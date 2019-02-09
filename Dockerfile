@@ -4,11 +4,11 @@ FROM node:10
 WORKDIR /user/app
 
 COPY package.json /user/app
-RUN npm install
+RUN yarn install
 
 COPY . /user/app
 
-CMD node index.js
+CMD yarn start
 
 # Expose Port number Host OS 8082
 # EXPOSE 8082
