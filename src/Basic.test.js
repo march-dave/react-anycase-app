@@ -10,8 +10,8 @@ describe('Counter', () => {
     component = renderer.create(<Basic />);
   });
 
-//   it('matches snapshot', () => {
-//     const tree = component.toJSON();
-//     expect(tree).toMatchSnapshot();
-//   })
+  it('matches snapshot', () => {
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  })
 }); 
