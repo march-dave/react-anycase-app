@@ -11,7 +11,7 @@ class BasicInfo extends Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.props.GetUserName} />
+        <input id="username" type="text" value={this.props.GetUserName} />
       </div>
     );
   }
