@@ -1,5 +1,5 @@
 import React from "react";
-import BasicInfo from "./BasicInfo";
+import BasicInfo from "../BasicInfo";
 
 import Adapter from "enzyme-adapter-react-16";
 import { configure, shallow } from "enzyme";
