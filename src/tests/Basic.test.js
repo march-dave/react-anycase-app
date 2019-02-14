@@ -2,8 +2,18 @@ import React from 'react';
 import Basic from '../Basic'
 import { shallow } from "enzyme";
 
+
+const setUp = (props={}) => {
+  const component = shallow(<Basic {...props} />);
+  return component;
+}
+
 describe('Counter', () => {
   let component = null;
+
+  beforeEach( () => {
+    component = setUp();
+  })
 
   it("renders correctly", () => {
     component = shallow(<Basic />);
