@@ -17,12 +17,19 @@ describe("BasicInfo Component Load", () => {
     expect(component).toMatchSnapshot();
   });
 
-  //   it('find component', () => {
-  //       expect(component.find('input').exists()).toBe(true);
-  //   })
   describe("insert new text", () => {
     it("has an input", () => {
       expect(component.find("input").exists());
     });
   });
+
+  let changed = null;
+  const handleChange = (name) => {
+    changed = name;
+  }
+
+  // it("handleChange", () => {
+  //   const wrapper = shallow(<BasicInfo onChange={handleChange} />);
+  //   expect(wrapper.);  
+  // } )
 });

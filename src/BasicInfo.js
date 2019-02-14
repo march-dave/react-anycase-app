@@ -8,10 +8,16 @@ const mapStateToProps = state => {
 };
 
 class BasicInfo extends Component {
+
+  handleChange = () => {
+    
+  }
+
   render() {
     return (
       <div>
         <input id="username" type="text" value={this.props.GetUserName} />
+        <input type="text" onChange={this.handleChange}/>
       </div>
     );
   }
