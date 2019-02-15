@@ -5,7 +5,7 @@ import { shallow } from "enzyme";
 let component = null;
 
 describe("BasicInfo Component Load", () => {
-  it("Render correctly", () => {
+  test("Render correctly", () => {
     component = shallow(<BasicInfo />);
   });
 
