@@ -1,24 +1,24 @@
 import React from "react";
 import BasicInfo from "./BasicInfo";
 
-import Adapter from "enzyme-adapter-react-16";
-import { configure, shallow } from "enzyme";
+// import Adapter from "enzyme-adapter-react-16";
+import { shallow } from "enzyme";
 
-configure({ adapter: new Adapter() });
+// configure({ adapter: new Adapter() });
 
 let component = null;
 
 describe("BasicInfo Component Load", () => {
-  it("Render correctly", () => {
+  test("Render correctly", () => {
     component = shallow(<BasicInfo />);
   });
 
-  it("matches snapshot", () => {
+  test("matches snapshot", () => {
     expect(component).toMatchSnapshot();
   });
 
   describe("insert new text", () => {
-    it("has an input", () => {
+    test("has an input", () => {
       expect(component.find("input").exists());
     });
   });
@@ -28,7 +28,7 @@ describe("BasicInfo Component Load", () => {
     changed = name;
   }
 
-  // it("handleChange", () => {
+  // test("handleChange", () => {
   //   const wrapper = shallow(<BasicInfo onChange={handleChange} />);
   //   expect(wrapper.);  
   // } )
