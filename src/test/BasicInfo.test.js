@@ -1,7 +1,6 @@
 import React from "react";
 import BasicInfo from "../BasicInfo";
 
-// import Adapter from "enzyme-adapter-react-16";
 import { shallow } from "enzyme";
 
 let component = null;

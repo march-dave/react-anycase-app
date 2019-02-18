@@ -20,9 +20,6 @@ describe("Counter", () => {
     wrapper = setUp(props);
     
     component = setUp();
-
-
-
   });
 
   it("renders correctly", () => {
@@ -33,12 +30,4 @@ describe("Counter", () => {
     expect(component).toMatchSnapshot();
   });
 
-  // it('renders correctly', () => {
-  //   component = renderer.create(<Basic />);
-  // });
-
-  // it('matches snapshot', () => {
-  //   const tree = component.toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // })
 });
