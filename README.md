@@ -69,4 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 ## yarn test --coverage
-yarn test --env=jsdom --coverage
+1) yarn test --env=jsdom --coverage
