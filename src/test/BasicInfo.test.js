@@ -28,10 +28,8 @@ describe("BasicInfo Component Load", () => {
     expect(component).toMatchSnapshot();
   });
 
-  describe("insert new text", () => {
-    test("has an input", () => {
-      expect(component.find("input").exists());
-    });
+  test("has an input", () => {
+    expect(component.find("input").exists()).toBe(true);
   });
 
   // it("renders properly", () => {
