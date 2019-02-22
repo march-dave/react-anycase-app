@@ -70,3 +70,129 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## yarn test --coverage
 1) yarn test --env=jsdom --coverage
+
+
+
+
+import React from "react";
+import { mount, shallow } from "enzyme";
+import Basic from "./Basic";
+import configureMockStore from "redux-mock-store";
+import configureStore from "./configureStore";
+
+import { Provider } from "react-redux";
+
+import action from "./Action";
+import reducer from "./Reducer";
+
+const setup = () => {
+  let mockStore = configureMockStore();
+
+  // 데이터들을 받아올 가짜 스토어 만들기
+  // let store = mockStore({
+  //   username: "dave"
+  // });
+  let store = mockStore({});
+
+  store.dispatch(action("dave"));
+
+  let wrapper = shallow(
+    <Provider store={store}>
+      <Basic />
+    </Provider>
+  );
+
+  // const wrapper = mount(<Basic />);
+  console.log(wrapper.debug());
+};
+
+setup();
+
+describe("action testing", () => {
+  test("should create an action to add a todo", () => {
+    const user = "dave";
+    const exceptedAction = {
+      type: "SET_USER",
+      user
+    };
+    expect(action(user)).toEqual(exceptedAction);
+  });
+});
+
+describe("reducer testing", () => {
+  let state = reducer(undefined, {});
+  test("should return initialState", () => {
+    console.log(state);
+    expect(state).toHaveProperty("username", "dave");
+  });
+
+  test("should state change", () => {
+    state = {
+      ...state,
+      username: "jane"
+    };
+
+    state = reducer(state, "SET_USER");
+    console.log(state);
+    expect(state).toHaveProperty("username", "jane");
+  });
+});
+
+let mockStore = configureMockStore();
+
+// 데이터들을 받아올 가짜 스토어 만들기
+// let store = mockStore({
+//   username: "dave"
+// });
+let store = mockStore({});
+// username: "dave"
+
+describe("Store renders properly", () => {
+  let component = null;
+  let buttons = null;
+
+  // Real Store
+  // let store = configureStore();
+
+  it("renders properly", () => {
+    store.dispatch(action("dave"));
+
+    let component = shallow(
+      <Provider store={store}>
+        <Basic />
+      </Provider>
+    );
+
+    // console.log(store.getState());
+    console.log(store.getActions());
+
+    expect(store.getActions()[0]).toEqual({ type: "SET_USER", user: "dave" });
+  });
+
+  describe("describe debug", () => {
+    test("fdsjklsfdkjlfds", () => {
+      let wrap = shallow(<Basic />);
+      console.log(wrap.find("input").debug());
+      console.log("sdjflsdjfslj");
+    });
+  });
+
+  it("dispatches action", () => {
+    const mockedEvent = {
+      target: {
+        value: "world"
+      }
+    };
+    // component.find('input').simulate('change', mockedEvent);
+    // expect(store.getState().names.input).toBe('world');
+  });
+
+  // it('dispatches INSERT action', () => {
+  //   component.find('form').simulate('submit');
+  //   expect(store.getState().names.names).toEqual(['world']);
+  // });
+
+  //   it("matches snapshot", () => {
+  //     expect(component).toMatchSnapshot();
+  //   });
+});
