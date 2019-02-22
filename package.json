@@ -3,11 +3,21 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+<<<<<<< HEAD
         "react": "^16.8.3",
         "react-dom": "^16.8.3",
         "react-redux": "^6.0.1",
         "react-scripts": "2.1.5",
         "redux": "^4.0.1"
+=======
+        "react": "^16.8.2",
+        "react-dom": "^16.8.2",
+        "react-redux": "^6.0.1",
+        "react-scripts": "2.1.5",
+        "redux": "^4.0.1",
+        "redux-mock-store": "^1.5.3",
+        "redux-thunk": "^2.3.0"
+>>>>>>> 2a466566b53d3f4610875ff4a64600735bdc6b18
     },
     "scripts": {
         "start": "react-scripts start",
