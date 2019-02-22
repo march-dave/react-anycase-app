@@ -2,9 +2,8 @@ import React from "react";
 import Basic from "../Basic";
 // import { shallow } from "enzyme";
 
-
 import configureMockStore from "redux-mock-store";
-import configureStore from "../configureStore";
+// import configureStore from "../configureStore";
 
 import { Provider } from "react-redux";
 import action from "../Action";
