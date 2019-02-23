@@ -74,7 +74,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 
-import React from "react";
+<!-- import React from "react";
 import { mount, shallow } from "enzyme";
 import Basic from "./Basic";
 import configureMockStore from "redux-mock-store";
@@ -195,4 +195,4 @@ describe("Store renders properly", () => {
   //   it("matches snapshot", () => {
   //     expect(component).toMatchSnapshot();
   //   });
-});
+}); -->
