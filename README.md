@@ -195,4 +195,4 @@ describe("Store renders properly", () => {
   //   it("matches snapshot", () => {
   //     expect(component).toMatchSnapshot();
   //   });
-}); --> -->
+}); -->
