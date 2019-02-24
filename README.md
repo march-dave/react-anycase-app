@@ -148,7 +148,7 @@ let store = mockStore({});
 // username: "dave"
 
 describe("Store renders properly", () => {
-  let component = null;
+  <!-- let component = null;
   let buttons = null;
 
   // Real Store
@@ -195,4 +195,4 @@ describe("Store renders properly", () => {
   //   it("matches snapshot", () => {
   //     expect(component).toMatchSnapshot();
   //   });
-}); -->
+}); --> -->
