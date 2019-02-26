@@ -4,6 +4,7 @@ import "./App.css";
 import Basic from "./Basic";
 import BasicInfo from "./BasicInfo";
 import Counter from "./Counter";
+import Hamburger from "./Hamburger";
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
         <Counter />
         <Basic />
         <BasicInfo />
+        <Hamburger />
       </div>
     );
   }
