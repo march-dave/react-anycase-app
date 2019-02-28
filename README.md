@@ -69,10 +69,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 ## yarn test --coverage
-1) yarn test --env=jsdom --coverage
+yarn test --env=jsdom --coverage
 
 
-
+## free images url
+https://pngtree.com/so/hamburger
 
 <!-- import React from "react";
 import { mount, shallow } from "enzyme";
