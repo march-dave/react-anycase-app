@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-        cover {
-            border: 10px solid orangered;
-        }
+      cover {
+        border: 10px solid orangered;
+      }
 
-        cover:before {
-            content: 'km';
-        }
+      /* PSeudo Element css2 */
+      cover:before {
+        content: "km";
+      }
+      /* PSeudo Element css3
+       cover::before {
+        content: "km";
+      } */
 
-        cover:after {
-            content: 'cm';
-        }
+      /* PSeudo Element */
+      cover:after {
+        content: "cm";
+      }
+
+      /* PSeudo Element css3
+      cover::after {
+        content: "cm";
+      } */
+
+
+      /* PSeudo Class */
+      cover:hover {
+        margin: 40px -100px;
+        box-shadow: 0 0 30px 50px rgba(0, 0, 0, 0.2);
+      }
     </style>
-</head>
-<body>
-    <div class="cover">
-
-    </div>
-</body>
+  </head>
+  <body>
+    <div class="cover"></div>
+  </body>
 </html>
