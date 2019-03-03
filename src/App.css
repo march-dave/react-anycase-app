@@ -38,6 +38,7 @@
     /* padding: 10px auto; */
     margin: 10px auto;
     /* border: 10px solid orangered; */
+    overflow: hidden;
 }
 
 h1 {
