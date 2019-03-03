@@ -33,17 +33,20 @@
 
 .box {
     background-color: #fff;
-    width: 960px;
-    height: 200px
+    /* width: 400px; */
+    height: 200px;
+    border: 10px solid orangered;
 }
 
 h1 {
-    margin: 20px, auto;
+    margin: 20px auto;
 }
 
 .box-cover {
     width: 100px;
     height: 100px;
+    margin: 30px auto;
+    display: block;
 }
 
 p {
