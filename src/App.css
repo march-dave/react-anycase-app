@@ -33,9 +33,11 @@
 
 .box {
     background-color: #fff;
-    /* width: 400px; */
-    height: 200px;
-    border: 10px solid orangered;
+    width: 400px;
+    height: 350px;
+    /* padding: 10px auto; */
+    margin: 10px auto;
+    /* border: 10px solid orangered; */
 }
 
 h1 {
@@ -46,10 +48,14 @@ h1 {
 .box-cover {
     width: 100px;
     height: 100px;
-    margin: 30px auto;
+    margin: 30px auto 30px;
     display: block;
+    border: 10px solid orangered;
 }
 
 p {
     padding: 3 rem;
+    width: 300px;
+    margin: 5px auto;
+    /* border: 10px solid aquamarine; */
 }
