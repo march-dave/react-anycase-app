@@ -35,10 +35,10 @@
     background-color: #fff;
     width: 400px;
     height: 350px;
-    /* padding: 10px auto; */
+    padding: 10px auto;
     margin: 10px auto;
     /* border: 10px solid orangered; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 h1 {
