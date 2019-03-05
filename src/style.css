@@ -76,6 +76,7 @@ li {
   color: #999;
   padding: 0 20px;
   border-radius: 30px;
+  padding: 1px;
 }
 
 .card-icon {
@@ -152,9 +153,9 @@ li {
   .card-title:after {
     content: ' ';
     position: absolute;
-    right: 0;
-    top: 50%;
     right: -60px;
+    top: 30%;
+    right: -40px;
     background-color: white;
     border-radius: 50%;
     border: 6px solid;
@@ -177,7 +178,7 @@ li {
   }
 
   .timeline-item:nth-child(even) .card-title:after {
-      left: -60px;
+      left: -45px;
       transform: translate(50%, -50%);
   }
 }
