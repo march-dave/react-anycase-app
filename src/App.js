@@ -5,6 +5,7 @@ import Basic from "./Basic";
 import BasicInfo from "./BasicInfo";
 import Counter from "./Counter";
 import Hamburger from "./Hamburger";
+import "./style.scss";
 
 class App extends Component {
   render() {
