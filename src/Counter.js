@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import debounce from "lodash.debounce";
 
 class Counter extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.handlerSearchDelayed = debounce(this.onSearch, 1000);
-//     this.handlerSearchDelayed = this.handlerSearchDelayed.bind(this);
-//   }
+  //   constructor(props) {
+  //     super(props);
+  //     this.handlerSearchDelayed = debounce(this.onSearch, 1000);
+  //     this.handlerSearchDelayed = this.handlerSearchDelayed.bind(this);
+  //   }
 
   state = {
     number: 0
@@ -14,14 +14,12 @@ class Counter extends Component {
 
   handlerSearchDelayed = () => {
     debounce(this.onSearch, 1000);
-}
+  };
 
-    // onSearch(textSearch) {
-    //     this.setState({text:textSearch});
-    //     this.getData();
-    // }
-
-
+  // onSearch(textSearch) {
+  //     this.setState({text:textSearch});
+  //     this.getData();
+  // }
 
   // handleChange = () => {
   //     this.setState({
@@ -44,10 +42,9 @@ class Counter extends Component {
       <div>
         <p>{this.state.number}</p>
         <input type="button" value="+" onClick={this.handleChange} />
-        <input
-          placeholder=""
-          onChange={this.handlerSearchDelayed}
-        />
+        <input placeholder="" onChange={this.handlerSearchDelayed} />
+
+        <input ref={this.props.innerRef} />
       </div>
     );
   }
