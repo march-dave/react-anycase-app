@@ -6,10 +6,12 @@ class SeeRef extends Component {
   };
 
   input = null;
+  // input = React.createRef(); // React version over 16.3 
   box = null;
 
   handleClick = () => {
     this.input.focus();
+    // this.input.currnet.focus(); React version over 16.3
   };
 
   componentDidMount() {
@@ -24,6 +26,7 @@ class SeeRef extends Component {
         <input
         placeholder="ref holder"
           ref={ ref => this.input = ref }
+        // ref={this.input} React version over 16.3
         />
         <button onClick={this.handleClick}>Focus Input</button>
         <div
