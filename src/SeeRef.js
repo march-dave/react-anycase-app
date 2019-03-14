@@ -22,7 +22,8 @@ class SeeRef extends Component {
     return (
       <div>
         <input
-          ref={this.props.innerRef}
+        placeholder="ref holder"
+          ref={ ref => this.input = ref }
         />
         <button onClick={this.handleClick}>Focus Input</button>
         <div

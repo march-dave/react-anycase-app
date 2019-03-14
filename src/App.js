@@ -5,6 +5,7 @@ import Basic from "./Basic";
 import BasicInfo from "./BasicInfo";
 import Counter from "./Counter";
 import Hamburger from "./Hamburger";
+import SeeRef from './SeeRef';
 import "./style.scss";
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
         <Basic />
         <BasicInfo />
         <Hamburger />
+        <SeeRef />
       </div>
     );
   }
