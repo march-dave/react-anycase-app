@@ -197,3 +197,22 @@ describe("Store renders properly", () => {
   //     expect(component).toMatchSnapshot();
   //   });
 }); -->
+
+
+<!-- mapDispatchToProps Redux Action -->
+<!-- // option 1
+const mapDispatchToProps = (dispatch) => ({
+  action: () => dispatch(action())
+})
+
+
+// option 2
+const mapDispatchToProps = (dispatch) => ({
+  action: bindActionCreators(action, dispatch)
+})
+
+
+// option 3
+const mapDispatchToProps = {
+  action: action
+} -->
