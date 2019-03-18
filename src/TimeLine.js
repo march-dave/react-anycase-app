@@ -14,7 +14,7 @@ class TimeLine extends Component {
           <ul className="timeline">
             <li className="timeline-item">
               <div className="card">
-                <img className="card-icon" src="images/1.png" />
+                <img className="card-icon" src="images/1.png"  alt="images" />
                 <h2 className="card-title">1990</h2>
                 <dl className="card-definition">
                   <dt>
