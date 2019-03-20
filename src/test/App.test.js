@@ -13,6 +13,12 @@ describe("App", () => {
     expect(component).toMatchSnapshot();
   });
 
+  it('find p ', () => {
+    const wrapper = shallow(<App />);
+    const text = wrapper.find('p').text();
+    expect(text).toEqual('Current Text 1');
+  })
+
 
   // it("renders correctly", () => {
   //   const wrapper = shallow(<App />);
