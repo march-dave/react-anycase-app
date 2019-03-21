@@ -4,7 +4,7 @@ export default class SeeRefV2 extends Component {
     input = React.createRef(); // React version over 16.3 
 
     handleClick = () => {
-        this.input.currnet.focus(); // React version over 16.3
+        this.input.current.focus(); // React version over 16.3
     };
 
     render() {
