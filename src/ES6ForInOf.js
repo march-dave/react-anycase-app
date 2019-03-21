@@ -5,31 +5,14 @@ class ES6ForInOf extends Component {
         return(
             <div>
                 {
-                    // function anagrams(stringA, stringB) {
-                    //   const aCharMap = buildCharMap(stringA);
-                    //   const bCharMap = buildCharMap(stringB);
-                    //
-                    //   if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
-                    //     return false;
-                    //   }
-                    //
-                    //   for (let char in aCharMap) {
-                    //     if (aCharMap[char] !== bCharMap[char]) {
-                    //       return false;
-                    //     }
-                    //   }
-                    //
-                    //   return true;
+                    // let list = [4, 5, 6];
+
+                    // for (let i in list) {
+                    //    console.log(i); // "0", "1", "2",
                     // }
-                    //
-                    // function buildCharMap(str) {
-                    //   const charMap = {};
-                    //
-                    //   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-                    //     charMap[char] = charMap[char] + 1 || 1;
-                    //   }
-                    //
-                    //   return charMap;
+                    
+                    // for (let i of list) {
+                    //    console.log(i); // "4", "5", "6"
                     // }
                 }
             </div>
