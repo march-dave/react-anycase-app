@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-      cover {
+      .cover {
         border: 10px solid orangered;
       }
 
       /* PSeudo Element css2 */
-      cover:before {
+      .cover:before {
         content: "km";
       }
       /* PSeudo Element css3
-       cover::before {
+       .cover::before {
         content: "km";
       } */
 
       /* PSeudo Element */
-      cover:after {
+      .cover:after {
         content: attr(title);
         background-color: orangered;
         color: white;
@@ -39,13 +39,13 @@
       }
 
       /* PSeudo Element css3
-      cover::after {
+      .cover::after {
         content: "cm";
       } */
 
 
       /* PSeudo Class */
-      cover:hover:after {
+      .cover:hover:after {
         opacity: 1;
         top: -20px;
         left: 10px;
