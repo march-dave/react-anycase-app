@@ -31,6 +31,15 @@
     }
 } */
 
+/* <style>
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+</style>
+
+@font-face {
+    font-family: 'FiraSans-Bold';
+    src: url('./fonts/FiraSans-Bold.ttf') format('truetype');
+  } */
+
 .box {
     background-color: #fff;
     width: 400px;
