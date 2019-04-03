@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,16 @@
     <title>Document</title>
 
     <style>
+        .wrapper {
+            background-color: #fff;
+            width: 960px;
+            margin: 50px auto;
+            text-align: center;
+            border-radius: 20px;
+            border-right: 5px solid #ccc;
+            border-bottom: 5px solid #999;
+        }
+
         .talk-contents {
             background-color: #FFF;
             padding: 2em;
@@ -21,7 +32,7 @@
             content: ' ';
             border-width: 1em;
             border-style: solid;
-            border-color: transparent transparent transparent orangered;
+            border-color: #ddd transparent transparent transparent;
             position: absolute;
             left: 0;
             right: 0;
@@ -29,8 +40,15 @@
             margin: auto;
             bottom: -2em;
         }
+
+        /* .talk-contents:hover {
+            opacity: 1;
+            top: -20px;
+            left: 10px;
+        } */
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="talk">
@@ -41,4 +59,5 @@
         </div>
     </div>
 </body>
+
 </html>
