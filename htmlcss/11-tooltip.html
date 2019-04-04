@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
 
-    <style>
-      .content {
-        border: 1px solid black;
-        margin: 10px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
 
-      .cover {
-        border: 10px solid orangered;
-      }
+  <style>
+    .box {
+      background-color: #fff;
+      width: 960px;
+      margin: 50px auto;
+      text-align: center;
+      border-radius: 20px;
+      border-right: 5px solid #ccc;
+      border-bottom: 5px solid #999;
+    }
 
-      /* PSeudo Element css2 */
-      .cover:before {
-        content: "km";
-      }
-      /* PSeudo Element css3
+    .content {
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+    .cover {
+      border: 10px solid orangered;
+    }
+
+    /* PSeudo Element css2 */
+    .cover:before {
+      content: "km";
+    }
+
+    /* PSeudo Element css3
        .cover::before {
         content: "km";
       } */
 
-      /* PSeudo Element */
-      .cover:after {
-        content: attr(title);
-        background-color: orangered;
-        color: white;
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 12px;
-        padding: 0 1em;
-        white-space: nowrap;
-        border-radius: 50px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        /* opacity: 0.1; */
-        transform: all 0.5s;
-      }
+    /* PSeudo Element */
+    .cover:after {
+      content: attr(title);
+      background-color: orangered;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 12px;
+      padding: 0 1em;
+      white-space: nowrap;
+      border-radius: 50px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      /* opacity: 0.1; */
+      transform: all 0.5s;
+    }
 
-      /* PSeudo Element css3
+    /* PSeudo Element css3
       .cover::after {
         content: "cm";
       } */
 
 
-      /* PSeudo Class */
-      .cover:hover:after {
-        opacity: 1;
-        top: -20px;
-        left: 10px;
-      }
+    /* PSeudo Class */
+    .cover:hover:after {
+      opacity: 1;
+      top: -20px;
+      left: 10px;
+    }
+  </style>
+</head>
 
-    </style>
-  </head>
-  <body>
-    <div class="content">
-      <div class="cover" title="hi"></div>
-    </div>
-  </body>
+<body>
+  <div class="box">
+    <div class="cover" title="hi"></div>
+  </div>
+</body>
+
 </html>
