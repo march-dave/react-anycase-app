@@ -7,7 +7,10 @@ export default class ObjectEmpty extends Component {
         return (
             <div>
                 {
-                    Object.entries(obj).length === 0 && obj.constructor === Object
+                    // ES 7+
+                    // Object.entries(obj).length === 0 && obj.constructor === Object
+                    // ES 6
+                    // Object.keys(obj).length === 0 && obj.constructor == Object
                 }
             </div>
         )
