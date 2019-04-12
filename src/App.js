@@ -6,7 +6,10 @@ import BasicInfo from "./BasicInfo";
 import Counter from "./Counter";
 import Hamburger from "./Hamburger";
 import SeeRef from './SeeRef';
+import MyComp from './MyComp';
+
 import "./style.scss";
+
 
 class App extends Component {
   render() {
@@ -31,6 +34,7 @@ class App extends Component {
         <BasicInfo />
         <Hamburger />
         <SeeRef />
+        <MyComp />
       </div>
     );
   }

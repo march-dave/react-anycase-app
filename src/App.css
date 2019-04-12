@@ -50,6 +50,15 @@
     /* overflow: hidden; */
 }
 
+.boxddl {
+    background-color: #fff;
+    width: 400px;
+    padding: 10px auto;
+    margin: 10px auto;
+    /* border: 10px solid orangered; */
+    /* overflow: hidden; */
+}
+
 h1 {
     margin: 20px auto;
     width: 170px;
