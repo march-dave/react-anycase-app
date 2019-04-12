@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import Select from 'react-styled-select'
-
 class MyComp extends React.Component {
   render() {
     const options = [
@@ -27,7 +26,6 @@ class MyComp extends React.Component {
     )
   }
 }
-
 
 const TileStyle = styled.div`
 .arrowZone {
