@@ -15,6 +15,9 @@ export default class Paremeter extends Component {
     render() {
         return (
             <button onClick={this.handleClick}></button>
+
+            // ES 6 Style
+            //   <button onClick={(e) => this.handleClick(param, e)}></button>
         )
     }
 }
