@@ -11,6 +11,10 @@ export default class LifeCycle extends Component {
       }
       
       componentWillMount() {
+        // 화면에 나가기 바로 직전에 호출 되는 API 16.3 에서 deprecated
+        // 16.3 이후에는 UNSAFE_componentWillMount 로 사용 되어 지며
+        // 주로 서버 사이드 처리 용도로 사용되어 졌다.
+        // constructor 와 componentDidMount 에서 처리 된다.
         console.log('componentWillMount (deprecated)');
       }
     
