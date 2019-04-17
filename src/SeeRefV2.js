@@ -20,23 +20,23 @@ export default class SeeRefV2 extends Component {
     }
 }
 
-state = {
-    information: [
-      {
-        id: 0,
-        name: 'Dave',
-        phone: '010-0000-0000'
-      },
-      {
-        id: 1,
-        name: 'John',
-        phone: '010-0000-0001'
-      }
-    ]
-  }
-  handleCreate = (data) => {
-    const { information } = this.state;
-    this.setState({
-      information: information.concat({ id: this.id++, ...data })
-    })
-  }
+// state = {
+//     information: [
+//       {
+//         id: 0,
+//         name: 'Dave',
+//         phone: '010-0000-0000'
+//       },
+//       {
+//         id: 1,
+//         name: 'John',
+//         phone: '010-0000-0001'
+//       }
+//     ]
+//   }
+//   handleCreate = (data) => {
+//     const { information } = this.state;
+//     this.setState({
+//       information: information.concat({ id: this.id++, ...data })
+//     })
+//   }
