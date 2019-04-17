@@ -9,6 +9,7 @@
         "react-dom": "^16.8.6",
         "react-redux": "7.0.1",
         "react-scripts": "^2.1.8",
+        "react-select": "^2.4.3",
         "react-styled-select": "^2.1.2",
         "redux": "^4.0.1",
         "redux-mock-store": "^1.5.3",
