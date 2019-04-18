@@ -12,7 +12,24 @@ export default class ReactSelect extends Component {
     selectedOption: null,
   }
   handleChange = (selectedOption) => {
+
+// this.setState(prevState => ({
+//   formComplete: prevState.answers.filter(answer => answer !== '').length === prevState.totalAnswers
+// }));
+
+// await this.setState(prevState => ({
+//     experienceList: prevState.experienceList
+//       .filter(role => role !== prevState.experienceList[index])
+//   }), () => {
+//     this.props.updateExperienceList(this.state.experienceList);
+//   });
+
     this.setState({ selectedOption });
+
+    this.setState(prevState => ({
+      selectedOption: prevState.selectedOption.value === 'chocolate' ? {value: 'aaa', label: 'aaa'} : selectedOption
+    }))
+
     console.log(`Option selected:`, selectedOption);
   }
 

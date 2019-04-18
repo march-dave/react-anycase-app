@@ -220,3 +220,41 @@ const mapDispatchToProps = {
 
 ## git stash test
 # stash 2
+
+
+this.setState(prevState => ({
+      currentPage: prevState.currentPage - 1,
+      user_id: this.props.user.id,
+      id: prevState.currentExercise.id,
+      answers: prevState.answers,
+      fullSentence: decodeString(prevState.fullSentence),
+    }));
+
+    if (this.pages[this.state.currentPage] === 'beforeYouStart') {
+      this.setState(prevState => ({
+        currentPage: prevState.currentPage + 1,
+        canProceed: !!prevState.currentExercise.exercise_responses
+      }));
+
+      this.setState(prevState => ({
+        selectedValue: {
+          ...prevState.selectedValue,
+          [questionIndex]: null
+        },
+      }));
+
+      this.setState({ currentQuestion: index - 1 }, () => {
+        this.setState(prevState => ({
+          currentPage,
+          isQuestions: false,
+          isQuestionForm: false,
+          isQuestionEdit: true,
+          finalAnswer: prevState.textFields.map((answer, ind) => (ind === 3 ? `${answer}` : `${answer}\n\n`)).join('')
+        }));
+
+        if(e.value) {
+          this.setState(prevState => ({
+            selectedValue: e,
+            updateAnyAnswered: (prevState.updateAnyAnswered !== true) ? true:  prevState.updateAnyAnswered
+          }), () =>  {this.processResponse(questionIndex)} );
+        }
