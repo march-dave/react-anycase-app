@@ -16,10 +16,11 @@ class Contact extends Component {
         ]
     }
 
-    handClick = (e) => {
+    handClick = (data) => {
         this.setState({
-            id: ++this.id,
-            [e.target.name]: e.target.value
+            // id: ++this.id,
+            // [e.target.name]: e.target.value
+            information: this.state.information.concat({ id: this.id++, ...data })
         })
     }
 
