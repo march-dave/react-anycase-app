@@ -26,7 +26,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <input type="text" name="firstname" onClick={this.handClick} />
+                <input type="text" name="firstname" onClick={this.handClick} placeholder="something input" />
             </div>
         )
     }
