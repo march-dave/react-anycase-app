@@ -7,7 +7,8 @@ import Counter from "./Counter";
 import Hamburger from "./Hamburger";
 import SeeRef from './SeeRef';
 import MyComp from './MyComp';
-import ReactSelect from './ReactSelect'
+import ReactSelect from './ReactSelect';
+import Contact from './Contact';
 
 import "./style.scss";
 
@@ -37,6 +38,7 @@ class App extends Component {
         <SeeRef />
         <MyComp />
         <ReactSelect />
+        <Contact />
       </div>
     );
   }

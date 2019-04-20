@@ -17,6 +17,7 @@ class Contact extends Component {
     }
 
     handClick = (data) => {
+        debugger;
         this.setState({
             information: this.state.information.concat({ id: this.id++, ...data })
         })
