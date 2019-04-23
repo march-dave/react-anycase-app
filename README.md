@@ -258,3 +258,33 @@ this.setState(prevState => ({
             updateAnyAnswered: (prevState.updateAnyAnswered !== true) ? true:  prevState.updateAnyAnswered
           }), () =>  {this.processResponse(questionIndex)} );
         }
+
+        if (this.state.selectedValue[questionIndex].value !== e.value) {
+          this.setState({
+            selectedValue: e,
+            updateAnyAnswered: true
+          }, () => {
+            this.processResponse(questionIndex);
+          });
+        }
+
+        if (this.state.updateAnyAnswered === false) {
+          this.setState({ updateAnyAnswered: true })
+        }
+
+  state = {
+    name: '',
+    phone: ''
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  <input
+          placeholder="first name"
+          value={this.state.name}
+          onChange={this.handleChange}
+          name="name" 
+          />
