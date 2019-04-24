@@ -106,3 +106,7 @@
 // });
 
 
+// Enzyme는 assertion을 위해 Chai와 Sinon을 사용하지만 
+// Jest 에서 expect()와 jest.fn()을 내장하고 있기 때문에 꼭 사용할 필요는 없다.
+
+//https://circleci.com/blog/continuously-testing-react-applications-with-jest-and-enzyme/
