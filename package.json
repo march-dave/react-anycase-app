@@ -7,6 +7,8 @@
         "node-sass": "^4.11.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
+        "react-html-converter": "^0.3.2",
+        "react-lz-editor": "^0.12.1",
         "react-redux": "7.0.2",
         "react-scripts": "^2.1.8",
         "react-select": "^2.4.3",

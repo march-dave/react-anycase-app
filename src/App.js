@@ -9,6 +9,7 @@ import SeeRef from './SeeRef';
 import MyComp from './MyComp';
 import ReactSelect from './ReactSelect';
 import Contact from './Contact';
+import HtmlConverter from './HtmlConverter';
 
 import "./style.scss";
 
@@ -39,6 +40,7 @@ class App extends Component {
         <MyComp />
         <ReactSelect />
         <Contact />
+        <HtmlConverter />
       </div>
     );
   }
