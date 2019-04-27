@@ -10,7 +10,7 @@
         "react-html-converter": "^0.3.2",
         "react-lz-editor": "^0.12.1",
         "react-redux": "7.0.2",
-        "react-scripts": "^2.1.8",
+        "react-scripts": "3.0.0",
         "react-select": "^2.4.3",
         "react-styled-select": "^2.1.2",
         "redux": "^4.0.1",
