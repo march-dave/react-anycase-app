@@ -11,6 +11,9 @@ import ReactSelect from './ReactSelect';
 import Contact from './Contact';
 import SeeRefV2 from './SeeRefV2';
 // import HtmlConverter from './HtmlConverter';
+import StateParent from './StateParent';
+
+
 
 import "./style.scss";
 
@@ -43,6 +46,7 @@ class App extends Component {
         <Contact />
         {/* <HtmlConverter /> */}
         <SeeRefV2 />
+        <StateParent />
       </div>
     );
   }
