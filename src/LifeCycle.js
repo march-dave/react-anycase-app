@@ -42,7 +42,7 @@ export default class LifeCycle extends Component {
         // 5 의 배수라면 리렌더링 하지 않음  false 이면 업데이트 안함
         console.log('shouldComponentUpdate');
         if (nextState.number % 5 === 0) return false;
-        return true;
+        return true; // true  이면 업데이트, true 가 기본 설정 값이다.
       }
     
       // deprecate
