@@ -77,6 +77,7 @@ export default class LifeCycle extends Component {
         // 컴포넌트가 더 이상 필요 하지 않게 되면 호출 된다.
         // 이벤트 setTimer 외부 라이브러리 인스턴스
       }
+      // tihs.forceUpdate() 함수를 통해 강제 렌더링 
     
       handleIncrease = () => {
         const { number } = this.state;
