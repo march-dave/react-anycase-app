@@ -288,3 +288,7 @@ this.setState(prevState => ({
           onChange={this.handleChange}
           name="name" 
           />
+
+
+# Rename local branch
+git branch -m new-name
