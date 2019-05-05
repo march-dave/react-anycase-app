@@ -8,3 +8,7 @@
 //         exampleArray.push(props.listOfQuestions[index].example);
 //       });
 //     })
+
+
+// let arr = [1,2,3]
+// let result = arr.concat([4,5,6])
