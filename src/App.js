@@ -12,6 +12,7 @@ import Contact from './Contact';
 import SeeRefV2 from './SeeRefV2';
 // import HtmlConverter from './HtmlConverter';
 import StateParent from './StateParent';
+import Toastify from './Toastify';
 
 
 
@@ -47,6 +48,7 @@ class App extends Component {
         {/* <HtmlConverter /> */}
         <SeeRefV2 />
         <StateParent />
+        <Toastify />
       </div>
     );
   }
