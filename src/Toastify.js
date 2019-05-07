@@ -7,7 +7,6 @@ export default class Toastify extends Component {
 
   notify = () => toast('Your career vision has been saved in My Work. Feel free to access it whenever you like.');
 
-
   constructor(props) {
     super(props)
 
