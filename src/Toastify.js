@@ -14,7 +14,6 @@ export default class Toastify extends Component {
     this.state = {
       toast: false
     }
-
   }
   
   componentDidMount() {
@@ -29,10 +28,6 @@ export default class Toastify extends Component {
       })
     }
   }
-
-  
-
-
 
   render() {
     return (
@@ -55,7 +50,6 @@ export default class Toastify extends Component {
     )
   }
 }
-
 
 const BodyStyle = styled.div`
 
@@ -95,14 +89,11 @@ const BodyStyle = styled.div`
   font-size: 16px;
 }
 
-
 .Toastify__close-button--default {
   // background: black;
   color: white;
   opacity: 1;
 }
-
-
 
 .toast-container {
   // border: 1px solid orangered;
