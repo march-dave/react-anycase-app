@@ -36,7 +36,7 @@ const BodyStyle = styled.div`
   select {
     appearance: none;
     -webkit-appearance: none;
-    background: url('xxx.png') no-repeat right;
+    background: url('xxx.png') no-repeat right; // 오른쪽 커스텀 화살
   }
 
   .arrowZone {

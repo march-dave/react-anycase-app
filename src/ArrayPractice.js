@@ -14,3 +14,10 @@
 // let result = arr.concat([4,5,6])
 
 // forEach는 반환을  undefined 를 map 은 배열을 반환 한다.
+
+// filter
+// this.setState(
+//     ({ todoItems }) => ({
+//       todoItems: todoItems.filter(todo => todo.id !== id)
+//     })
+//   );
