@@ -19,3 +19,8 @@
 // export default function() {...}
 // import myFunction from 'myFunc';
 // myFunc();
+
+
+// import Main from 'main';
+// con lib = {message: "This Is A Lib"};
+// export { lib as Lib };
