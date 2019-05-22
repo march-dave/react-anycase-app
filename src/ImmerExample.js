@@ -38,7 +38,7 @@ let quiz2 = produce(quiz, draft => {
 // console.log(quiz.quizlist[0].options[0].option)
 
 // //true, true, true
-console.log(quiz === quiz2);
-console.log(quiz.quizlist === quiz2.quizlist);
-console.log(quiz.quizlist[0].options[0] === quiz2.quizlist[0]);
-console.log(quiz.students === quiz2.students);
+console.log(quiz === quiz2);        // false 
+console.log(quiz.quizlist === quiz2.quizlist);   // false 
+console.log(quiz.quizlist[0].options[0] === quiz2.quizlist[0]);  // false 
+console.log(quiz.students === quiz2.students);  // ture
