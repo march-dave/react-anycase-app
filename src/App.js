@@ -13,11 +13,7 @@ import SeeRefV2 from './SeeRefV2';
 // import HtmlConverter from './HtmlConverter';
 import StateParent from './StateParent';
 import Toastify from './Toastify';
-
-
-
 import "./style.scss";
-
 
 class App extends Component {
   render() {
