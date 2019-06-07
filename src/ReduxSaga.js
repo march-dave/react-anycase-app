@@ -15,3 +15,6 @@
 // // instead of resuming normally with another `next(..)` call,
 // // let's throw a wrench (an error) into the gears:
 // it.throw( "Oops!" ); // Error: Oops!
+
+// saga란 action에 대한 listener이다.
+// 음… 액션 리스너구나. 이벤트 리스너같은 것이군.
