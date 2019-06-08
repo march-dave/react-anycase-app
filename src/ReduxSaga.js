@@ -18,3 +18,4 @@
 
 // saga란 action에 대한 listener이다.
 // 음… 액션 리스너구나. 이벤트 리스너같은 것이군.
+// generator 의 개념
