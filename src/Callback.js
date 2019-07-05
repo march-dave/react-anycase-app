@@ -1,5 +1,3 @@
-// import { nodeInternals } from "stack-utils";
-
 // 콜백 사용법 1)
 // 함수를 만들고 변수?에 넣는다. 나중에 사용 하려고
 // let a = function() {
