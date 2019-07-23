@@ -317,3 +317,7 @@ const Count = React.memo(( {이곳에 props 지정 }:이곳에 type 지정 ) => 
 const Count = React.memo(( { id, title, name 등등 }: props ) => {
   return <div>{props.count}</div>;
 };
+
+const Count = React.memo(( props: IUser ) ) => {
+  return <div>{props.count}</div>;
+};
