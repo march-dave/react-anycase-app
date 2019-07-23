@@ -292,3 +292,19 @@ this.setState(prevState => ({
 
 # Rename local branch
 git branch -m new-name
+
+# React.memo 사용법 3 가지 
+
+방법 1) function
+const Count = React.memo(function Count(props) {
+  return <div>{props.count}</div>;
+});
+
+방법 2) arrow function
+const Count = React.memo((props) => {
+  return <div>{props.count}</div>;
+};
+
+방법 3) wrapping
+const Count = props => <div>{props.count}</div>;
+const WrappedCount = React.memo(Count);
