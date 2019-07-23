@@ -308,3 +308,12 @@ const Count = React.memo((props) => {
 방법 3) wrapping
 const Count = props => <div>{props.count}</div>;
 const WrappedCount = React.memo(Count);
+
+방법 4)  TypeScript
+const Count = React.memo(( {이곳에 props 지정 }:이곳에 type 지정 ) => {
+  return <div>{props.count}</div>;
+};
+
+const Count = React.memo(( { id, title, name 등등 }: props ) => {
+  return <div>{props.count}</div>;
+};
