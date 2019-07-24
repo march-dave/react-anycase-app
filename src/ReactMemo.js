@@ -1,5 +1,6 @@
 // import React, { Component } from 'react'
 
+//  사용법 1)
 // const MyComponent = React.memo(function MyComponent(props) {
 //     /* render using props */
 //   });
@@ -8,6 +9,8 @@
 //     /* render using props */
 // }
 
+//  사용법 2)
+// 또한, 두번째 인수로 비교함수를 지정해 줄수도 있습니다!
 // function areEqual(prevProps, nextProps) {
 //     /*
 //     return true if passing nextProps to render would return
