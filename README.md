@@ -321,3 +321,14 @@ const Count = React.memo(( { id, title, name 등등 }: props ) => {
 const Count = React.memo(( props: IUser ) ) => {
   return <div>{props.count}</div>;
 };
+
+# javascript
+var p1 = 1;
+var p2 = 1;
+
+console.log(p1, p2, p1===p2)
+
+# immutability
+var obj = { name: "john doe" , score: [1,2]}
+Object.freeze(obj);
+obj.name = "jane doe"; // can't change
