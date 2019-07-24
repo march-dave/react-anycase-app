@@ -332,3 +332,6 @@ console.log(p1, p2, p1===p2)
 var obj = { name: "john doe" , score: [1,2]}
 Object.freeze(obj);
 obj.name = "jane doe"; // can't change
+obj.score.push[3];    // huk!! because of reference
+Ojbect.freeze(obj.score) // have to use freeze reference level
+obj.score.push[3];    // can't change
