@@ -1,3 +1,5 @@
+// HOC example code
+
 // import React, { Component } from 'react';
 
 // const withRequest = (url) => (WrappedComponent) => {
