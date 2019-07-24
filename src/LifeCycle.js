@@ -22,6 +22,7 @@ export default class LifeCycle extends Component {
       componentDidMount() {
         // 외부 라이브러리 연동 Ajax 콜
         // DOM의 속성을 읽거나 변경하는 작업도 여기
+        // 이곳은 랜더링 끝나고 실행되는 사이클이다. 따라서 DOM의 속성을 읽을 수 있다. 업로드 컨트롤의 속성을 이곳에서 읽을 수 있다. 
         console.log('componentDidMount');
       }
 
