@@ -6,8 +6,9 @@
 
 // function MyComponent(props) {
 //     /* render using props */
-//   }
-//   function areEqual(prevProps, nextProps) {
+// }
+
+// function areEqual(prevProps, nextProps) {
 //     /*
 //     return true if passing nextProps to render would return
 //     the same result as passing prevProps to render,
