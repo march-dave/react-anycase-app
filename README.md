@@ -335,3 +335,10 @@ obj.name = "jane doe"; // can't change
 obj.score.push[3];    // huk!! because of reference
 Ojbect.freeze(obj.score) // have to use freeze reference level
 obj.score.push[3];    // can't change
+
+
+# git local user 사용법
+git config --list 로 현재 사용자 확인
+
+git config --local user.name '사용자 id' <-- 안써도 된다 귀찮으면, 아래 이메일만 정확 하면 유저 이름 쯤이야~!!
+git config --local user.email 'abc@abc.com'
