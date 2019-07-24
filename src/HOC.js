@@ -1,4 +1,4 @@
-// HOC example code
+// HOC example code 
 
 // import React, { Component } from 'react';
 

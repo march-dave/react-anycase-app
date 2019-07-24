@@ -1,3 +1,5 @@
+// react ref example code
+// ref for when done rendering I can access dom
 import React, { Component } from 'react'
 
 export default class SeeRefV2 extends Component {
