@@ -1,5 +1,3 @@
-// I will add React Hook codes in here
-
 import React, { useState, useEffect } from 'react';
 
 const Sample = (props) => {
