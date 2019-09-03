@@ -24,6 +24,7 @@ export default class LifeCycle extends Component {
         // DOM의 속성을 읽거나 변경하는 작업도 여기
         // 이곳은 랜더링 끝나고 실행되는 사이클이다. 따라서 DOM의 속성을 읽을 수 있다. 업로드 컨트롤의 속성을 이곳에서 읽을 수 있다.
         // 잊지 말아야 할것은 이곳에 추가된 내용은 여기서 끝이다. render에서 다시 업데이트 되지 않는다.
+        // update 를 하려면 componentDidUpdate 할 수 있다.
         console.log('componentDidMount');
       }
 
