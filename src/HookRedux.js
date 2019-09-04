@@ -1,3 +1,4 @@
+// 1) Redux classic style
 // const mapStateToProps = (state)=> {
 //     return {
 //         todolist : state.todolist
@@ -13,6 +14,12 @@
 // }
 
 // const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+// 2) react-redux hook style
+// useSelector()
+// useDispatch()
+// useStore()
 
 //import { useDispatch, useSelector } from 'react-redux'
 // const AppContainer = () => {
