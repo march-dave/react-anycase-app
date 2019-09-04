@@ -16,7 +16,7 @@
 // const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 
 
-// 2) react-redux hook style
+// 2) react-redux hook style  hook? (7.1.0-alpha.5)
 // useSelector()
 // useDispatch()
 // useStore()
