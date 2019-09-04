@@ -1,10 +1,9 @@
-// 1) Redux classic style
+// 1) HCO style
 // const mapStateToProps = (state)=> {
 //     return {
 //         todolist : state.todolist
 //     }
 // }
-
 // const mapDispatchToProps = (dispatch)=> {
 //     return {
 //         addTodo : (todo) => dispatch(TodoActionCreator.addTodo(todo)),
@@ -12,7 +11,6 @@
 //         toggleDone : (no) => dispatch(TodoActionCreator.toggleDone(no)),
 //     }
 // }
-
 // const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 
 
