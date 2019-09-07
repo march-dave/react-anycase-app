@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 // 라이프 사이클은 componentDidMount, componentDidUnmount, componentWillUnmount 만 지원한다.
 
 const Sample = (props) => {
-    // count, setCount 이것은 어디서 나왔냐?
+    // ? count, setCount 이것은 어디서 나왔냐?
+    // ? useState(0) 이것은 무엇이냐?
+    // ? [count, setCount] 이것은 무엇인데 배열인가?
     const [count, setCount] = useState(0);
 
     // Similar to componentDidMount and componentDidUpdate:
