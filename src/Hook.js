@@ -10,6 +10,7 @@ const Sample = (props) => {
     const [count, setCount] = useState(0);
 
     // Similar to componentDidMount and componentDidUpdate:
+    // ? useEffect 이것도 조사해 보자
     useEffect(() => {
       // Update the document title using the browser API
       document.title = `You clicked ${count} times`;
