@@ -7,6 +7,7 @@ const Sample = (props) => {
     // ? count, setCount 이것은 어디서 나왔냐?
     // ? useState(0) 이것은 무엇이냐?
     // ? [count, setCount] 이것은 무엇인데 배열인가?
+    // ? [count, setCount] = useState(0) 는 어떻게 할당 되나?
     const [count, setCount] = useState(0);
 
     // Similar to componentDidMount and componentDidUpdate:
