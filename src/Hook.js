@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // React Hooks 은 버전 16.8 이상에서 지원 한다.
-// 라이프 사이클은 componentDidMount, componentDidUnmount, componentWillUnmount 만 지원한다.
+// 라이프 사이클은 componentDidMount, componentDidUnmount, componentWillUnmount 만 지원한다. 이얘기는 rendering 이 끝난 후에 만 사용 가능 하나는 얘기 인데?
 
 const Sample = (props) => {
     // ? count, setCount 이것은 어디서 나왔냐?
