@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// 가운데 정렬
 class Hamburger extends Component {
     render() {
         return(
