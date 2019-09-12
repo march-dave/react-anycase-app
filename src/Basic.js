@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import action from "./Action";
 
 const People = [
+  { id: 4, name: "jane" },
   { id: 3, name: "tom" },
   { id: 4, name: "dave" },
   { id: 2, name: "jane" },
