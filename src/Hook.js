@@ -9,6 +9,7 @@ const Sample = (props) => {
     // ? [count, setCount] 이것은 무엇인데 배열인가?
     // ? [count, setCount] = useState(0) 는 어떻게 할당 되나?
     const [count, setCount] = useState(0);
+    const [newTodo, setNewCount] = useState();
 
     // Similar to componentDidMount and componentDidUpdate:
     // ? useEffect 이것도 조사해 보자
