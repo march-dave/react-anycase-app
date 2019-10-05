@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // https://www.youtube.com/watch?v=GuIiGOMJgUI
 // useState, useEffect 가 있는데
 // useState 는 State를 관리 하고 useEffect 는 라이프 사이클을 관리 한다.
+// useEffect는 두번 이상 호출 되는 것을 라이프 사이클에서 관리 할 수 있다.
 
 // https://www.youtube.com/watch?v=y52Av3JxNW4
 
