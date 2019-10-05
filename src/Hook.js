@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 // https://www.youtube.com/watch?v=GuIiGOMJgUI
+// useState, useEffect 가 있는데
+// useState 는 State를 관리 하고 useEffect 는 라이프 사이클을 관리 한다.
+
 // https://www.youtube.com/watch?v=y52Av3JxNW4
+
+
 
 // React Hooks 은 버전 16.8 이상에서 지원 한다.( 버전 1.8 이상이다 !!!)
 // 라이프 사이클은 componentDidMount, componentDidUnmount, componentWillUnmount 만 지원한다. 이얘기는 rendering 이 끝난 후에 만 사용 가능 하나는 얘기 인데?
