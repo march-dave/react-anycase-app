@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 // useState 는 State를 관리 하고 useEffect 는 라이프 사이클을 관리 한다.
 // useEffect는 두번 이상 호출 되는 것을 라이프 사이클에서 관리 할 수 있다.
 // const {number, setNumber} = useState(0); 
+// 이경우 number state 사용 하고 setNumber를 통해서 입력 받는다.
 
 // https://www.youtube.com/watch?v=y52Av3JxNW4
 
