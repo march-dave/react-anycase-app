@@ -17,7 +17,7 @@
             border-right: 5px solid #ccc;
             border-bottom: 5px solid #999;
         }
-
+        
         .talk-contents {
             background-color: #FFF;
             padding: 2em;
@@ -27,7 +27,19 @@
             position: relative;
             margin-bottom: 2em;
         }
-
+        /* .talk-contents::before {
+            content: ' ';
+            border-width: 1em;
+            border-style: solid;
+            border-color: #ddd transparent transparent transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 0;
+            margin: auto;
+            bottom: -2em;
+        } */
+        
         .talk-contents::after {
             content: ' ';
             border-width: 1em;
@@ -40,7 +52,6 @@
             margin: auto;
             bottom: -2em;
         }
-
         /* .talk-contents:hover {
             opacity: 1;
             top: -20px;
