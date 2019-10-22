@@ -4,3 +4,4 @@
 # text-align vs margin 상속에 대해서 알아 봐야 함
 
 # :after :before 알아 보자
+# transform: rotate 알아 보자
