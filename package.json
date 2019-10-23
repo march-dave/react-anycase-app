@@ -3,10 +3,12 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "axios": "^0.19.0",
         "immer": "^3.1.2",
         "lodash.debounce": "^4.0.8",
         "node-sass": "^4.11.0",
         "react": "^16.8.6",
+        "react-csv": "^1.1.1",
         "react-dom": "^16.8.6",
         "react-html-converter": "^0.3.2",
         "react-lz-editor": "^0.12.1",
