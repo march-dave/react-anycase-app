@@ -5,14 +5,15 @@ import Basic from "./Basic";
 import BasicInfo from "./BasicInfo";
 import Counter from "./Counter";
 import Hamburger from "./Hamburger";
-import SeeRef from './SeeRef';
-import MyComp from './MyComp';
-import ReactSelect from './ReactSelect';
-import Contact from './Contact';
-import SeeRefV2 from './SeeRefV2';
+import SeeRef from "./SeeRef";
+import MyComp from "./MyComp";
+import ReactSelect from "./ReactSelect";
+import Contact from "./Contact";
+import SeeRefV2 from "./SeeRefV2";
 // import HtmlConverter from './HtmlConverter';
-import StateParent from './StateParent';
-import Toastify from './Toastify';
+import StateParent from "./StateParent";
+import Toastify from "./Toastify";
+import CSVDownload from "./CSVDownload";
 import "./style.scss";
 
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
         <SeeRefV2 />
         <StateParent />
         <Toastify />
+        <CSVDownload />
       </div>
     );
   }
