@@ -39,3 +39,20 @@
 // 4 
 // 3 
 // '안녕하세요 동기, 비동기'
+
+// call back log 찍기
+
+function myFunc() {
+return 'func';
+}
+
+async function myAsync() {
+return 'async'
+}
+
+myAsync().then( (result) => {
+    console.log(result)
+}  )
+
+console.log(myFunc());
+console.log(myAsync());
