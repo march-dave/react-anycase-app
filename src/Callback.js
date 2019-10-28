@@ -42,17 +42,17 @@
 
 // call back log 찍기
 
-myFunc() =>  {
-    return 'func';
-}
+// myFunc() =>  {
+//     return 'func';
+// }
 
-async myAsync () => {
-    return 'async'
-}
+// async myAsync () => {
+//     return 'async'
+// }
 
-myAsync().then( (result) => {
-    console.log(result)
-}  )
+// myAsync().then( (result) => {
+//     console.log(result)
+// }  )
 
-console.log(myFunc());
-console.log(myAsync());
+// console.log(myFunc());
+// console.log(myAsync());
