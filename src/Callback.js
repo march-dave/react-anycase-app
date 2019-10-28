@@ -42,12 +42,12 @@
 
 // call back log 찍기
 
-function myFunc() {
-return 'func';
+myFunc() =>  {
+    return 'func';
 }
 
-async function myAsync() {
-return 'async'
+async myAsync () => {
+    return 'async'
 }
 
 myAsync().then( (result) => {
