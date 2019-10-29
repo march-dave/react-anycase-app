@@ -342,3 +342,6 @@ git config --list 로 현재 사용자 확인
 
 git config --local user.name '사용자 id' <-- 안써도 된다 귀찮으면, 아래 이메일만 정확 하면 유저 이름 쯤이야~!!
 git config --local user.email 'abc@abc.com'
+
+# react 에서 
+process.env.xxx 는 어떻게 쓰는지 알아 봐야 한다. 
