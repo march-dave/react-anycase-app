@@ -8,3 +8,5 @@
 # position relative 와 absolute 에 대해서 알아 보자
 # 그림자 생성 하기 
 # border-radis
+
+# poistion:relative; top: -20px 와 margin: -60px; 차이점
