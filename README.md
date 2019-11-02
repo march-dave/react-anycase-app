@@ -347,3 +347,4 @@ git config --local user.email 'abc@abc.com'
 process.env.xxx 는 어떻게 쓰는지 알아 봐야 한다. 
 webpack webpack.DefinePlugin 에서 설정 할 수 있다.
 webpack splitchunks - https://webpack.js.org/plugins/split-chunks-plugin/
+- splitchunks 에서 얼마나 자세하게 splitchunks 를 할 수 있나 알아 봐야 한다.
