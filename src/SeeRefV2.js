@@ -3,8 +3,11 @@
 import React, { Component } from 'react'
 
 export default class SeeRefV2 extends Component {
-    focuseMe = React.createRef(); // React version over 16.3 
-                                    // 여기서 ref 가 설정 됐다. 요로케 React.createRef()
+    // React version 16.3 이상에서 사용 가능 하며  
+    // 여기서 ref 가 설정 됐다. 요로케 React.createRef()
+    // 이것은 Object 랍니다.
+    focuseMe = React.createRef(); 
+
 
     handleClick = () => {
         this.focuseMe.current.focus(); // React version over 16.3
