@@ -2,3 +2,4 @@
 // arr.map( (cur) => )
 // arr.some( (cur) => )
 // arr.reducer( (cur) => )
+// arr.forEach( () => )
