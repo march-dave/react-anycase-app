@@ -3,3 +3,4 @@
 // arr.some( (cur) => )
 // arr.reducer( (cur) => )
 // arr.forEach( () => )
+// arr.filter( () => )
