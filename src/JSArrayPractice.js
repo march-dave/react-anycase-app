@@ -4,3 +4,4 @@
 // arr.reducer( (cur) => )
 // arr.forEach( () => )
 // arr.filter( () => )
+// arr.fill()
