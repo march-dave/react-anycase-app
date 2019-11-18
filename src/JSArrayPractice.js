@@ -6,3 +6,6 @@
 // arr.filter( () => )
 // arr.fill()
 // arr.includes( )
+
+
+// for(let i=0; i<arr.length -1; i++) {}
