@@ -23,3 +23,41 @@
 //   }
   
 //   subsets([1,2,3]);
+
+
+// var subsets = function(nums) {
+//     combine(nums.slice(0));
+//   };
+  
+//   function combine(nums) {
+//       while (nums.length) {
+//       let r = nums.shift();
+//       console.log(r, ':',  nums);
+//       combine(nums.slice(0));
+//     }
+//   }
+  
+//   subsets([1,2,3]);
+
+
+// function combine(nums) {
+//     while (nums.length) {
+//         nums.shift();
+//         console.log(nums);
+//         return combine(nums.slice(0));
+//   }
+// }
+
+// combine([1,2,3])
+
+
+
+// ---------------  return -----------
+//     1 : [ 2, 3 ]
+//     2 : [ 3 ]
+//     3 : []
+//     3 : []
+//     2 : [ 3 ]
+//     3 : []
+//     3 : []
+// ------------------------------------
