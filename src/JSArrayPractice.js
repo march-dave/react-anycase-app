@@ -75,7 +75,7 @@
         
     //     for(var i = 0; i < nums.length; i++){
     //         var num = nums[i];
-    //         total ^= num;
+    //         total ^= num; // 햐... 이렇게 까지.
     //     }
         
     //     return total;
