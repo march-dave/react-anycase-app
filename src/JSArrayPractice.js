@@ -69,23 +69,15 @@
 //  */
 // var singleNumber = function(nums) {
     
-//     let hashMap = {};
+    // var singleNumber = function(nums) {
     
-//     for(let i=0; i<nums.length; i++) {
-//         if(!hashMap[nums[i]]) {
-//             hashMap[nums[i]]++;
-//         } else {
-//             hashMap[nums[i]] = 1;
-//         }
-//     }
-    
-//     let r_o;
-//     for( let o in hashMap ) {
-//         if (hashMap[o] == 1) {
-//            r_o = o; 
-//         } 
-//     }
-    
-//     return r_o;
-     
-// };
+    //     var total = 0;
+        
+    //     for(var i = 0; i < nums.length; i++){
+    //         var num = nums[i];
+    //         total ^= num;
+    //     }
+        
+    //     return total;
+         
+    // };
