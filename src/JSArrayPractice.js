@@ -50,6 +50,16 @@
 
 // combine([1,2,3])
 
+// function combine(nums) {
+//     while (nums.length) {
+//         nums.shift();
+//         console.log(nums);
+//         return combine(nums);
+//   }
+// }
+
+// combine([1,2,3])
+
 
 
 // ---------------  return -----------
