@@ -251,11 +251,10 @@ var moveZeroes = function(nums) {
         if (nums[i] === 0) { 
            
             temp = nums.shift();
-            
             nums.push(temp);
-            
         }
     }
+    return nums;
 };
 
 console.log(moveZeroes[[0,1,0,3,12]])
