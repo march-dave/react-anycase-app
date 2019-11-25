@@ -245,20 +245,15 @@
  */
 // var moveZeroes = function(nums) {
     
-//     let arr = [];
+//     let temp = '';
     
 //     for(let i=0; i<nums; i++) {
-//         if (nums[i] !== 0) { 
-//             arr.push(nums[i])
+//         if (nums[i] === 0) { 
+           
+//             temp = nums.shift();
+            
+//             nums.push(temp);
+            
 //         }
 //     }
-    
-//     for(let j=0; j<nums; j++) {
-//         if(nums[j] === 0) { 
-//             arr.push(nums[j])
-//         }
-//     }
-    
-//     return arr;
-    
 // };
