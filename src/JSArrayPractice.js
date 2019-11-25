@@ -238,3 +238,27 @@
     
 //     return s.substring(left+1, right);
 // }
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+// var moveZeroes = function(nums) {
+    
+//     let arr = [];
+    
+//     for(let i=0; i<nums; i++) {
+//         if (nums[i] !== 0) { 
+//             arr.push(nums[i])
+//         }
+//     }
+    
+//     for(let j=0; j<nums; j++) {
+//         if(nums[j] === 0) { 
+//             arr.push(nums[j])
+//         }
+//     }
+    
+//     return arr;
+    
+// };
