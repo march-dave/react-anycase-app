@@ -243,17 +243,19 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-// var moveZeroes = function(nums) {
+var moveZeroes = function(nums) {
     
-//     let temp = '';
+    let temp = '';
     
-//     for(let i=0; i<nums; i++) {
-//         if (nums[i] === 0) { 
+    for(let i=0; i<nums; i++) {
+        if (nums[i] === 0) { 
            
-//             temp = nums.shift();
+            temp = nums.shift();
             
-//             nums.push(temp);
+            nums.push(temp);
             
-//         }
-//     }
-// };
+        }
+    }
+};
+
+console.log(moveZeroes[[0,1,0,3,12]])
