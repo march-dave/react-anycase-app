@@ -244,8 +244,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    
-    let temp = '';
+    let temp;
     
     for(let i=0; i<nums.length; i++) {
         if (nums[i] === 0) { 
@@ -254,7 +253,7 @@ var moveZeroes = function(nums) {
             nums.push(temp);
         }
     }
-    return nums;
+    console.log(nums);
 };
 
-console.log(moveZeroes[[0,1,0,3,12]])
+console.log(moveZeroes([0,1,0,3,12]))
