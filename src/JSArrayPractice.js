@@ -247,7 +247,7 @@ var moveZeroes = function(nums) {
     
     let temp = '';
     
-    for(let i=0; i<nums; i++) {
+    for(let i=0; i<nums.length; i++) {
         if (nums[i] === 0) { 
            
             temp = nums.shift();
