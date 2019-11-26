@@ -287,3 +287,16 @@
   
 //     return true;
 // };
+
+
+// 258. Add Digits
+// Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var addDigits = function(num) {
+    let arr = num.toString().split("");
+    return arr.length === 1 ? num : addDigits(arr.reduce( (p, c) => parseInt(p) + parseInt(c)    ) 
+};
