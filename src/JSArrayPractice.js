@@ -289,7 +289,33 @@
  * @param {number} num
  * @return {number}
  */
-var addDigits = function(num) {
-    let arr = num.toString().split("");
-    return arr.length === 1 ? num : addDigits(arr.reduce( (p, c) => parseInt(p) + parseInt(c)    ) 
-};
+// var addDigits = function(num) {
+//     let arr = num.toString().split("");
+//     return arr.length === 1 ? num : addDigits(arr.reduce( (p, c) => parseInt(p) + parseInt(c)    ) 
+// };
+
+// 2. Add Two Numbers
+// You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+// var addTwoNumbers = function(l1, l2) {
+    
+//     // l1 = 243 --> 342
+//     // l2 = 564 --> 465
+//     // 342 + 465 = 807
+    
+    
+// };
