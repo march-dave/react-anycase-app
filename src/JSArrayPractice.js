@@ -319,3 +319,30 @@
     
     
 // };
+
+
+// 8. String to Integer (atoi)
+
+/**
+ * @param {string} str
+ * @return {number}
+ */
+// var myAtoi = function(str) {
+    
+//     let arr = str.trim().split(' ');
+    
+//     let num = 0;
+//     let r_num = 0;
+    
+//      if (arr[0].match(/\d+/g) != undefined) {
+//          num = parseInt(arr[0])
+//      }
+    
+//     ( num > 0 ) ?  r_num = Math.min( Math.pow(2, 31) - 1, num) : 
+//                     r_num = Math.max( Math.pow(2, 31) | 0, num);
+    
+//     if ( isNaN(r_num) ) {
+//         r_num = 0;
+//     }
+//     return r_num;
+// };
