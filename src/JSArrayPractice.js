@@ -355,8 +355,16 @@
 //  * @return {number}
 //  */
 // var maxArea = function(height) {
-//     let left = 0;
-//     let right = height - 1;
+    // let left = 0;
+    // let right = height - 1;
+    // let maxWater = 0;
+    
+    // 루프 돌리고
+    // var contain = (right-left)*Math.min(height[left],height[right]);
+    //    maxWater = Math.max(contain, maxWater);
+
+    
+    // return maxWater;
     
     
     
