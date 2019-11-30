@@ -374,13 +374,20 @@
  * @param {string[]} strs
  * @return {string}
  */
-// var longestCommonPrefix = function(strs) {
-//     if (strs.length <= 0) return '';
-//     return strs.reduce(function (prev, next) {
-//         let i = 0;
-//         while (prev[i] && next[i] && prev[i] === next[i]) i++;
-//         return prev.slice(0, i);
-//     });
+// var searchRange = function(nums, target) {
+    
+//     let arr = [];
+//     let r_arr = [];
+    
+//     arr = nums.map( (cur, idx) =>  { if (cur === target) return idx }  ).filter( c => c !== undefined );
+    
+//     if (arr.length > 1) {
+//         return r_arr.concat(arr[0]).concat(arr[arr.length-1]);
+//     } else if (arr.length == 1) {
+//         return arr.concat(arr);
+//     } else {
+//         return [-1, -1];
+//     }
 // };
 
 // 15. 3Sum
