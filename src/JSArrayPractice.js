@@ -355,16 +355,27 @@
 //  * @return {number}
 //  */
 // var maxArea = function(height) {
-    // let left = 0;
-    // let right = height - 1;
-    // let maxWater = 0;
+//     let left = 0; // 왼쪽
+//     let right = height - 1; // 오른쪽
+//     let maxWater = 0; // 반환될 가장 많은 물의 양 값
     
-    // 루프 돌리고
-    // var contain = (right-left)*Math.min(height[left],height[right]);
-    //    maxWater = Math.max(contain, maxWater);
-
+//     // 루프 돌리고 어디까지 돌리냐면? 왼쪽과 오른쪽이 만나기 전까지
+//     while( left < right ) {
+//     let contain = (right-left)*Math.min(height[left],height[right]);
+//        maxWater = Math.max(contain, maxWater);
+        
+//         // 여기서는 하나씩 배열의 값을 변경 해준다.
+//         // 왼쪽이 크면 오른쪽 빼고
+//         // 오른쪽이 크면 왼쪽 빼고
+        
+//         if ( height[left] > height[right] ) {
+//             right--;
+//         } else {
+//             left--;
+//         }
+//     }
     
-    // return maxWater;
+//     return maxWater;
 // };
 
 // Write a function to find the longest common prefix string amongst an array of strings.
