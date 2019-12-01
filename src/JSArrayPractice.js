@@ -364,9 +364,9 @@
 //     let contain = (right-left)*Math.min(height[left],height[right]);
 //        maxWater = Math.max(contain, maxWater);
         
-//         // 여기서는 하나씩 배열의 값을 변경 해준다.
-//         // 왼쪽이 크면 오른쪽 빼고
-//         // 오른쪽이 크면 왼쪽 빼고
+//          여기서는 하나씩 배열의 값을 변경 해준다.
+//          왼쪽이 크면 오른쪽 빼고
+//          오른쪽이 크면 왼쪽 빼고
         
 //         if ( height[left] > height[right] ) {
 //             right--;
