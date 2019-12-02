@@ -412,3 +412,34 @@
 //     nums.sort( (a, b) => a -b )
     
 // };
+
+
+// 12. Integer to Roman
+/**
+ * @param {number} num
+ * @return {string}
+ */
+// var intToRoman = function(num) {
+    
+//     // num 이 IIII --> 4 이면 --> IV
+//     // num 이 9 --> IX
+    
+//     //     V (5) --> IV --> 4
+//     //     L (50) --> XL( )
+//     //     C(100) --> XC(90)
+
+//     //     D(500) --> CD(400)
+//     //     M(1000) --> CM(900)ㅗ
+    
+//     // 4 로 나눠서 0 이 나오면
+//    1, 5,  (num % 4 === 1) 이면 I, V - 1,  
+//    10, 50  (num % 4 === 2) X - 1,
+//     (num % 4 === 2) 이면 L - 10, 
+//    100 (num % 4 === 4)    C - 100, 
+//    500  (num % 4 === 20)  D - 1,  
+//    1000 (num % 4 === 40)  M - 1   
+//     // 58 LVIII
+//     // 1994 MCMXCIV
+//     // integer convert to a roman numeral
+//     // 범위 1 to 3999
+// };
