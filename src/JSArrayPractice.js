@@ -448,3 +448,33 @@
 //     // integer convert to a roman numeral
 //     // 범위 1 to 3999
 // };
+
+// 13. Roman to Integer
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// var romanToInt = function(s) {
+    
+//     // s 는 I, V, IX, LVIII ... 처럼 로마체가 넘어온다
+//     // 그것을 숫자로 변경 하는 것이 임무
+    
+//     let obj = {
+//         I: 1,
+//         V: 5,
+//         X: 10,
+//         L: 50,
+//         C: 100,
+//         D: 500,
+//         M: 1000
+//     }
+    
+//     return obj[s];
+    
+    
+//     for(let idx in obj) {
+        
+//         // IX, LVIII 등등등 은 문자열을 파싱 해서 숫자와 매핑 해서 return 한다.
+        
+//     }
+// };
