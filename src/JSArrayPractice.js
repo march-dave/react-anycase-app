@@ -482,3 +482,17 @@
     
 //     return res;
 // };
+
+// 15. 3Sum
+// /**
+//  * @param {number[]} nums
+//  * @return {number[][]}
+//  */
+// var threeSum = function(nums) {
+    
+//     nums.sort( (a, b) => { return a - b } )
+    
+//     // 배열에서 3개를 더해서 0 만들기
+//     // 배열 요소를 2번 쓰지 아니 한다
+    
+// };
