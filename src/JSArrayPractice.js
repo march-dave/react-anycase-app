@@ -507,6 +507,31 @@
     
     // 경우 3 - 3) 이건 사실 좀 거시기 하네 
     // 배열 요소가 0 이 아니지만 
-    // 그냥 전체를 더해서 0 이 되는 경우 
+    // 그냥 전체를 더해서 0 이 되는 경우
+
+    // 다 필요 없고 기준점 1개를 정해서
+    // 2개를 더해서 기준점과의 합이 0 이 되면 된다.
+    let res = [];
+    
+    // nums = [-1, 0, 1, 2, -1, -4],
+    // sorting 하고 나서 nums = [-4, -1, -1, 0, 2, 1],
+    let j = 0, k=0;
+    for(let i=0; i<nums.length-2; i++) {
+        
+        let tar = 0 - nums[i];
+        
+        j = i + 1;
+        k = nums.length - 1;
+        
+        while(j < k) {
+            if (tar === (nums[j] + nums[k]) ) {
+                res.push(nums[i], nums[j], nums[k])
+            }
+            j++;
+            k--;
+        }
+    }
+    
+    return res;
 
 // };
