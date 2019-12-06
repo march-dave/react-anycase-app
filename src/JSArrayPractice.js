@@ -524,13 +524,21 @@
         k = nums.length - 1;
         
         while(j < k) {
-            if (tar === (nums[j] + nums[k]) ) {
-                res.push(nums[i], nums[j], nums[k])
+            
+            if (tar === nums[j] + nums[k] ) {
+                res.push([nums[i], nums[j], nums[k]])
+            
+                j++;
+                k--;
+
+                while (j < k && nums[j] === nums[j - 1]) j++;
+                while (j < k && nums[k] === nums[k + 1]) k--;
+                
+            } else if (nums[j] + nums[k] < tar) {
+                j++;
+            } else {
+                k--;
             }
-            while (j < k && nums[j] === nums[j + 1]) j++;
-            while (j < k && nums[k] === nums[k - 1]) k--;
-            j++;
-            k--;
         }
     }
     
