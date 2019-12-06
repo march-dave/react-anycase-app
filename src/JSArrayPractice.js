@@ -511,37 +511,37 @@
 
     // 다 필요 없고 기준점 1개를 정해서
     // 2개를 더해서 기준점과의 합이 0 이 되면 된다.
-    let res = [];
+    // let res = [];
     
-    // nums = [-1, 0, 1, 2, -1, -4],
-    // sorting 하고 나서 nums = [-4, -1, -1, 0, 2, 1],
-    let j = 0, k=0;
-    for(let i=0; i<nums.length-2; i++) {
+    // // nums = [-1, 0, 1, 2, -1, -4],
+    // // sorting 하고 나서 nums = [-4, -1, -1, 0, 2, 1],
+    // let j = 0, k=0;
+    // for(let i=0; i<nums.length-2; i++) {
         
-        let tar = 0 - nums[i];
+    //     let tar = 0 - nums[i];
         
-        j = i + 1;
-        k = nums.length - 1;
+    //     j = i + 1;
+    //     k = nums.length - 1;
         
-        while(j < k) {
+    //     while(j < k) {
             
-            if (tar === nums[j] + nums[k] ) {
-                res.push([nums[i], nums[j], nums[k]])
+    //         if (tar === nums[j] + nums[k] ) {
+    //             res.push([nums[i], nums[j], nums[k]])
             
-                j++;
-                k--;
+    //             j++;
+    //             k--;
 
-                while (j < k && nums[j] === nums[j - 1]) j++;
-                while (j < k && nums[k] === nums[k + 1]) k--;
+    //             while (j < k && nums[j] === nums[j - 1]) j++;
+    //             while (j < k && nums[k] === nums[k + 1]) k--;
                 
-            } else if (nums[j] + nums[k] < tar) {
-                j++;
-            } else {
-                k--;
-            }
-        }
-    }
+    //         } else if (nums[j] + nums[k] < tar) {
+    //             j++;
+    //         } else {
+    //             k--;
+    //         }
+    //     }
+    // }
     
-    return res;
+    // return res;
 
 // };
