@@ -545,3 +545,19 @@
     // return res;
 
 // };
+
+// 1. Two Sum
+
+// var twoSum = function(nums, target) {
+//     let hash = {};
+//     for(let i = 0; i < nums.length; i++) {
+//         let num = nums[i];
+//         if(hash[num] !== undefined) {
+//             return [hash[num], i];
+//         } else {
+//             hash[target - num] = i;
+//         }
+//     }
+    
+//     return [];
+// };
