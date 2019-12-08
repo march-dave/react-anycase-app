@@ -549,15 +549,15 @@
 // 1. Two Sum
 
 // var twoSum = function(nums, target) {
-//     let hash = {};
-//     for(let i = 0; i < nums.length; i++) {
-//         let num = nums[i];
-//         if(hash[num] !== undefined) {
-//             return [hash[num], i];
-//         } else {
-//             hash[target - num] = i;
-//         }
-//     }
+    // let hash = {};
+    // for(let i = 0; i < nums.length; i++) {
+    //     let num = nums[i]; // 2, 7, 11, 15
+    //     if(hash[num] !== undefined) {   // 
+    //         return [hash[num], i];  // [0, 1] // 햐!!! 별것을 다 생각해 내야 하네
+    //     } else {
+    //         hash[target - num] = i;  // hash[9-2] = 0, hash[9-7] = 1, hash[9-11] = 3, hash[9-15] = 4
+    //     }                            // hash[7] = 0, hash[2] = 1
+    // }
     
 //     return [];
 // };
