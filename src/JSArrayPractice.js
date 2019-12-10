@@ -561,3 +561,27 @@
     
 //     return [];
 // };
+
+// 3. Longest Substring Without Repeating Characters
+// Input: "abcabcbb"
+// Output: 3 
+// /**
+//  * @param {string} s
+//  * @return {number}
+//  */
+// var lengthOfLongestSubstring = function(s) { 
+//     // 반복 안되는 문자열의 길이 반환하기
+//     let res = '';
+    
+//     for(let i=0; i<s.length; i++) {
+        
+//         // 여기서 반복이 안되면 res 대입 하면 된다
+//         if (res[res.length] !== s[i]) {
+//             res += s[i];    
+//         }
+        
+        
+//     }
+    
+//     return res.length;
+// };
