@@ -585,3 +585,18 @@
     
 //     return res.length;
 // };
+
+// 4. Median of Two Sorted Arrays
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+// var findMedianSortedArrays = function(nums1, nums2) {
+    
+//     let a = nums1[nums1.length - 1];
+//     let b = nums2[0];
+    
+//     return (a + b) / 2; 
+    
+// };
