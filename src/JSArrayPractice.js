@@ -632,3 +632,23 @@
 //     return res;
     
 // };
+
+// 26. Remove Duplicates from Sorted Array
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// var removeDuplicates = function(nums) {
+    
+//     // 입력이 nums = [0,0,1,1,1,2,2,3,3,4] 반환은 5 중복값은 제거 하고
+    
+//     var count = 0;
+//     for(var i = 1 ; i < nums.length ; i++){
+//         if(nums[count] != nums[i]){
+//             count++;
+//             nums[count] = nums[i];
+//         }
+//     }    
+//     return ++count;
+    
+// };
