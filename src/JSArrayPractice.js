@@ -600,3 +600,35 @@
 //     return (a + b) / 2; 
     
 // };
+
+// 16. 3Sum Closest
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number}
+//  */
+// var threeSumClosest = function(nums, target) {
+//     // nums = [-1, 2, 1, -4]
+//     // target = 1
+//     // 배열중 3개의 값을 더해서 target 값이 나오는 배열을 찾기
+//     // [-1, 2, 1] 는 -1 + 2 + 1 ==> 2 이지만 target = 1 의 가장 가까운 값 2를 반환! 
+    
+//     let sum = 0;
+//     let res = 0;
+//     let j = 0;
+    
+//     for(let i=0; i<nums.length - 1; i++) {    
+//         j = i+ 1;   // 시작 다음 부터
+//         k = nums.length - 1;    // 꼬리 부터
+
+//         // 3개를 더해서 target의 가까운 값이면 된다
+//         sum = nums[i] + nums[j] + nums[k];
+        
+//         res = Math.abs(target - sum);
+        
+//         res  = sum;
+//     }
+    
+//     return res;
+    
+// };
