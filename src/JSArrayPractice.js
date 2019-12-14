@@ -652,3 +652,33 @@
 //     return ++count;
     
 // };
+
+// 27. Remove Element
+
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+// var removeElement = function(nums, val) {
+//     // Given nums = [3,2,2,3], val = 3, 3 을 배열에서 제거 하고
+//     // nums = [2,2] 배열에 길이는 2가 반환
+    
+//     // Given nums = [0,1,2,2,3,0,4,2], val = 2,
+//     // nums = [0,1,3,0,4] 길이가 5가 반환
+    
+// //     let res = nums.filter( cur => cur !== val );
+// //     return res.length;
+    
+//     for(let i=0; i<nums.length; i++) {
+        
+//         if (nums[i] === val) { 
+//             nums.splice(i, 1);
+//             i--;
+//         }
+        
+//     }
+    
+//     return nums.length;
+    
+// };
