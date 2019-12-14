@@ -682,3 +682,35 @@
 //     return nums.length;
     
 // };
+
+
+// 1285. Element Appearing More Than 25% In Sorted Array
+/**
+ * @param {number[]} arr
+ * @return {number}
+ */
+// var findSpecialInteger = function(arr) {
+//     // 배열중 25% 이상 나타는것 정수로 반화하기
+//     // 배열을 한번씩 돌면서 해쉬에 넣고 키(숫자) 값(증가값)을 만들면
+    
+//     let hashMap = {};
+//     let max = 1;
+    
+//     for(let i=0; i<arr.length; i++) {
+//         if(hashMap[arr[i]]) {
+//             hashMap[arr[i]]++;
+//         } else {
+//             hashMap[arr[i]] = 1;
+//         }
+//     }
+    
+    
+//     for (let char in hashMap) {
+//       if (hashMap[char] > max) {
+//         // max = hashMap[char];
+//           max = char;
+//       }
+//     }
+    
+//     return max;
+// };
