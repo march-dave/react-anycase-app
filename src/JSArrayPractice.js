@@ -719,5 +719,28 @@
 //     return max;
 // };
 
-
+// var threeSumClosest = function(nums, target) {
+//     let diff = Infinity;
+//     let container = null;
+    
+//     nums.sort((a,b) => a - b);
+    
+//     for(let i = 0; i < nums.length - 2; i++){
+//         let j = i + 1;
+//         let k = nums.length - 1;
+        
+//         while(j < k){
+//             let sum = nums[i] + nums[j] + nums[k];
+//             let newDiff = sum - target;
+            
+//             if(Math.abs(newDiff) < diff) container = sum;
+//             diff = Math.min(Math.abs(newDiff), diff);
+            
+//             if(newDiff >= 0) k--;
+//             else j++;
+//         }
+//     }
+//     return container
+    
+// };
 
