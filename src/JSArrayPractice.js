@@ -612,28 +612,27 @@
 //     // target = 1
 //     // 배열중 3개의 값을 더해서 target 값이 나오는 배열을 찾기
 //     // [-1, 2, 1] 는 -1 + 2 + 1 ==> 2 이지만 target = 1 의 가장 가까운 값 2를 반환! 
-//     // 어떻게 풀어야 하나. 모르겠네. 2019-12-15
+//     // 2019-12-15 어떻게 풀어야 하나. 모르겠네. 
+//     // 2019-12-17 3 개의 배열값을 더해서 기준값과 비교(절대값) 해서 크면 k 에서 빼고 반대로 작으면 j를 올리고
+//     // 그런데 아직 
+//     // 순서를 한번은 정렬을 하고 Submit을 통과 못했다. [1, 1, 1, 0], -100 일때 2를 반환 해야하는데 3을 반환!! 
+//     nums.sort( (a, b) => a - b );
     
-//     // 순서를 한번은 정렬을 하고
-//     nums.sort( (a, b) => (a - b) );
-    
-//     let sum = 0;
-//     let res = 0;
+//     // let sum = 0;
+//     let res = null;
 //     let j = 0, k = 0;
 //     let diff = 9999; // 처음에 그냥 어마 어마 하게 큰 랜덤값을 넣어 둔다.
     
 //     for(let i=0; i<nums.length - 2; i++) {    
-//         j = i+ 1;   // 시작 다음 부터
-//         k = nums.length - 1;    // 꼬리 부터
+//          j = i+ 1;   // 시작 다음 부터
+//          k = nums.length - 1;    // 꼬리 부터
         
 //         while( j < k ) {
 //             // 3개를 더해서 target의 가까운 값이면 된다
-//             sum = nums[i] + nums[j] + nums[k];
+//             let sum = nums[i] + nums[j] + nums[k];
 
 //             let newDiff = sum - target;
-
-//             res  = sum;
-            
+   
 //             if(Math.abs(newDiff) < diff) res = sum;
 //             diff = Math.min(Math.abs(newDiff), diff);
             
