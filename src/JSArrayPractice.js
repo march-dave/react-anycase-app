@@ -726,4 +726,38 @@
 // };
 
 
+// 17. Letter Combinations of a Phone Number
 
+// /**
+//  * @param {string} digits
+//  * @return {string[]}
+//  */
+// var letterCombinations = function(digits) {₩
+    
+//     // digits = 23
+//     // 배열 반환 2 와 3 에 해당하는 배열의 조합을 반환
+//     // ad, ae, af // bd, be, bf // cd, ce, cf
+//     // 이거는 서로 막연결 하나? 방법이 안떠오르네...
+//     // 먼저 해쉬 만들고, 해쉬는 만들고 나서 항상 헷갈린다.
+    
+//     // 2 - abc
+//     // 3 - def
+//     // 4 - ghi
+//     // 5 - jkl
+//     // 6 - mno
+//     // 7 - pqrs 
+//     // 8 - tuv
+//     // 9 - wxyz
+    
+//     let obj = {
+//         1: '',
+//         2: 'abc',
+//         3: 'def',
+//         4: 'ghi',
+//         5: 'jkl',
+//         6: 'mno',
+//         7: 'pqrs',
+//         8: 'tuv',
+//         9: 'wxyz'
+//     }
+// };
