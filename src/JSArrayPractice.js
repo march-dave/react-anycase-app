@@ -789,3 +789,23 @@
 //         return [...acc, ...tmp]
 //       }, []);
 //   }
+
+// 18. 4Sum
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number[][]}
+//  */
+// var fourSum = function(nums, target) {
+    
+//     //nums = [1, 0, -1, 0, -2, 2], target = 0 이면
+//     // 2차원 배열을 4개를 합쳐서 0이 되는 배열을 반환 한다.
+//     // 요롷게
+//     // [
+//     //   [-1,  0, 0, 1],
+//     //   [-2, -1, 1, 2],
+//     //   [-2,  0, 0, 2]
+//     // ]
+
+    
+// };
