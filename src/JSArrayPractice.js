@@ -809,6 +809,35 @@
 //     //   [-2, -1, 1, 2],
 //     //   [-2,  0, 0, 2]
 //     // ]
-
     
 // };
+
+// 19. Remove Nth Node From End of List
+// var removeNthFromEnd = function(head, n) {
+//     let runner = head;
+//     let curr = head;
+//     let prev = head;
+//     let i = 0;
+//     let counter = 0;
+    
+//     if(n === 0) return head;
+    
+//     while(runner) {
+//         if(i<n) {
+//             i++;
+//         } else if(i === n) {
+//             prev = curr;
+//             curr = curr.next;
+//         }
+//         runner = runner.next;
+//         counter++;
+//     }
+    
+//     if(n === counter) {
+//         return head.next;
+//     }
+    
+//     prev.next = curr.next;
+    
+//     return head;
+// }
