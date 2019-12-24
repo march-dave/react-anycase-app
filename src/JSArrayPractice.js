@@ -848,3 +848,8 @@
 //     this.data = data; 
 //     this.next = null; 
 // }
+// function LinkedList() { 
+//     var _length = 0; 
+//     var _head = null; 
+// }
+
