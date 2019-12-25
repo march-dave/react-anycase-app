@@ -812,6 +812,8 @@
     
 // };
 
+// 1->2->3->4->5 에서 n=2 이라면 뒤에서 두번째 것을 제거 하면
+// 4를 제거 하고 1->2->3->5 를 반환한다.
 // 19. Remove Nth Node From End of List
 // var removeNthFromEnd = function(head, n) {
 //     let runner = head;
