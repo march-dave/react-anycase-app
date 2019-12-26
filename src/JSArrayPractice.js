@@ -874,3 +874,22 @@
 // list.append(15); 
 // list.append(10);
 
+// LinkedList.prototype.removeAt = function(pos) { 
+//     if( pos > -1 && pos < this._length ) { 
+//         var curr = this._head; 
+//         var prev, index = 0; 
+//         if( pos === 0 ) { 
+//             this._head = curr.next; 
+//         } else { 
+//             while( index++ < pos ) { 
+//                 prev = curr; 
+//                 curr = prev.next; 
+//             } 
+//             prev.next = curr.next; 
+//         } 
+//         this._length --; 
+//         curr.next = null; 
+//         return curr.data; 
+//     } 
+//     return null; 
+// };
