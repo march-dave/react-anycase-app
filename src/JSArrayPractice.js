@@ -857,7 +857,8 @@
 
 
 // LinkedList.prototype.append = function(data) { 
-//     var node = new Node(data); var curr; 
+//     var node = new Node(data); 
+//     var curr; 
 //     if( this._head == null ) { 
 //         this._head = node; 
 //     } else { 
