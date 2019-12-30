@@ -908,3 +908,18 @@
 // var replaceElements = function(arr) {
 //     // 뭘 하라는 건지?
 // };
+
+// 20. Valid Parentheses
+// Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// var isValid = function(s) {
+//     // 열고 닫고가 순서에 입각해서 매칭 하면  true 반환 아리면 false
+//     // 입력 캐릭터의 숫자와 순서
+//     // 도대체 이런 프로그래밍이 왜 필요 한지 모르겠다...ㅋㅋ
+    
+//     console.log(s);
+    
+// };
