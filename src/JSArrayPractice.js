@@ -973,3 +973,14 @@
     
 //     return l1 || l2
 // };
+
+// 22. Generate Parentheses
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+// var generateParenthesis = function(n) {
+//     // 3 개의 캐릭터가 묶여서 서로 다르게 반환 되게..그런데 몇 줄?
+//     // 서로 다르게 나올 수 있는 경우의 수를 만들어야 하는 구나!!
+//     // 일단 다음에 계속
+// };
