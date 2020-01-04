@@ -984,3 +984,13 @@
 //     // 서로 다르게 나올 수 있는 경우의 수를 만들어야 하는 구나!!
 //     // 일단 다음에 계속
 // };
+
+// 45. Jump Game II
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// var jump = function(nums) {
+//     //  무슨 말인지 모르겠다.
+    
+// };
