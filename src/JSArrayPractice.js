@@ -991,6 +991,6 @@
  * @return {number}
  */
 // var jump = function(nums) {
-//     //  무슨 말인지 모르겠다.
+//     //  무슨 말인지 모르겠다. DP
     
 // };
