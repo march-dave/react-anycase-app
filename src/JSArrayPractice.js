@@ -1009,3 +1009,4 @@
 
 // R2 = max(R2+P0, R1+P1, R0+P2) 입니다. R2 + P0 = R2 + 0 = R2 본인 자신이니까 첫 항은 삭제합니다. 
 // R2 = max(R2+P0,    1+1,   0+5) 이니까, R2 = 5가 됩니다. 
+// https://www.youtube.com/watch?v=TwsP3C4bJ9s
