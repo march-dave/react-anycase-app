@@ -999,6 +999,23 @@
 // length : i  1 2 3 4 5   6  7  8  9 
 // price  : Pi 1 5 8 9 10 17 17 20 24
 
+// var p = [0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30];
+// function cutRod(p, n) {
+//   var r = [0];
+//   for (var j = 1; j <= n; j++) {
+//     q = -1;
+//     for (var i = 1; i <= j; i++) {
+//       q = Math.max(q, p[i] + r[j - i]);
+//     }
+//     r[j] = q;
+//   }
+//   return r[n];
+// }
+// cutRod(p, 2); // 5
+// cutRod(p, 3); // 8
+// cutRod(p, 4); // 10
+// cutRod(p, 7); // 18
+
 // R4 = (R4+P0, R3+P1, R2+P2, R1+P3, R0+P4) ==> (4+0, 3+1,2+5, 1+8, 0+9)
 
 
