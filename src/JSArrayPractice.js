@@ -1037,3 +1037,23 @@
 // R2 = max(R2+P0, R1+P1, R0+P2) 입니다. R2 + P0 = R2 + 0 = R2 본인 자신이니까 첫 항은 삭제합니다. 
 // R2 = max(R2+P0,    1+1,   0+5) 이니까, R2 = 5가 됩니다. 
 // https://www.youtube.com/watch?v=TwsP3C4bJ9s
+
+
+// 23. Merge k Sorted Lists
+// Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode[]} lists
+ * @return {ListNode}
+ */
+// var mergeKLists = function(lists) {
+//     // 이건 무슨 말인지도 모르겠다.
+//     // 
+// };
