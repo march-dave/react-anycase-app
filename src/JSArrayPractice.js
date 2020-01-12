@@ -1056,3 +1056,12 @@
 // var mergeKLists = function(lists) {
 //     // 이건 무슨 말인지도 모르겠다.
 // };
+
+// 5307. Convert Integer to the Sum of Two No-Zero Integers
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+// var getNoZeroIntegers = function(n) {
+//     // 입력이 2 라면, 출력은 배열 [1, 1]   
+//   };
