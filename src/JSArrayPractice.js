@@ -1063,5 +1063,5 @@
  * @return {number[]}
  */
 // var getNoZeroIntegers = function(n) {
-//     // 입력이 2 라면, 출력은 배열 [1, 1]   
+//      입력이 2 라면, 출력은 배열 [1, 1]   
 //   };
