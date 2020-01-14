@@ -1065,3 +1065,19 @@
 // var getNoZeroIntegers = function(n) {
 //      입력이 2 라면, 출력은 배열 [1, 1]   
 //   };
+
+// 24. Swap Nodes in Pairs
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+// var swapPairs = function(head) {
+//     // 사실 노드와 리스트 나오는 문제는 하나도 못풀겠다. 
+// };
