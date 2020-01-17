@@ -1165,14 +1165,15 @@
 // 인오더
 //        A
 //      B    C
-//  D     E
+//  D     E     F
 //     G
 // DBGEACF
 
 // 포스트 오더
 //        A
 //      B    C
-//  D     E F   G
+//  D     E     F
+//     G
 // DGEBFCA
 
 // 프리오더
