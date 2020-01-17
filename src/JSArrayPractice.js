@@ -1088,3 +1088,15 @@
 // Graph 탐색 목적: 임의의 Vertex 에서 시작 해서 한번씩 모두 방문 하는것, 만약 두번 방문 하면 Graph 아니다.
 // BFS: 수평 : Queue, Graph 제일 중요
 // DFS: 수직 : Stack 
+// BFS: simple code
+// queuq<int> q;
+// check[1] = true; q.push(1);
+// while(!q.empty()) {
+    // int x = q.fornt(); q.pop();
+    // for(int i=1; i<=n; i++) {
+    // if(a[x][i] == 1 && check[i] == false) {
+    //     check[i] = true;
+    //     q.push(i);
+    // }
+    // }
+// }
