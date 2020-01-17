@@ -1088,7 +1088,8 @@
 // 저장 방법 인접 행렬, 인접 리스트 
 
 // Graph 탐색 목적: 임의의 Vertex 에서 시작 해서 연결 되어 있는 Vertex를 한번씩 모두 방문 하는것, 만약 두번 방문 하면 Graph 아니다.
-// BFS: 수평 : Queue, Graph 제일 중요
+// BFS: 수평 : Queue, Graph 제일 중요, 
+// BFS는 모든 가중치가 1일때 최단 거리를 구할 수 있다.
 
 
 
@@ -1105,7 +1106,7 @@
     // }
 // }
 
-// BFS 인접 리스트 방법
+// BFS 인접 리스트 방법 무존껀 좋다
 // queuq<int> q;
 // check[1] = true; q.push(1);
 // while(!q.empty()) {
