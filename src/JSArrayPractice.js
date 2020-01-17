@@ -1104,6 +1104,19 @@
         // }
     // }
 // }
+
+// BFS 인접 리스트 방법
+// queuq<int> q;
+// check[1] = true; q.push(1);
+// while(!q.empty()) {
+    // int x = q.fornt(); q.pop();
+    // for(int i=0; i<=a[x].size; i++) {
+    // int y = a[x][i];    
+    // if(check[y] == false) {
+        // check[y] = true; q.push(y);
+        // }
+    // }
+// }
             
             
 // DFS: 수직 : Stack O(V ^ 2)
