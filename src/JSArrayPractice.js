@@ -1091,7 +1091,7 @@
 
 
 
-// BFS: simple code
+// BFS: simple code : O(E)
 // queuq<int> q;
 // check[1] = true; q.push(1);
 // while(!q.empty()) {
@@ -1105,7 +1105,8 @@
 // }
             
             
-// DFS: 수직 : Stack 
+// DFS: 수직 : Stack O(V ^ 2)
+// 인접 행렬 방법
 // void dfs(int x) {
     // check[x] = true;
     // for(int i=1; i<n; i++) {
@@ -1114,3 +1115,23 @@
         // }
     // }
 // }
+
+// 인접 리스트 방법: Stack O(V + E) or O(E)
+// 차이점은 다음 정점을 찾는다.
+// void dfs(int x) {
+    // check[x] = true;
+    // for(int i=1; i<a[x].size(); i++) {
+        // int y = a[x][i];
+        // if(check[y] == false) {
+            // dfs(y);
+        // }
+    // }
+// }
+
+// 트리
+// 자료구조
+// 사이클이 없는 연결 그래프
+// 루트의 정의가 없다 그렇지만 루트가 있을 수 있다. (젤 중요)
+// 정점의 개수 V
+// 간선의 개수 V-1
+//  
