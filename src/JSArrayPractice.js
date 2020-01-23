@@ -1200,7 +1200,6 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 // var nextPermutation = function(nums) {
-//     // 이건 무엇을 하라는 말인지도 모르겠다.
 //     // 1,2,3 넣었는데 1,3,2 
 //     // 3, 2, 1 --> 1, 2, 3
 //     // 1, 1, 5 --> 1, 5, 1
