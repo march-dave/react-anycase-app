@@ -1200,9 +1200,39 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 // var nextPermutation = function(nums) {
-//     // 1,2,3 넣었는데 1, 3, 2 
-//     // 3, 2, 1 --> 1, 2, 3
-//     // 1, 1, 5 --> 1, 5, 1
-//      // 1 3 5 4 4
-//      // 1 4 3 4 5
-// };
+    
+//     // 문제의 의미는 다음 순열을 뽑아 내는 것이다.
+//     // 1,2,3 의 다음 순열은 1,3,2
+//     if (nums.length < 2) return nums;
+    
+//     // find the i point to the element right before the decreas string
+//     var i = nums.length - 2;
+//     while(i >= 0 && nums[i] >= nums[i + 1]) {
+//         i--;
+//     }
+      
+//     if (i < 0) return nums.reverse();
+    
+//     // find j to swap
+//     var j = i + 1;
+//     for (j; j < nums.length; j++) {
+//         if (nums[j] <= nums[i]) {
+//             break;
+//         };
+//     }
+//     --j;
+ 
+//     //swap i, j
+//     [nums[i], nums[j]] = [nums[j], nums[i]];
+//     // reverse the decreasing string
+//     reverse(nums, i + 1, nums.length - 1);
+//  };
+ 
+//  function reverse(nums, left, right) {
+//     while(left < right) {
+        
+//         [nums[left], nums[right]] = [nums[right], nums[left]];
+//         left++;
+//         right--;
+//     }
+//  }
