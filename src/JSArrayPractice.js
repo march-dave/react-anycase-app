@@ -1199,6 +1199,7 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
+// 이코드는 이해 하고 외워두자!!
 // var nextPermutation = function(nums) {
     
 //     // 문제의 의미는 다음 순열을 뽑아 내는 것이다.
