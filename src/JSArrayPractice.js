@@ -1237,3 +1237,9 @@
 //         right--;
 //     }
 //  }
+
+// DP  N으로 표현
+// function solution(N, number) {
+//     var answer = 0;
+//     return answer;
+// }
