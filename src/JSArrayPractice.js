@@ -1243,3 +1243,12 @@
 //     var answer = 0;
 //     return answer;
 // }
+
+// 46. Permutations
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+// var permute = function(nums) {
+    
+// };
