@@ -1250,5 +1250,23 @@
  * @return {number[][]}
  */
 // var permute = function(nums) {
-    
+    // const res = [];
+
+    // const go = (cur, rest) => {
+    //     if (!rest.length) {
+    //     res.push(cur);
+    //     return;
+    //     }
+
+    //     for (let i = 0; i < rest.length; i++) {
+    //     // note if using array push and splice here, it will cause mutation
+    //     go(
+    //         [...cur, rest[i]],
+    //         [...rest.slice(0, i), ...rest.slice(i + 1)],
+    //     );
+    //     }
+    // };
+
+    // go([], nums);
+    // return res;
 // };
