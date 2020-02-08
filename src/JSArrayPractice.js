@@ -1272,3 +1272,29 @@
 // };
 
 //33. Search in Rotated Sorted Array
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+// var search = function(nums, target) {
+//     let l = 0;
+//     let r = nums.length - 1;
+  
+//     while (l <= r) {
+//       const m = ~~((l + r) / 2);
+  
+//       if (nums[m] === target) return m;
+  
+//       // When dividing the rotated array into two halves, one must be sorted
+//       // Check if the left side is sorted
+//       if (nums[l] <= nums[m]) {
+//         if (nums[l] <= target && target <= nums[m]) r = m - 1; // target is in the left
+//         else l = m + 1; // target is in the right
+//       } else {
+//         if (nums[m] <= target && target <= nums[r]) l = m + 1; // target is in the right
+//         else r = m - 1; // target is in the left
+//       }
+//     }
+//     return -1;
+//   };
