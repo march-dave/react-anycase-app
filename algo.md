@@ -25,3 +25,18 @@ i.e) 1 과 2,  1, 3,  1, 5
 ### 약수 (Divisor)
 % 나눠서 나머지가 0이면 약수.
 여러개가 나올 수 있다.
+
+### 최대공약수 (GCD)
+약수중에서 가장 큰수 
+i.e) 10, 5 ==> 5
+
+### 최소공배수 (LCM)
+i.e) 10, 5 ==> 10
+
+### 피보나치 수열 dp 방식
+var arr = [];
+function fibonacci(n){
+    if(n<=1) return n;
+    else if(m[n]) return m[n];
+    else return m[n] = fibonacci(n-1)+fibonacci(n-2);
+}
