@@ -10,8 +10,8 @@ for(var i=0; i<N; i++) {
 }
 ```
 
+시간 복잡도 O(N 제곱) : 두번 루프를 돌고 있으므로 제곱
 ```
-시간 복잡도 O(N 제곱)
 var sum = 0;
 for(var i=0; i<N; i++) {
     for(var j=0; i<N; j++) {
@@ -22,6 +22,28 @@ for(var i=0; i<N; i++) {
 }
 ```
 
+시간 복잡도 O(1)
+var sum = 0;
+sum = N * (N+1) / 2;
+
+
+### 스택
+```
+var stack = [];
+stack.push(1);
+stack.push(2);
+var i = stack.pop();
+console.log(i); //  displays 1
+```
+
+### 큐
+```
+var queue = [];
+queue.push(1);
+queue.push(2);
+var i = queue.shift();
+console.log(i);  displays 2
+```
 
 ### 대문자 > 소문자
 
