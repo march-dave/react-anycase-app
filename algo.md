@@ -95,6 +95,15 @@ function gcd(x, y) {
 
 ### 최소공배수 (LCM)
 i.e) 10, 5 ==> 10 <br />
+```
+function gcd(x, y) {
+    if (y == 0) return x;
+    else return gcd(y, x%y);
+}
+
+var g = gcd(a,b);
+console.log(a * b / g); <--- LCM
+```
 
 ### 피보나치 수열 dp 방식
 2, 1짜리로 n을 체우는 경우의 수 문제는 피보나치 수열로 풀 수 있다고 보면 된다.<br />
