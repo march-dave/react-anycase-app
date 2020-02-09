@@ -40,3 +40,6 @@ function fibonacci(n){
     else if(m[n]) return m[n];
     else return m[n] = fibonacci(n-1)+fibonacci(n-2);
 }
+
+### 홀수/짝수 간단한 코드
+num & 1 ? "Odd" : "Even";
