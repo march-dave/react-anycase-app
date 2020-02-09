@@ -85,6 +85,14 @@ for (int i=2; i<=Math.min(a,b); i++) {
 }
 ```
 
+재귀함수 + 유클리드 호제법을 이용
+```
+function gcd(x, y) {
+    if (y == 0) return x;
+    else return gcd(y, x%y);
+}
+```
+
 ### 최소공배수 (LCM)
 i.e) 10, 5 ==> 10 <br />
 
