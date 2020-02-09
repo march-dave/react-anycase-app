@@ -46,11 +46,10 @@ console.log(i);  displays 2
 ```
 
 ### 대문자 > 소문자
-
-32 - space(공백)
-65 - A
-90 - Z
-97 - a
+32 - space(공백) <br />
+65 - A <br /> 
+90 - Z <br />
+97 - a <br />
 122 - z
 
 ### Swap 알고리즘
