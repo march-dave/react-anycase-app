@@ -121,15 +121,36 @@ var g = gcd(a,b);
 console.log(a * b / g); <--- LCM
 ```
 
+### 그냥 피보나치
+```
+function fibonacci(n) {
+    if(n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+```
+
 ### 피보나치 수열 dp 방식
 2, 1짜리로 n을 체우는 경우의 수 문제는 피보나치 수열로 풀 수 있다고 보면 된다.<br />
 ex) 점프 2,1 n칸 건너기, 타일링 2x1 짜리로 n칸 체우기<br />
 ```
-var arr = [];
+1)
+var memo = [];
+function fibonacci(n){
+   if(n === 1) return 1;
+   if(n === 2) return 2;
+   if(memo[n] != 0) return memo[n];
+   return memo[n] = fibonacci[n - 1] + fibonacci[n - 2];
+}
+
+2)
+var memo = [];
 function fibonacci(n){
     if(n<=1) return n;
-    else if(m[n]) return m[n];
-    else return m[n] = fibonacci(n-1)+fibonacci(n-2);
+    else if(memo[n] > 0) { 
+        return memo[n];
+    }
+    memo[n] = fibonacci(n-1) + fibonacci(n-2);
+    return memo[n];
 }
 ```
 
