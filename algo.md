@@ -132,8 +132,9 @@ function fibonacci(n) {
 ### 피보나치 수열 dp 방식
 2, 1짜리로 n을 체우는 경우의 수 문제는 피보나치 수열로 풀 수 있다고 보면 된다.<br />
 ex) 점프 2,1 n칸 건너기, 타일링 2x1 짜리로 n칸 체우기<br />
-```
+
 1) 이건 피보나치
+```
 var memo = [];
 function fibonacci(n){
    if(n === 1) return 1;
@@ -141,8 +142,10 @@ function fibonacci(n){
    if(memo[n] != 0) return memo[n];
    return memo[n] = fibonacci[n - 1] + fibonacci[n - 2];
 }
+```
 
 2)
+```
 var memo = [];
 function fibonacci(n){
     if(n<=1) return n;
