@@ -144,7 +144,7 @@ function fibonacci(n){
 }
 ```
 
-2)
+2) 좀 더 보기 좋은 피보나치
 ```
 var memo = [];
 function fibonacci(n){
@@ -160,7 +160,7 @@ function fibonacci(n){
 ```
 var memo = [];
 function fibonacci(n) {
-    if ( n<= 1) {
+    if (n<= 1) {
         return n;
     } else {
         return fibonacci(n - 1) + fibonacci(n - 2);
