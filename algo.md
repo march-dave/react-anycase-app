@@ -156,9 +156,28 @@ function fibonacci(n){
     return memo[n];
 }
 ```
-3) 피보나치 Top Down 방식
+3) 피보나치 Top Down 방식 재귀 호출
 ```
-
+var memo = [];
+function fibonacci(n) {
+    if ( n<= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+```
+3) 피보나치 Bottom Up 방식 for 문
+```
+var d[100];
+function fibonacci(n) {
+    d[0] = 0;
+    d[1] = 1;
+    for(int i=2; i<=n; i++) {
+        d[i] = d[i-1] + d[i-2];
+    }
+    return d[n];
+}
 ```
 
 ### 홀수/짝수 간단한 코드
