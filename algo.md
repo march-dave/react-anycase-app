@@ -156,6 +156,10 @@ function fibonacci(n){
     return memo[n];
 }
 ```
+3) 피보나치 Top Down 방식
+```
+
+```
 
 ### 홀수/짝수 간단한 코드
 num & 1 ? "Odd" : "Even";
