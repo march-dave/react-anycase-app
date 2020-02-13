@@ -1318,3 +1318,22 @@
 //     }
 //     return i;
 // };
+
+// 70. Climbing Stairs
+/**
+ * @param {number} n
+ * @return {number}
+ */
+
+// var memo = [];
+// var climbStairs = function(n) {
+    
+//     if(n <= 2) return n;
+//     else if (memo[n] > 0) {
+//         return memo[n];
+//     }
+//     memo[n] = climbStairs(n - 1) + climbStairs(n - 2);
+    
+//     return memo[n];
+    
+// };
