@@ -114,7 +114,7 @@ i.e) 10, 5 ==> 10 <br />
 ```
 function gcd(x, y) {
     if (y == 0) return x;
-    else return gcd(y, x%y);
+    return gcd(y, x%y);
 }
 
 var g = gcd(a,b);
