@@ -57,8 +57,8 @@ console.log(i);  displays 2
 장점 : 간지남. 한줄코딩가능 ex) if(A > B) A ^= B ^= A ^= B; <br />
 단점 : 코드를 이해하기 어렵다.  <br />
 
-int A = 5; <br />
-int B = 23;
+var A = 5; <br />
+var B = 23;
 
 A = A ^ B; <br />
 B = A ^ B; <br />
@@ -163,7 +163,7 @@ function fibonacci(n) {
     if (n<= 1) {
         return n;
     } else {
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        return memo[n] = fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 ```
