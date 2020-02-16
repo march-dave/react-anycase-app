@@ -66,7 +66,7 @@ A = A ^ B;
 
 
 
-### 소수 (Prime number)
+### 소수 (Prime number) [link](https://repl.it/@DavidSS1/Primenumber)
 약수가 1과 자기 자신 밖에 없는 수<br />
 자기 자신보다 작은 수들을 나누어봐서, 하나라도 나누어지면 소수가 아닌 것 <br />
 1 과 자신만 으로 분류 되는것 <br />
