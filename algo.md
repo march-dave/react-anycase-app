@@ -53,7 +53,7 @@ console.log(i);  displays 2
 48 - 0 <br />
 122 - z
 
-### Swap 알고리즘
+### Swap 알고리즘 [Swap link](https://repl.it/@DavidSS1/swap)
 장점 : 간지남. 한줄코딩가능 ex) if(A > B) A ^= B ^= A ^= B; <br />
 단점 : 코드를 이해하기 어렵다.  <br />
 
@@ -64,7 +64,7 @@ A = A ^ B; <br />
 B = A ^ B; <br />
 A = A ^ B;
 
-[Swap link](https://repl.it/@DavidSS1/swap)
+
 
 ### 소수 (Prime number)
 약수가 1과 자기 자신 밖에 없는 수<br />
