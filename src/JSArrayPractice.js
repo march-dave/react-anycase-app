@@ -1335,3 +1335,17 @@
 //     memo[n] = climbStairs(n - 1) + climbStairs(n - 2);
 //     return memo[n];
 // };
+
+// var rob = function(nums) {
+    
+//     var memo = [];
+//     memo[0] = 0;
+//     memo[1] = nums[0];
+    
+//     for(var i=1; i<nums.length; i++) {
+//         // 햐 참 기가 차다. 이걸 처음 생각해 낸 놈은!!
+//         memo[i+1] = Math.max(memo[i], memo[i - 1] + nums[i]);
+//     }
+    
+//     return memo[nums.length];
+// };
