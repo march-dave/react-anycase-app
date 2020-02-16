@@ -170,8 +170,8 @@ function fibonacci(n) {
 3) 피보나치 Bottom Up 방식 for 문, 작은 문제 부터 차례로 푼다
 ```
 function fibonacci(n) {
-    var d[100];
-    
+    var d[];
+
     d[0] = 0;
     d[1] = 1;
     for(int i=2; i<=n; i++) {
