@@ -64,6 +64,8 @@ A = A ^ B; <br />
 B = A ^ B; <br />
 A = A ^ B;
 
+[Swap link](https://repl.it/@DavidSS1/swap)
+
 ### 소수 (Prime number)
 약수가 1과 자기 자신 밖에 없는 수<br />
 자기 자신보다 작은 수들을 나누어봐서, 하나라도 나누어지면 소수가 아닌 것 <br />
