@@ -203,10 +203,12 @@ i.e) 순열의 경우 { 1, 2 } , {1, 3} , { 2, 1} , {2, 3}, { 3, 1}, {3 , 2} 를
 
 
 <br />
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 <br />
 <br />
