@@ -204,11 +204,11 @@ i.e) 순열의 경우 { 1, 2 } , {1, 3} , { 2, 1} , {2, 3}, { 3, 1}, {3 , 2} 를
 
 <br />
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables | Are   |   Cool  | Cool  |
+| ------ |:-----:| -------:| -----:|
+| col 3 i| right | ! $1600 | $1600 |
+| col 2 i| cente |     $12 |   $12 |
+| zebra s| are n |      $1 |    $1 |
 
 <br />
 <br />
