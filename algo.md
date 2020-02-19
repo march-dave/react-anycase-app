@@ -169,7 +169,7 @@ function fibonacci(n) {
     }
 }
 ```
-3) 피보나치 Bottom Up 방식 for 문, 작은 문제 부터 차례로 푼다
+3) 피보나치 Bottom Up 방식 for 문, 작은 문제 부터 차례로 푼다. 점화식이 뭔지 잘 숙지
 ```
 function fibonacci(n) {
     var d[];
