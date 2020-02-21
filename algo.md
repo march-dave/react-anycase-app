@@ -216,11 +216,26 @@ DFS: 깊이 우선 탐색
 재귀 호출 방법
 ```
 void dfs(int x) {
-check[x] = true;
 
+check[x] = true;
 for (int i=1; i<=n; i++) {
         if (a[x][i] == 1 && check[i] == false) {
             dfs(i);
+        }
+    }
+}
+```
+
+인접행렬 호출 방법
+```
+void dfs (int x) {
+
+check[x] = true;
+for(int i=0; i<a[x].size(); i++) {
+
+    int y = a[x][i];
+    if (check[y] == false) {
+        dfs(y);
         }
     }
 }
