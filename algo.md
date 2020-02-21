@@ -204,7 +204,28 @@ i.e) 순열의 경우 { 1, 2 } , {1, 3} , { 2, 1} , {2, 3}, { 3, 1}, {3 , 2} 를
 <br />
 <br />
 
+    -   5   -   4   -   6  
+1       |       |
+    -   2   -   3
+
 DFS: 깊이 우선 탐색
+1, 2, 3, 4, 5, 6
+
+재귀 호출 방법
+```
+void dfs(int x) {
+check[x] = true;
+
+for (int i=1; i<=n; i++) {
+        if (a[x][i] == 1 && check[i] == false) {
+            dfs(i);
+        }
+    }
+}
+```
+
+
 BFS: 넓이 우선 탐색
+
 
 ### A leetcode a day, keeps unemployment away.
