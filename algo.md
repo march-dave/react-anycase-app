@@ -250,5 +250,37 @@ for(int i=0; i<a[x].size(); i++) {
 BFS: 넓이 우선 탐색
 1, 2, 5, 3, 4, 6
 
+BFS: 인접 행렬
+```
+queue<int> q;
+check[1] = true; q.push(1);
+
+while (!q.empty()) {
+    int x = q.front(); q.pop();
+    for (int i=1; i<=n; i++) {
+        if (a[x][i] == 1 && check[i] == false) {
+            check[i] = true;
+            q.push(i);
+        }
+    }
+}
+```
+
+BFS: 인접 리스트
+```
+queue<int> q;
+check[1] = true; q.push(1);
+
+while (!q.empty()) {
+    int x = q.front(); q.pop();
+    for(int i=0; i<a[x].size(); i++) {
+        int y = a[x][i];
+        if (check[y] == false) {
+            check[y] = true; q.push(y);
+        }
+    }
+}
+```
+
 
 ### A leetcode a day, keeps unemployment away.
