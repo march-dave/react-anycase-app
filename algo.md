@@ -241,8 +241,14 @@ for(int i=0; i<a[x].size(); i++) {
 }
 ```
 
+```
+    -   5   -   4   -   6  
+1       |       |
+    -   2   -   3
+```
 
 BFS: 넓이 우선 탐색
+1, 2, 5, 3, 4, 6
 
 
 ### A leetcode a day, keeps unemployment away.
