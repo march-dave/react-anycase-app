@@ -297,4 +297,7 @@ while (!q.empty()) {
 ### Two Pointers
 
 
+[다이나믹 프로그래밍](https://www.youtube.com/watch?v=R9WCxrPs2b8)
+
+
 ### A leetcode a day, keeps unemployment away.
