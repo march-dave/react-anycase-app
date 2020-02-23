@@ -300,6 +300,7 @@ while (!q.empty()) {
 
 
 [다이나믹 프로그래밍 1, 2, 3로만 더하기](https://www.youtube.com/watch?v=R9WCxrPs2b8) <br />
-[다익 스트라 알고리즘](https://www.youtube.com/watch?v=tZu4x5825LI)
+[다익 스트라 알고리즘](https://www.youtube.com/watch?v=tZu4x5825LI) <br />
+[Big-0](https://www.youtube.com/watch?v=6Iq5iMCVsXA)
 
 ### A leetcode a day, keeps unemployment away.
