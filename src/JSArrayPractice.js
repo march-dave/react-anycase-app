@@ -1366,3 +1366,15 @@
 //     }
 //     return dp[m][n];
 // };
+
+// var smallerNumbersThanCurrent = function(nums) {
+    
+//     var l = [];
+//     var ret = [];
+    
+//     for(let i=0; i<nums.length; i++) {       
+//         l = nums.filter( c => c < nums[i] );
+//         ret.push(l.length);
+//     }
+//     return ret;
+// };
