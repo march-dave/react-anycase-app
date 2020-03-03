@@ -158,7 +158,7 @@ function fibonacci(n){
     return memo[n];
 }
 ```
-3) 피보나치 Top Down 방식 재귀 호출, 큰 문제를 작은 문제로 나누고 푼다
+3) 피보나치 Top Down 방식 재귀 호출, 큰 문제를 작은 문제로 나누고 푼다, 가끔은 Timeout 발생하는데 점화식 잘 살필것
 ```
 var memo = [];
 function fibonacci(n) {
