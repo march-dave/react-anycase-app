@@ -10,3 +10,5 @@
 # border-radis
 
 # poistion:relative; top: -20px 와 margin: -60px; 차이점
+
+참고한 비디오
