@@ -3,7 +3,7 @@
 // arr.some( (cur) => )
 // arr.reducer( (cur) => )
 // arr.forEach( () => )
-// arr.filter( () => )
+// const result = arr.filter( () => )
 // arr.fill()
 // arr.includes( )
 
