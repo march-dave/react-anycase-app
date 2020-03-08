@@ -13,6 +13,7 @@
 
 참고한 비디오
 [CSS 레이아웃 - 처음부터 반응형 웹까지 핵심만 간단히](https://www.youtube.com/watch?v=Zny5Vxqk6Mk&t=1428s)
+
 [CSS Flexbox와 CSS Grid, 한번에 정리!](https://www.youtube.com/watch?v=eprXmC_j9A4&t=1106s)
 
 [너비높이를 알 수 없는 div 가로세로 모두 가운데 정렬](https://www.youtube.com/watch?v=78-X1JGvCZU)
