@@ -20,3 +20,5 @@
 [너비높이를 알 수 없는 div 가로세로 모두 가운데 정렬](https://www.youtube.com/watch?v=78-X1JGvCZU)
 
 [div 가로세로 모두 가운데 정렬 css position: absolute](https://www.youtube.com/watch?v=vdvLfkn9wp4&t=644s)
+
+[https://www.youtube.com/watch?v=8xKDSdHQ35U&t=12s](https://www.youtube.com/watch?v=8xKDSdHQ35U&t=12s)
