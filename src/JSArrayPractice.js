@@ -1382,3 +1382,5 @@
 // var uniquePathsWithObstacles = function(obstacleGrid) {
 //     console.log(obstacleGrid);
 // };
+
+// return (BigInt(digits.join('')) + 1n).toString().split(''); 
