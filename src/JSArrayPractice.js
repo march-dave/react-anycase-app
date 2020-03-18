@@ -1384,3 +1384,11 @@
 // };
 
 // return (BigInt(digits.join('')) + 1n).toString().split(''); 
+
+// for(let i of num1) {
+        
+// }
+
+// for(let j of num2) {
+    
+// }
