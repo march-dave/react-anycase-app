@@ -1386,9 +1386,9 @@
 // return (BigInt(digits.join('')) + 1n).toString().split(''); 
 
 // for(let i of num1) {
-        
+//     result = result + i;
 // }
 
 // for(let j of num2) {
-    
+//     result = result + j;
 // }
