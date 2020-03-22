@@ -1391,5 +1391,4 @@
 
 // for(let j of num2) {
 //     result = result + j;
-//
 // }
