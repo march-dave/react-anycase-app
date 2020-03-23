@@ -111,7 +111,7 @@ function gcd(x, y) {
 }
 ```
 
-GCD 유클리드 호제법을 이용
+GCD 유클리드 호제법을 이용, 시간 복잡도 logN
 ```
 function gcd(x, y) {
     while(b !== 0) {
