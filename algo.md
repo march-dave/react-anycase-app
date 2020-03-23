@@ -103,11 +103,23 @@ for (int i=2; i<=Math.min(a,b); i++) {
 }
 ```
 
-재귀함수 + 유클리드 호제법을 이용
+GCD 재귀함수 + 유클리드 호제법을 이용
 ```
 function gcd(x, y) {
     if (y == 0) return x;
     else return gcd(y, x%y);
+}
+```
+
+GCD 유클리드 호제법을 이용
+```
+function gcd(x, y) {
+    while(b !== 0) {
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
 }
 ```
 
