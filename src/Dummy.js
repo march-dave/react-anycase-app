@@ -1400,3 +1400,9 @@
 
 //     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 // };
+
+// var isSymmetric = function(root) {
+//     // 이건 도대체 어떻게 푸는거냐?
+//     // binary tree or not check 
+    
+// };
