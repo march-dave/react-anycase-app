@@ -1404,7 +1404,7 @@
 // var isSymmetric = function(root) {
 //     // 이건 도대체 어떻게 푸는거냐?
 //     // binary tree or not check 
-//      // return helper(root, root)
+//      return helper(root, root)
 // };
 
 // const helper = function(p, q) {
