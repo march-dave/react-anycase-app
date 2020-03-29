@@ -330,5 +330,7 @@ while (!q.empty()) {
 [DFS, BFS 예제](https://www.youtube.com/watch?v=1zLuMxrl1LA)
 [시뮬레이션 문제](https://www.youtube.com/watch?v=VsbeEVbmcxU&list=PLS3b0M70KTPyciRth9b2QZhQnT8nj82XI)
 
+[알고리즘들]
+http://www.kocw.net/home/search/kemView.do?kemId=1310135&ar=relateCourse
 
 ### A leetcode a day, keeps unemployment away.
