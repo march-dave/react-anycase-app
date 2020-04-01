@@ -2,7 +2,7 @@
 Input: [2,2,1]
 Output: 1 <br />
 
-`
+```
 var singleNumber = function(nums) {
     
     var total = 0;
@@ -15,4 +15,4 @@ var singleNumber = function(nums) {
     return total;
      
 };
-`
+```
