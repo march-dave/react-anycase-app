@@ -1,5 +1,5 @@
 ### Single Number
-Input: [2,2,1]
+Input: [2,2,1] <br />
 Output: 1 <br />
 
 ```
