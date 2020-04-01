@@ -1,6 +1,7 @@
 ### Single Number
 Input: [2,2,1]
-Output: 1
+Output: 1 <br />
+
 `
 var singleNumber = function(nums) {
     
