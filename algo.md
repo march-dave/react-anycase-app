@@ -324,6 +324,10 @@ O(N^2)      1초 동안 40960 입력 계산
 O(NlogN)    1초 동안 2천만 입력 계산
 O(N)        1초 동안 1억 6천만 입력 계산
 
+### 지수 시간 (Exponential Time)
+N 하나 증가, 시간 배로 증가
+
+
 ### 참고한 비디오들
 [다이나믹 프로그래밍 1, 2, 3로만 더하기](https://www.youtube.com/watch?v=R9WCxrPs2b8) <br />
 [다이나믹 프로그래밍 1로 만들기](https://www.youtube.com/watch?v=OSRD1bs9Om8) <br />
