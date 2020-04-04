@@ -331,6 +331,10 @@ N 하나 증가시 1차 함수 처럼 완만하게 증가
 ### 지수 시간 (Exponential Time)
 N 하나 증가, 시간 배로 증가
 
+### 알고리즘 정당성 증명
+초기조건 <br />
+유지조건
+
 
 ### 참고한 비디오들
 [다이나믹 프로그래밍 1, 2, 3로만 더하기](https://www.youtube.com/watch?v=R9WCxrPs2b8) <br />
@@ -345,5 +349,6 @@ N 하나 증가, 시간 배로 증가
 
 [알고리즘들]
 http://www.kocw.net/home/search/kemView.do?kemId=1310135&ar=relateCourse
+
 
 ### A leetcode a day, keeps unemployment away.
