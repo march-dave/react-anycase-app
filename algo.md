@@ -331,6 +331,34 @@ N 하나 증가시 1차 함수 처럼 완만하게 증가
 ### 지수 시간 (Exponential Time)
 N 하나 증가, 시간 배로 증가
 
+###  탐욕법 (Greedy)
+```
+int coin[4] = {20, 10, 5, 1};
+int count[4];
+int main() {
+int m, i = 0, f = 0;
+scanf("%d", &m);
+
+while (i < 4) {
+    if (coin[i] > m) i++;
+    else if (coin[i] < m) {
+        m -= coin[i];
+        count[i]++;
+    }
+    else {
+        f = 1;
+        count[i]++;
+        break; 
+    }
+}
+    if (f) printf("%d coin %d, %d coin %d, %d coin %d,
+    %d coin %d.\n", coin[0], count[0], coin[1], count[1],
+    coin[2], count[2], coin[3], count[3]);
+    else printf("No answer.\n");
+    return 0;
+}
+```
+
 ### 알고리즘 정당성 증명
 반복문 불변식 <br />
 초기조건: 변하지 않는 조건 <br />
