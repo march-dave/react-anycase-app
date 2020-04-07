@@ -360,7 +360,7 @@ while (i < 4) {
 ```
 
 ### 알고리즘 정당성 증명
-반복문 불변식 <br />
+반복문, 불변식 <br />
 초기조건: 변하지 않는 조건 <br />
 유지조건: for 문이나, while 반복문 안쪽에서 지속적인 조건
 [반복문 불변식](http://kocw.xcache.kinxcdn.com/KOCW/edu/html/cuk/imcholhong1206/3-2/index.htmlhttp://kocw.xcache.kinxcdn.com/KOCW/edu/html/cuk/imcholhong1206/3-2/index.html)
