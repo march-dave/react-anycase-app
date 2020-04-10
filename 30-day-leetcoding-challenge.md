@@ -53,3 +53,32 @@ var middleNode = function(head) {
     return slow;
 };
 ```
+
+### Backspace String Compare
+```
+var backspaceCompare = function(S, T) {
+    
+    // 반복문, 불변식
+    // 초기 조건
+    let SS = [];
+    for(let i=0; i<S.length; i++) {
+        if( S[i] !== '#' ) {
+            SS.push( S[i] );
+        } else {
+            SS.pop( S[i] );
+        }
+    }
+    
+    let TT = [];
+    for(let j=0; j<T.length; j++) {
+        if( T[j] !== '#' ) {
+            TT.push( T[j] );
+        } else {
+            TT.pop( T[j] );
+        }
+    }
+    // 유지 조건
+    return (SS.join('') === TT.join(''));
+    
+};
+```
