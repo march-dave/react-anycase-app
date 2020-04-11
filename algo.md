@@ -376,6 +376,10 @@ while (i < 4) {
 유지조건: for 문이나, while 반복문 안쪽에서 지속적인 조건
 [반복문 불변식](http://kocw.xcache.kinxcdn.com/KOCW/edu/html/cuk/imcholhong1206/3-2/index.htmlhttp://kocw.xcache.kinxcdn.com/KOCW/edu/html/cuk/imcholhong1206/3-2/index.html)
 
+### 시물레이션 문제
+시계열 데이타 <br />
+주어진 주건(규칙)들을 이행 했을때, 한가지 상황이 도출되는 문제 유형
+
 
 ### 참고한 비디오들
 [다이나믹 프로그래밍 1, 2, 3로만 더하기](https://www.youtube.com/watch?v=R9WCxrPs2b8) <br />
