@@ -47,7 +47,7 @@
 // }
 
 // async myAsync () => {
-//     return 'async11111111'
+//     return 'async'
 // }
 
 // myAsync().then( (result) => {
