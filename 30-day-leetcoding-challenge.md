@@ -278,3 +278,21 @@ var search = function(nums, target) {
   return -1;
 };
 ```
+
+
+### Construct Binary Search Tree from Preorder Traversal
+```
+var bstFromPreorder = function(preorder) {
+    
+    if (!preorder.length) return null
+    
+    const [root, ...rest] = preorder
+    
+    const rootNode = new TreeNode(root)
+    rootNode.left = bstFromPreorder(rest.filter(n => n < root))
+    rootNode.right = bstFromPreorder(rest.filter(n => n > root))
+    
+    return rootNode
+};
+
+```
