@@ -371,3 +371,8 @@ var canJump = function(nums) {
 ```
 
 ```
+
+### Maximal Square
+```
+
+```
