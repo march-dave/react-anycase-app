@@ -376,3 +376,8 @@ var canJump = function(nums) {
 ```
 
 ```
+
+### First Unique Number
+```
+
+```
