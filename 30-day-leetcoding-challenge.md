@@ -395,3 +395,8 @@ var max = -Number.MAX_VALUE;
     return Math.max(0, node.val + leftSum, node.val + rightSum);
   }
 ```
+
+### Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree
+```
+
+```
