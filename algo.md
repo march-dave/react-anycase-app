@@ -105,7 +105,7 @@ for(int i = 2; i<=n; i++) {
             check[j] = true;
         }
     }
-}
+}
 ```
 
 ### 약수 (Divisor)
