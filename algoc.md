@@ -57,3 +57,32 @@ int main() {
     cout << dist[h-1][w-1];
 }
 ```
+
+### 에라토스 테네스의 체
+```
+#include <iostream>
+using namespace std;
+
+int N, K, cnt, ans;
+bool visited[2000];
+
+int main() {
+
+    cin >> N >> K;
+
+    for(int i=2; i<=N; i++) {
+        for(int j=i; j<=N; j+=i) {
+            if(visited[j] == false) {
+                cnt++;
+                if (cnt == k) {
+                    cout << j << '\n';
+                    break;
+                }
+                visited[j] == true;
+            }
+        }
+    }
+
+    return 0;
+}
+```
