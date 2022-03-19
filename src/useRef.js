@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("10");
   const count = useRef(10);
 
   useEffect(() => {
