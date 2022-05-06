@@ -12,6 +12,7 @@ describe("SelectCreate Render", () => {
 
   test("render correctly", () => {
     // component = shallow(<SelectCreate onChange={handleSelect} />);
+    // component = shallow(<SelectCreate onChange={handleSelect} />);
     component = shallow(<SelectCreate />);
   });
 
