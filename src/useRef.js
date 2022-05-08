@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 function App() {
   const [inputValue, setInputValue] = useState("10");
-  const count = useRef(60);
+  const count = useRef(61);
   
   useEffect(() => {
     count.current = count.current + 1;
