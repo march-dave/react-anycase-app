@@ -5,7 +5,20 @@ flex 의 조건 컨터이너와 아이템으로 이루어 진다. 아래와 같�
     <item>item1</item>
 </container>
 
-container 태그에만 줄 수 있는 속성 container { display: flex; flex-direction: row; // 기본 설정, 세로로 보여준다. flex-direction: colum; // 이것은 가로로 flex-direction: row-reverse; flex-direction: colum-reverse; flex-wrap: wrap; justify-content: center; // flex-start: 시작에서 시작,
-flex-end 끝에서 시작 // space-between: 양쪽끝으로 붙이고 공간, // space-around: 양쪽끝 공간 그리고 공간 flex-flow: ?? align-items: ?? align-content: // flex-center, space-between, space-around: 상하로 정렬 될땔 쓴다. } item 태그에만 줄 수 있는 속성 { order flex-grow: 1; // 여백 없이 전체를 사용 하겠다는것 |
+container 태그에만 줄 수 있는 속성 container 
+
+{   
+    display: flex; 
+    flex-direction: row; // 기본 설정, 세로로 보여준다. 
+    flex-direction: colum; // 이것은 가로로 
+    flex-direction: row-reverse; 
+    flex-direction: colum-reverse; 
+    flex-wrap: wrap; justify-content: 
+    center; // flex-start: 시작에서 시작,
+    flex-end 끝에서 시작 // space-between: 양쪽끝으로 붙이고 공간, // space-around: 양쪽끝 공간 그리고 공간 flex-flow: ?? align-items: ?? align-content: // flex-center, space-between, space-around: 상하로 정렬 될땔 쓴다. } 
+
+
+
+item 태그에만 줄 수 있는 속성 { order flex-grow: 1; // 여백 없이 전체를 사용 하겠다는것 |
 그런데 이거 잘 알아야 한다. item 여러개 있을 경우 flex-grow: 1, 2, 3 등등 숫자를 지정해 주는데 이것은 기본적으로 남겨진 공간의 비율을 주겠다는 나눠 주는것 이다. flex-shrink: 0; // 줄어 드는것 없이 정해진 공간을 다 쓰겠다는 것 flex-basis: 기본값은 : auto 이다 그런데 0 으로 셋팅 하고 있는 경우가 많다., 150px; 기본 크기 150px로 사용 flex: ?? align-self: flex-start;
 // 상단 시작에 배치 된다. css 에는 기본적으로 수직 중앙 정렬이 // 존재 하지 아니 하지만 flex에서 새로 추가 된 기능이다. center: // 가운데 배치 된다. flex-end; // 이것은 하단에 배치 된다. order: 1, 2, 3 // 순서를 매길 수 있다. 별것 다 한다. } // 참고 자료: https://www.youtube.com/watch?v=eprXmC_j9A4&t=761s
