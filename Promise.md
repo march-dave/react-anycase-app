@@ -3,20 +3,22 @@
 ```
 var p = new Promise(
     function(resolve, reject) {
-        setTimeOut(function() {
+        setTimeout(function() {
             var num = Math.round(Math.round()*20);
             var isValid = num % 2;
-            is(isValid) { resolve(num); }
+            if(isValid) { resolve(num); }
             else { reject(num); }
         }, 1000);
     });
 
     p.then(function(num) {
-
+        console.log('Resolve 1', num);
     }).then(function(num) {
-
+        console.log('Resolve 2', num);
     }).then(function(num) {
-
+         console.log('Resolve 3', num);
+    }).catch(function(error) {
+         console.log('Catch', error);
     })
 ```
     
