@@ -620,9 +620,6 @@ var max = -Number.MAX_VALUE;
 Input: nums = [2,3,2] <br />
 Output: 3 <br />
 ```
-// nums = [1,2, 3,1]
-// dp[1, 2, 4, 4]
-// dp2[0, 2, 3, 3]
 var rob = function(nums) {
   let length = nums.length;
   if (length == 0) return 0;
