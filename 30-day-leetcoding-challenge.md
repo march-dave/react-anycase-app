@@ -615,3 +615,27 @@ var max = -Number.MAX_VALUE;
 
 ### No more access for 30 Days coding challenge
 ## master branch
+
+### 213. House Robber II
+Input: nums = [2,3,2] <br />
+Output: 3 <br />
+```
+// nums = [1,2, 3,1]
+// dp[1, 2, 4, 4]
+// dp2[0, 2, 3, 3]
+var rob = function(nums) {
+  let length = nums.length;
+  if (length == 0) return 0;
+  if (length == 1) return nums[0];
+  
+  let dp = [nums[0], Math.max(nums[0], nums[1])] ;
+  let dp2 = [0, nums[1]];
+  
+  for(let i=2; i<nums.length; i++) {
+      dp[i] = i == (length - 1) ? dp[i-1] : Math.max(dp[i-1], dp[i - 2] + nums[i])
+      dp2[i] = Math.max(dp2[i-1]  , dp2[i - 2] + nums[i])
+  }
+  
+  return Math.max(dp[length-1], dp2[length-1])
+};
+```
