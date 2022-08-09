@@ -680,3 +680,5 @@ var longestPalindrome = function(s) {
     return maxSub
 };
 ```
+
+### No more access for 30 Days coding challenge
