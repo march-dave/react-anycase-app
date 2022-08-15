@@ -691,3 +691,42 @@ var longestPalindrome = function(s) {
    
 ### No more access for 30 Days coding challenge
 ### No more access for 30 Days coding challenges
+
+
+### 647. Palindromic Substrings
+Input: s = "abc" <br />
+Output: 3 <br />
+```
+var countSubstrings = function(s) {
+   
+    let n = s.length;
+    let dp = [...Array(n)].map( () => Array(n).fill(false));
+    let count = 0;
+    
+    // 1
+    for(let i=0; i<n; i++) {
+        dp[i][i] = true;
+        count++
+    }
+    
+    // 2
+    for(let i=0; i<n-1; i++) {
+        dp[i][i+1] = s[i] === s[i+1]
+        dp[i][i+1] && count++
+    }
+    
+    // more than 3
+    for(let len=3; len<=n; len++) {
+        let start = 0, end = start + len - 1
+        while(start < n) {
+            dp[start][end] = s[start] === s[end] && dp[start+1][end-1]
+            dp[start][end] && count++
+            
+            console.log('start, end: ', start, end)
+            start++, end++
+        }
+    }
+    
+    return count
+};
+```
