@@ -730,3 +730,5 @@ var countSubstrings = function(s) {
     return count
 };
 ```
+
+### No more access for 30 Days coding challenges
