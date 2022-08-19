@@ -765,3 +765,21 @@ var numDecodings = function(s) {
 ```
 
 ### No more access for 30 Days coding challenges
+
+
+### 322. Coin Change
+Input: coins = [1,2,5], amount = 11 <br />
+Output: 3 <br />
+```
+var coinChange = function(coins, amount) {
+    let dp = new Array(amount + 1).fill(amount + 1);
+    dp[0] = 0;
+    
+    for (let i = 0; i < coins.length; i++) {
+        for (let j = coins[i]; j <= amount; j++) {
+            dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+        }   
+    }
+    return dp[amount] === amount + 1 ? -1 : dp[amount];
+};
+```
