@@ -787,6 +787,10 @@ var coinChange = function(coins, amount) {
 ### 139. Word Break
 Input: s = "leetcode", wordDict = ["leet","code"] <br />
 Output: true <br />
+
+Input: s = "applepenapple", wordDict = ["apple","pen"] <br />
+Output: true <br />
+
 ```
 var wordBreak = function(s, wordDict) {
     let dp = new Array(s.length + 1).fill(false);
