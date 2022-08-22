@@ -810,3 +810,26 @@ var wordBreak = function(s, wordDict) {
 ```
 
 ### No more access for 30 Days coding challenges
+
+
+300. Longest Increasing Subsequence
+Input: nums = [10,9,2,5,3,7,101,18] <br />
+Output: 4 <br />
+
+```
+var lengthOfLIS = function(nums) {
+    let dp = new Array(nums.length).fill(1)
+    let longest = 1;
+    
+    for(let i=0; i<nums.length; i++) {
+        for(let j=0; j<i; j++) {
+            if(nums[j] < nums[i]) {
+                dp[i] = Math.max(dp[i], dp[j] + 1)
+                longest = Math.max(dp[i], longest)
+            }
+        }
+    }
+    
+    return longest
+};
+```
