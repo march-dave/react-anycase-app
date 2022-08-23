@@ -913,3 +913,37 @@ var invertTree = function(root) {
 };
 ```
 
+104. Maximum Depth of Binary Tree
+Input: root = [3,9,20,null,null,15,7] <br />
+Output: 3  <br />
+
+DFS(Recursion)
+```
+var maxDepth = function(root) {
+    if(root == null) return 0;
+    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+};
+```
+
+BFS
+```
+var maxDepth = function(root) {
+    if(!root) return 0;
+    // using BFS and counting levels
+    // not recommended to use array as queue
+    let levels = 0, queue = [];
+    queue.push(root);
+    
+    while(queue.length > 0){
+        let count = queue.length;
+        
+        for(let i = 0; i < count; i++){
+            const node = queue.shift();
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right);
+        }
+        levels++;
+    }
+    return levels;
+};
+```
