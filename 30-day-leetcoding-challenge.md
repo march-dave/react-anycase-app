@@ -812,7 +812,7 @@ var wordBreak = function(s, wordDict) {
 ### No more access for 30 Days coding challenges
 
 
-300. Longest Increasing Subsequence
+### 300. Longest Increasing Subsequence
 Input: nums = [10,9,2,5,3,7,101,18] <br />
 Output: 4 <br />
 
@@ -834,7 +834,7 @@ var lengthOfLIS = function(nums) {
 };
 ```
 
-62. Unique Paths
+### 62. Unique Paths
 Input: m = 3, n = 2 <br />
 Output: 3 <br />
 
@@ -868,7 +868,7 @@ var uniquePaths = (m, n) => {
 };
 ```
 
-1143. Longest Common Subsequence
+### 1143. Longest Common Subsequence
 Input: text1 = "abcde", text2 = "ace" <br />
 Output: 3  <br />
 
@@ -893,7 +893,7 @@ var longestCommonSubsequence = function(text1, text2) {
 
 ```
 
-226. Invert Binary Tree
+### 226. Invert Binary Tree
 Input: root = [4,2,7,1,3,6,9] <br />
 Output: [4,7,2,9,6,3,1] <br />
 
@@ -913,7 +913,7 @@ var invertTree = function(root) {
 };
 ```
 
-104. Maximum Depth of Binary Tree
+### 104. Maximum Depth of Binary Tree
 Input: root = [3,9,20,null,null,15,7] <br />
 Output: 3  <br />
 
@@ -948,7 +948,7 @@ var maxDepth = function(root) {
 };
 ```
 
-100. Same Tree 
+### 100. Same Tree
 Input: p = [1,2,3], q = [1,2,3] <br />
 Output: true <br />
 
@@ -960,7 +960,7 @@ var isSameTree = function(p, q) {
 };
 ```
 
-572. Subtree of Another Tree
+### 572. Subtree of Another Tree
 Input: root = [3,4,5,1,2], subRoot = [4,1,2] <br />
 Output: true <br />
 
@@ -980,7 +980,7 @@ function isSameTree(root, subRoot) {
 }
 ```
 
-235. Lowest Common Ancestor of a Binary Search Tree
+### 235. Lowest Common Ancestor of a Binary Search Tree
 Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8 <br />
 Output: 6 <br />
 
@@ -999,7 +999,7 @@ var lowestCommonAncestor = function(root, p, q) {
 };
 ```
 
-102. Binary Tree Level Order Traversal
+### 102. Binary Tree Level Order Traversal
 Input: root = [3,9,20,null,null,15,7] <br />
 Output: [[3],[9,20],[15,7]] <br />
 
@@ -1026,7 +1026,7 @@ var levelOrder = function(root) {
 };
 ```
 
-98. Validate Binary Search Tree
+### 98. Validate Binary Search Tree
 Input: root = [2,1,3] <br />
 Output: true <br />
 
