@@ -947,3 +947,81 @@ var maxDepth = function(root) {
     return levels;
 };
 ```
+
+100. Same Tree 
+Input: p = [1,2,3], q = [1,2,3] <br />
+Output: true <br />
+
+```
+var isSameTree = function(p, q) {
+    if (p === null && q === null) return true
+    if( (p === null && q) || (p && q === null) || (p.val !== q.val) ) return fals
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+};
+```
+
+572. Subtree of Another Tree
+Input: root = [3,4,5,1,2], subRoot = [4,1,2] <br />
+Output: true <br />
+
+```
+var isSubtree = function(root, subRoot) {
+    if (root === null) return false;  
+    if(isSameTree(root, subRoot)) return true;
+    return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+};
+
+function isSameTree(root, subRoot) {
+    if(root === null && subRoot === null) return true;
+    if(root === null || subRoot === null ) return false;
+    if(root.val != subRoot.val) return false;
+    
+    return isSameTree(root.left, subRoot.left) && isSameTree(root.right, subRoot.right);
+}
+```
+
+235. Lowest Common Ancestor of a Binary Search Tree
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8 <br />
+Output: 6 <br />
+
+```
+var lowestCommonAncestor = function(root, p, q) {
+    if(root === null){
+        return null;
+    }
+    if(p.val<root.val && q.val<root.val) {
+        return lowestCommonAncestor(root.left, p, q);
+    } else if(p.val>root.val && q.val>root.val) {
+        return lowestCommonAncestor(root.right, p, q);
+    } else {
+        return root;
+    }
+};
+```
+
+102. Binary Tree Level Order Traversal
+Input: root = [3,9,20,null,null,15,7] <br />
+Output: [[3],[9,20],[15,7]] <br />
+
+```
+var levelOrder = function (root) {
+    if (!root) return [];
+
+    const result = [];
+    const queue = [root];
+
+    while (queue.length) {
+        const numNodes = queue.length;
+        const temp = [];
+        for (let i = 0; i < numNodes; i++) {
+            const subtree = queue.shift();
+            temp.push(subtree.val);
+            if (subtree.left !== null) queue.push(subtree.left);
+            if (subtree.right !== null) queue.push(subtree.right);
+        }
+        result.push(temp);
+    }
+
+    return result;
+};
+```
