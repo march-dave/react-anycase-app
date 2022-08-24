@@ -1004,24 +1004,45 @@ Input: root = [3,9,20,null,null,15,7] <br />
 Output: [[3],[9,20],[15,7]] <br />
 
 ```
-var levelOrder = function (root) {
-    if (!root) return [];
-
-    const result = [];
-    const queue = [root];
-
-    while (queue.length) {
-        const numNodes = queue.length;
-        const temp = [];
-        for (let i = 0; i < numNodes; i++) {
-            const subtree = queue.shift();
-            temp.push(subtree.val);
-            if (subtree.left !== null) queue.push(subtree.left);
-            if (subtree.right !== null) queue.push(subtree.right);
+var levelOrder = function(root) {
+    if(!root) return [];
+ 
+    let queue = [root];
+    let output = []
+    
+    while(queue.length){
+        let count = queue.length;
+        let temp = []
+        for(let i = 0; i<count; i++){
+            const node = queue.shift();
+            console.log('node.val', node.val)
+            temp.push(node.val)
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right);
         }
-        result.push(temp);
+        output.push(temp)
     }
-
-    return result;
+    return output;
 };
+```
+
+98. Validate Binary Search Tree
+Input: root = [2,1,3] <br />
+Output: true <br />
+
+```
+// T.C: O(N)
+// S.C: O(H)
+var isValidBST = function(root) {
+    return validate(root, -Infinity, Infinity);
+};
+
+const validate = (root, low, high) => {
+    if (!root) {
+        return true;
+    }
+    return root.val > low && root.val < high &&
+        validate(root.left, low, root.val) &&
+        validate(root.right, root.val, high);
+}
 ```
