@@ -1033,16 +1033,44 @@ Output: true <br />
 ```
 // T.C: O(N)
 // S.C: O(H)
-var isValidBST = function(root) {
-    return validate(root, -Infinity, Infinity);
+var isValidBST = function (root) {
+    return validate(root, null, null);
 };
 
-const validate = (root, low, high) => {
+function validate(root, max, min) {
     if (!root) {
         return true;
-    }
-    return root.val > low && root.val < high &&
-        validate(root.left, low, root.val) &&
-        validate(root.right, root.val, high);
+    } else if (
+        (max !== null && root.val >= max) ||
+        (min !== null && root.val <= min)
+    ) {
+        return false;
+    } else
+        return (
+            validate(root.left, root.val, min) &&
+            validate(root.right, max, root.val)
+        );
 }
+```
+
+### 230. Kth Smallest Element in a BST
+Input: root = [3,1,4,null,2], k = 1 <br />
+Output: 1 <br />
+
+```
+var kthSmallest = function (root, k) {
+	let stack = [];
+	dfs(root);
+	return stack[k - 1];
+
+	function dfs(root) {
+		if (!root) {
+			return null;
+		}
+
+		dfs(root.left);
+		stack.push(root.val);
+		dfs(root.right);
+	}
+};
 ```
