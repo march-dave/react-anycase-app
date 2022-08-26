@@ -1091,3 +1091,23 @@ function buildTree(preorder, inorder) {
     return root;
 }
 ```
+
+### 124. Binary Tree Maximum Path Sum
+Input: root = [-10,9,20,null,null,15,7] <br />
+Output: 42 <br />
+
+```
+var maxPathSum = function(root) {
+  let max = -Number.MAX_VALUE;
+  getMaxSum(root);
+  return max;
+  
+  function getMaxSum(node) {
+    if (!node) return 0;
+    let leftSum = getMaxSum(node.left);
+    let rightSum = getMaxSum(node.right);
+    max = Math.max(max, node.val + leftSum + rightSum);
+    return Math.max(0, node.val + leftSum, node.val + rightSum);
+  }
+};
+```
