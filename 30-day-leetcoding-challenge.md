@@ -1121,8 +1121,8 @@ Input: grid = [
   ["1","1","0","1","0"],
   ["1","1","0","0","0"],
   ["0","0","0","0","0"]
-] < br />
-Output: 1  < br />
+] <br />
+Output: 1 <br />
 
 ```
 var numIslands = function(grid) {
