@@ -1163,23 +1163,86 @@ Output: [[2,4],[1,3],[2,4],[1,3]] <br />
 
 ```
 var cloneGraph = function(node) {
-    
-    var visited = {};
-    
+    var hash = {};
     let dfs = function(node) {
         if (!node) return node;
-        if (visited[node.val]!=null) return visited[node.val];
+        if (hash[node.val] != null) return hash[node.val];
         
-        let root = new Node(node.val);
-        visited[node.val] = root;
+        let clone = new Node(node.val);
+        hash[node.val] = clone;
 
         for (let n of node.neighbors) {
-            root.neighbors.push(dfs(n));
+            clone.neighbors.push(dfs(n));
         }
          
-        return root;
+        return clone;
     }
     
     return dfs(node);
+};
+```
+
+
+### 417. Pacific Atlantic Water Flow
+Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]] <br />
+Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]] <br />
+
+```
+var pacificAtlantic = function(matrix) {
+ if (matrix.length === 0) return [];
+  
+  const pacific = [];
+  const atlantic = [];
+  const result = [];
+  
+  for (let i = 0; i < matrix.length; i++) {
+    pacific[i] = Array(matrix[0].length).fill(0);
+    atlantic[i] = Array(matrix[0].length).fill(0);
+  }
+  
+  // top and botom
+  for (let i = 0; i < matrix[0].length; i++) {
+    dfs(matrix, 0, i, Number.MIN_SAFE_INTEGER, pacific);
+    dfs(matrix, matrix.length - 1, i, Number.MIN_SAFE_INTEGER, atlantic);
+  }
+  
+  // left and right
+  for (let i = 0; i < matrix.length; i++) {
+    dfs(matrix, i, 0, Number.MIN_SAFE_INTEGER, pacific);
+    dfs(matrix, i, matrix[0].length - 1, Number.MIN_SAFE_INTEGER, atlantic);
+  }
+  
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[0].length; j++) {
+      if (pacific[i][j] === 1 && atlantic[i][j] === 1) {
+        result.push([i, j]);
+      }
+    }
+  }
+  
+  return result;
+};
+
+function dfs(matrix, row, col, previous, ocean) {
+  // if we're looking at a valid matrix position
+  if (!isValid(matrix, row, col)) return;
+  
+  // ocean can't reach
+  if (matrix[row][col] < previous) return;
+
+  // the ocean was already here
+  if (ocean[row][col] === 1) return;
+  
+  ocean[row][col] = 1;
+  dfs(matrix, row + 1, col, matrix[row][col], ocean);
+  dfs(matrix, row - 1, col, matrix[row][col], ocean);
+  dfs(matrix, row, col + 1, matrix[row][col], ocean);
+  dfs(matrix, row, col - 1, matrix[row][col], ocean);
+}
+
+function isValid(matrix, row, col) {
+  const rowIsValid = row >= 0 && row < matrix.length;
+  const colIsValid = col >= 0 && col < matrix[0].length;
+  return rowIsValid && colIsValid;
 };
 ```
