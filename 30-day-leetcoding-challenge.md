@@ -1156,3 +1156,30 @@ function DFS(grid, i, j) {
     DFS(grid, i-1, j);
 }
 ```
+
+### 133. Clone Graph
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]] <br />
+Output: [[2,4],[1,3],[2,4],[1,3]] <br />
+
+```
+var cloneGraph = function(node) {
+    
+    var visited = {};
+    
+    let dfs = function(node) {
+        if (!node) return node;
+        if (visited[node.val]!=null) return visited[node.val];
+        
+        let root = new Node(node.val);
+        visited[node.val] = root;
+
+        for (let n of node.neighbors) {
+            root.neighbors.push(dfs(n));
+        }
+         
+        return root;
+    }
+    
+    return dfs(node);
+};
+```
