@@ -1246,3 +1246,5 @@ function isValid(matrix, row, col) {
   return rowIsValid && colIsValid;
 };
 ```
+
+### 207. Course Schedule
