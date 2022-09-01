@@ -1287,3 +1287,25 @@ var canFinish = function(numCourses, prerequisites) {
     return numCourses === order.length;
   };
   ```
+
+
+### 1448. Count Good Nodes in Binary Tree
+Input: root = [3,1,4,3,null,1,5] <br />
+Output: 4 <br />
+
+```
+var goodNodes = function(root) {
+    let good = 0;n.n
+    function trav(node, max){
+        if(!node) return;
+        if(node.val >= max) ++good;
+        max = Math.max(max, node.val);
+        trav(node.left, max);
+        trav(node.right, max); 
+    }
+    trav(root, root.val);
+    return good;
+};
+```
+
+
