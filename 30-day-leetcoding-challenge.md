@@ -1253,38 +1253,36 @@ Output: true <br />
 
 ```
 var canFinish = function(numCourses, prerequisites) {
-    const order = [];
-    const queue = [];
-    const graph = new Map();
-    const indegree = Array(numCourses).fill(0);
-  
-    for (const [e, v] of prerequisites) {
-      // build graph map
-      if (graph.has(v)) {
-        graph.get(v).push(e);
-      } else {
-        graph.set(v, [e]);
-      }
-      // build indegree array
-      indegree[e]++;
+    let indegree = Array(numCourses).fill(0);
+    let queue = []
+    let count = 0;
+    
+    for(let [course, prereq] of prerequisites) {
+        indegree[course] += 1;
     }
-  
-    for (let i = 0; i < indegree.length; i++) {
-      if (indegree[i] === 0) queue.push(i);
-    }
-  
-    while (queue.length) {
-      const v = queue.shift();
-      if (graph.has(v)) {
-        for (const e of graph.get(v)) {
-          indegree[e]--;
-          if (indegree[e] === 0) queue.push(e);
+    
+    for(let i=0; i<indegree.length; i++) {
+        if(indegree[i] == 0) {
+            queue.push(i);
         }
-      }
-      order.push(v);
     }
-  
-    return numCourses === order.length;
+    
+    while(queue.length != 0) {
+        let c = queue.pop();
+        count += 1;
+        
+        for(let [course, prereq] of prerequisites) {
+            if(prereq == c) {
+                indegree[course] -= 1;
+                if (indegree[course] == 0) {
+                    queue.push(course);
+                }
+            }
+        }
+        
+    }
+    
+    return count == numCourses;
   };
   ```
 
