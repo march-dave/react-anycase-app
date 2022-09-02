@@ -1308,4 +1308,31 @@ var goodNodes = function(root) {
 };
 ```
 
+### 637. Average of Levels in Binary Tree
+Input: root = [3,9,20,null,null,15,7] <br />
+Output: [3.00000,14.50000,11.00000] <br />
 
+```
+var averageOfLevels = function(root) {
+    if(!root) return [];
+ 
+    let queue = [root];
+    let output = []
+    
+    while(queue.length) {
+        let count = queue.length;
+        let temp = []
+        let sum = 0;
+        
+        for(let i = 0; i<count; i++){
+            const node = queue.shift();
+            sum += node.val;
+            temp.push(node.val)
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right);            
+        }
+        output.push( sum / count )
+    }
+    return output;
+};
+```
