@@ -1375,3 +1375,23 @@ var search = function(nums, target) {
 
 ### No more access for 30 Days coding challenge
 ### No more access for 30 Days coding challenge
+
+### 21. Merge Two Sorted Lists
+Input: list1 = [1,2,4], list2 = [1,3,4] <br />
+Output: [1,1,2,3,4,4] <br />
+```
+var mergeTwoLists = function(list1, list2) {
+    if (list1 === null) {
+        return list2
+    } else if (list2 === null) {
+        return list1
+    }
+    
+    if (list1.val > list2.val) {
+        [list1, list2] = [list2, list1] // Swap in place
+    }
+    list1.next = mergeTwoLists(list1.next, list2)
+    
+    return list1;
+};
+```
