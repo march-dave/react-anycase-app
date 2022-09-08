@@ -1423,3 +1423,21 @@ var mergeTwoLists = function(list1, list2) {
     
 };
 ```
+
+
+### 141. Linked List Cycle
+Input: head = [3,2,0,-4], pos = 1 <br />
+Output: true <br />
+
+```
+var hasCycle = function(head) {
+    let fast = head;
+    while(fast && fast.next) {
+        head = head.next;
+        fast = fast.next.next;
+        if(head == fast) return true;
+    }
+    
+    return false;
+};
+```
