@@ -1445,4 +1445,19 @@ var hasCycle = function(head) {
 ### No more access for 30 Days coding challenges
 ### No more access for 30 Days coding challenges
 ### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
+
+
+### 136. Single Number
+Input: nums = [2,2,1] <br />
+Output: 1 <br />
+```
+var singleNumber = function(nums) {
+    
+    let output = 0;
+    for(let i=0; i<nums.length; i++) {
+        output ^= nums[i]
+    }
+    
+    return output;
+};
+```
