@@ -1463,150 +1463,28 @@ var singleNumber = function(nums) {
 ```
 
 ### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 30 Days coding challenges
-### No more access for 31 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
-### No more access for 32 Days coding challenges
+### 1626. Best Team With No Conflicts
+
+Input: scores = [1,3,5,10,15], ages = [1,2,3,4,5] <br />
+Output: 34 <br />
+```
+var bestTeamScore = function (scores, ages) {
+	const players = ages
+			.map((age, i) => ({ age, score: scores[i] }))
+			.sort((a, b) => {
+				if (a.age < b.age) return -1;
+				if (a.age === b.age && a.score < b.score) return -1;
+				return 0;
+			}),
+		dp = players.map(p => p.score);
+	for (let i = 1; i < players.length; i++)
+		for (let j = 0; j < i; j++)
+			if (
+				(players[i].score >= players[j].score ||
+					players[i].age === players[j].age) &&
+				dp[i] < players[i].score + dp[j]
+			)
+				dp[i] = players[i].score + dp[j];
+
+	return Math.max(...dp);
+};
