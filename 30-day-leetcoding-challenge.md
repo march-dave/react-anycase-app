@@ -1488,3 +1488,6 @@ var bestTeamScore = function (scores, ages) {
 
 	return Math.max(...dp);
 };
+
+
+### No more access for 30 Days coding challenges
