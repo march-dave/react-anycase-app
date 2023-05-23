@@ -3,20 +3,22 @@
 ```
 var p = new Promise(
     function(resolve, reject) {
-        setTimeOut(function() {
+        setTimeout(function() {
             var num = Math.round(Math.round()*20);
             var isValid = num % 2;
-            is(isValid) { resolve(num); }
+            if(isValid) { resolve(num); }
             else { reject(num); }
         }, 1000);
     });
 
     p.then(function(num) {
-
+        console.log('Resolve 1', num);
     }).then(function(num) {
-
+        console.log('Resolve 2', num);
     }).then(function(num) {
-
+         console.log('Resolve 3', num);
+    }).catch(function(error) {
+         console.log('Catch', error);
     })
 ```
     
@@ -26,13 +28,13 @@ var req1 = new Promise( function(resolve, reject) {
     setTimeout(function() {resolve('작업1');  }, 3000);
 }  );
 
-    var req2 = new Promise( function(resolve, reject) {
+var req2 = new Promise( function(resolve, reject) {
     setTimeout(function() {resolve('작업2');  }, 3000);
 }  );
 
 Promise.all( [req1, req2] ).then( function(results) {
     console.log('Then', results);
-}).catch(function() {
+}).catch(function(err) {
     console.log('Catch', err);
 })
 ```
