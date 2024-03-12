@@ -16,7 +16,7 @@ function App(){
       <div>안녕하십니까 전 {age}</div>
       <button onClick={()=>{
             setCount(count+1);
-            }}>누르면한살먹기
+            }}>누르면한살먹기1
         </button> 
     </div>
   )
