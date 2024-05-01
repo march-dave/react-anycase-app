@@ -332,7 +332,7 @@ const IntroPage = ({ path = '', userType }) => {
               // onClick={redirect}
               onClick={() => setIsModalOpen(true)}
               label={textContent?.activationGetStarted}
-              className="w-full my-4 font-h4"
+              className="w-full my-4 font-h4" 
             />
           </div>
 
