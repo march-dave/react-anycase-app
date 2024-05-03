@@ -22,5 +22,3 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-sk-proj-4BmbpxsweHfTXXUsrFU6T3BlbkFJ8H3crreCxsmKf6xGU90V
