@@ -7,13 +7,26 @@ class Counter extends Component {
     number: 0
   };
 
-  handlerSearchDelayed = () => {
-    debounce(this.onSearch, 1000);
+  handleEvent = (eventType) => {
+    switch(eventType) {
+      case 'search':
+        return debounce(this.onSearch, 1000);
+      case 'change':
+        return this.setState(({ number }) => ({ number: number + 1 }));
+      case 'click':
+        return console.log("click");
+      default:
+        return;
+    }
   };
 
   handleChange = () => {
 
     this.setState(({ number }) => ({ number: number + 1 }));
+  };
+
+  handleClick = () => {
+    console.log("click");
   };
 
   render() {
@@ -24,6 +37,8 @@ class Counter extends Component {
         <input placeholder="" onChange={this.handlerSearchDelayed} />
 
         <input ref={this.props.innerRef} />
+
+        <input type="button" value="click" onClick={this.handleClick} />
       </div>
     );
   }
