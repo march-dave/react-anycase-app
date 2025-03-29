@@ -1,29 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Template</title>
+  <meta charset="UTF-8" />
+  <title>Multiplayer Airplane Game</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #87CEEB; /* sky blue */ }
+    #info { position: absolute; top: 10px; left: 10px; color: #fff; font-family: sans-serif; }
+  </style>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #F5F5F5;">
-    <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #fff;">
-        <tr>
-            <td style="text-align: center;">
-                <table align="center" cellpadding="0" cellspacing="0" border="0">
-                    <tr>
-                        <td style="text-align: center;">
-                            <!-- 도넛 이미지 -->
-                            <div style="position: relative; display: inline-block;">
-                                <img src="https://images.ctfassets.net/dk1yv4hqfwie/4SeDUvCS2OFcoRvF29uFsh/f952b734690302dbf9982916e69c4222/donut.png" alt="Donut Image" width="300" style="display: block;">
-                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                    <img src="https://images.ctfassets.net/dk1yv4hqfwie/2syKgglb7ABBu8LGRMpQEw/c0c0f3f265f995e3325b73ef510f5cdf/ping-rectangle.png?h=250" alt="Ping Rectangle" width="300" style="display: block;">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+<body>
+  <!-- Instructional overlay (optional) -->
+  <div id="info">Use arrow keys or W/A/S/D to fly the plane. Everyone online will appear in the sky.</div>
+
+  <!-- Include Three.js library from a CDN for quick loading -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <!-- Include Socket.io client library (served by our Node.js server) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+  // ===== 1. Initialize Three.js Scene, Camera, Renderer =====
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x87CEEB, 100, 500);  // optional: fog for depth cueing
+  // Set up camera (field of view 75, aspect ratio, near/far clipping planes)
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+  // Position camera initially (will be updated to follow the plane)
+  camera.position.set(0, 5, 10);
+
+  // WebGL renderer
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x87CEEB);  // sky-blue background
+  document.body.appendChild(renderer.domElement);
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  // ===== 2. Create the Player's Airplane =====
+  // Simple airplane made of a fuselage (box) and wings (thin box)
+  const airplaneGroup = new THREE.Group();  // group to hold plane parts
+  const fuselageGeom = new THREE.BoxGeometry(1, 0.2, 3);     // long box for body
+  const wingGeom = new THREE.BoxGeometry(3, 0.1, 0.5);       // flat wide box for wings
+  const material = new THREE.MeshLambertMaterial({ color: 0xff5533 });  // orange-red plane
+  const fuselage = new THREE.Mesh(fuselageGeom, material);
+  const wing = new THREE.Mesh(wingGeom, material);
+  wing.position.set(0, 0, 0);         // wings centered on plane
+  wing.rotation.x = Math.PI / 2;      // rotate wings to lie flat (around X-axis)
+  airplaneGroup.add(fuselage);
+  airplaneGroup.add(wing);
+  scene.add(airplaneGroup);
+
+  // Adjust initial orientation: point the plane along negative Z (forward)
+  // By default, the box is oriented along its Z axis. We'll assume negative Z is forward direction.
+  // No rotation needed if we treat negative Z as forward.
+
+  // ===== Lighting (simple) =====
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+  scene.add(ambientLight);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+  dirLight.position.set(5, 10, 7);
+  scene.add(dirLight);
+
+  // ===== 3. Multiplayer Setup: Connect to WebSocket server =====
+  const socket = io();  // auto-connects to the same host that served the page
+  const playerID = Math.floor(Math.random() * 1000000); // Temporary ID (server will actually assign an ID)
+  let players = {};  // to track other players' meshes by their id
+
+  socket.on('connect', () => {
+    console.log('Connected to server');
+    // Send an introduction with our initial position (could also send username here if needed)
+    const startPos = airplaneGroup.position;
+    socket.emit('newPlayer', { id: playerID, x: startPos.x, y: startPos.y, z: startPos.z });
+  });
+
+  // When another player joins, server sends their info for us to add them
+  socket.on('addPlayer', data => {
+    const { id, x, y, z, color } = data;
+    if (players[id]) return; // already have this player
+    // Create a new airplane mesh for the new player (use same geometry but possibly different color)
+    const mat = new THREE.MeshLambertMaterial({ color: color || 0x3355ff });  // default to blue if color not provided
+    const otherFuselage = new THREE.Mesh(fuselageGeom, mat);
+    const otherWing = new THREE.Mesh(wingGeom, mat);
+    otherWing.position.set(0, 0, 0);
+    otherWing.rotation.x = Math.PI / 2;
+    const otherPlane = new THREE.Group();
+    otherPlane.add(otherFuselage);
+    otherPlane.add(otherWing);
+    otherPlane.position.set(x, y, z);
+    scene.add(otherPlane);
+    players[id] = otherPlane;
+  });
+
+  // When a player leaves
+  socket.on('removePlayer', data => {
+    const { id } = data;
+    if (players[id]) {
+      scene.remove(players[id]);
+      delete players[id];
+    }
+  });
+
+  // Receive position/orientation updates of other players
+  socket.on('updatePlayer', data => {
+    const { id, x, y, z, rotX, rotY, rotZ } = data;
+    if (players[id]) {
+      const obj = players[id];
+      obj.position.set(x, y, z);
+      obj.rotation.set(rotX, rotY, rotZ);
+    }
+  });
+
+  // Receive the initial state of existing players when we join (server should send an array)
+  socket.on('initialState', playersList => {
+    playersList.forEach(p => {
+      if (p.id === playerID) return; // skip ourselves (our plane already exists)
+      // Create a plane for each existing player
+      const mat = new THREE.MeshLambertMaterial({ color: p.color || 0x3355ff });
+      const otherFuselage = new THREE.Mesh(fuselageGeom, mat);
+      const otherWing = new THREE.Mesh(wingGeom, mat);
+      otherWing.position.set(0, 0, 0);
+      otherWing.rotation.x = Math.PI / 2;
+      const otherPlane = new THREE.Group();
+      otherPlane.add(otherFuselage);
+      otherPlane.add(otherWing);
+      otherPlane.position.set(p.x, p.y, p.z);
+      otherPlane.rotation.set(p.rotX || 0, p.rotY || 0, p.rotZ || 0);
+      scene.add(otherPlane);
+      players[p.id] = otherPlane;
+    });
+  });
+
+  // ===== 4. Player Controls (Keyboard) =====
+  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false,
+                 KeyW: false, KeyS: false, KeyA: false, KeyD: false };
+  document.addEventListener('keydown', (e) => {
+    if (keys[e.code] !== undefined) keys[e.code] = true;
+  });
+  document.addEventListener('keyup', (e) => {
+    if (keys[e.code] !== undefined) keys[e.code] = false;
+  });
+
+  // Movement parameters
+  const moveSpeed = 0.2;      // forward movement speed
+  const turnSpeed = 0.02;     // rotation speed for pitch/yaw
+
+  // ===== 5. Game Loop (Rendering & Updates) =====
+  function animate() {
+    requestAnimationFrame(animate);
+
+    // Update this player's airplane based on keys
+    if (keys.ArrowLeft || keys.KeyA) {
+      airplaneGroup.rotation.y += turnSpeed;  // yaw left
+    }
+    if (keys.ArrowRight || keys.KeyD) {
+      airplaneGroup.rotation.y -= turnSpeed;  // yaw right
+    }
+    if (keys.ArrowUp || keys.KeyW) {
+      // Pitch the nose up (decrease rotation.x)
+      airplaneGroup.rotation.x -= turnSpeed;
+      if (airplaneGroup.rotation.x < -Math.PI/2) airplaneGroup.rotation.x = -Math.PI/2;
+    }
+    if (keys.ArrowDown || keys.KeyS) {
+      // Pitch nose down (increase rotation.x)
+      airplaneGroup.rotation.x += turnSpeed;
+      if (airplaneGroup.rotation.x > Math.PI/2) airplaneGroup.rotation.x = Math.PI/2;
+    }
+
+    // Move the plane forward in the direction it's facing (local -Z direction)
+    // Translate the plane group along its local Z axis (negative because our model faces -Z for forward)
+    airplaneGroup.translateZ(-moveSpeed);
+
+    // Keep the plane within some bounds (optional, or wrap around)
+    // (For simplicity, we won't implement world bounds here; assume infinite world or rely on fog.)
+
+    // Update camera to follow the plane from behind
+    const forwardDir = new THREE.Vector3();
+    airplaneGroup.getWorldDirection(forwardDir);
+    // Position camera behind and above the plane
+    const camDistance = 8;
+    const camHeight = 3;
+    const planePos = airplaneGroup.position;
+    camera.position.copy(planePos).addScaledVector(forwardDir, -camDistance);
+    camera.position.y += camHeight;
+    camera.lookAt(planePos);
+
+    // Send this player's updated state to server
+    socket.emit('update', {
+      id: playerID,
+      x: planePos.x, y: planePos.y, z: planePos.z,
+      rotX: airplaneGroup.rotation.x,
+      rotY: airplaneGroup.rotation.y,
+      rotZ: airplaneGroup.rotation.z
+    });
+
+    // Render the scene
+    renderer.render(scene, camera);
+  }
+  animate();
+  </script>
 </body>
 </html>
