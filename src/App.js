@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./style.scss";
-import Weather from './components/Weather';
+import ReactInterviewEssentials from './ReactInterviewEssentials';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Weather />
+        <ReactInterviewEssentials />
       </div>
     );
   }
