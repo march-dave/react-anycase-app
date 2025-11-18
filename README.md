@@ -1,122 +1,232 @@
-## Wallaby.js
+# CalorieFit
 
-[![Wallaby.js](https://img.shields.io/badge/wallaby.js-powered-blue.svg?style=for-the-badge&logo=github)](https://wallabyjs.com/oss/)
+A React Native Android app that calculates calories from food photos and recommends workout time to burn those calories.
 
-This repository contributors are welcome to use
-[Wallaby.js OSS License](https://wallabyjs.com/oss/) to get
-test results immediately as you type, and see the results in
-your editor right next to your code.
+## 📱 Features
 
+- 📸 **Take Photo**: Capture food images using camera or select from gallery
+- 🔢 **Calorie Calculation**: Automatically estimates calories from food photos
+- 🏃 **Workout Time**: Calculates time needed for various exercises to burn the calories
+- 🎨 **Beautiful UI**: Clean, modern interface with English text
+- 📱 **Android Only**: Optimized for Android (targetSdkVersion 35)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Supported Exercises
 
-## Available Scripts
+- Running
+- Walking
+- Cycling
+- Swimming
+- Jump Rope
+- Yoga
+- Weight Training
 
-In the project directory, you can run:
+## 🚀 Quick Start
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js >= 18
+- JDK 17 or higher
+- Android SDK (API 35)
+- Android Studio (recommended)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Installation
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-## yarn test --coverage
-yarn test --env=jsdom --coverage
-
-
-## free images url
-https://pngtree.com/so/hamburger
-
-## 토론토 날씨 컴포넌트
-
-이 프로젝트에는 토론토의 현재 날씨와 5일 예보를 보여주는 날씨 컴포넌트가 포함되어 있습니다.
-
-### 설정 방법
-
-1. [OpenWeatherMap](https://openweathermap.org/)에서 무료 API 키를 발급받으세요.
-2. 프로젝트 루트의 `.env` 파일에 API 키를 다음과 같이 추가하세요:
-   ```
-   REACT_APP_WEATHER_API_KEY=여기에_API_키_입력
-   ```
-3. 서버를 재시작하여 변경사항을 적용하세요.
-
-### 사용 방법
-
-Weather 컴포넌트를 다음과 같이 임포트하여 사용할 수 있습니다:
-
-```jsx
-import Weather from './components/Weather';
-
-function App() {
-  return (
-    <div className="App">
-      <Weather />
-    </div>
-  );
-}
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd react-anycase-app
 ```
 
-### 특징
+2. Install dependencies
+```bash
+npm install
+```
 
-- 토론토의 현재 온도, 날씨 상태, 체감 온도, 습도, 풍속 표시
-- 5일 날씨 예보 (일별 최고/최저 온도 및 날씨 상태)
-- 반응형 디자인
-- 스타일드 컴포넌트를 사용한 세련된 UI
+3. Start Metro bundler
+```bash
+npm start
+```
+
+4. Run on Android device/emulator
+```bash
+npm run android
+```
+
+## 📦 Build Release AAB
+
+### Easy Method (Recommended)
+
+Use the provided build script:
+
+```bash
+./build-aab.sh
+```
+
+This will:
+- Clean previous builds
+- Build the release AAB
+- Copy the AAB to `AAB_Builds/` folder with timestamp
+
+### Manual Method
+
+```bash
+cd android
+./gradlew clean
+./gradlew bundleRelease
+```
+
+The AAB file will be located at:
+```
+android/app/build/outputs/bundle/release/app-release.aab
+```
+
+Then copy it to AAB_Builds folder:
+```bash
+mkdir -p ../AAB_Builds
+cp app/build/outputs/bundle/release/app-release.aab ../AAB_Builds/CalorieFit.aab
+```
+
+## 🔐 Release Keystore Information
+
+The app is signed with the following keystore:
+
+- **Keystore File**: `android/app/caloriefit-release.keystore`
+- **Store Password**: `654321`
+- **Key Alias**: `caloriefit-key-alias`
+- **Key Password**: `654321`
+
+⚠️ **Important**: Keep this keystore file safe! You'll need it for all future app updates.
+
+## 📁 Project Structure
+
+```
+CalorieFit/
+├── App.tsx                    # Main app component with UI and logic
+├── index.js                   # App entry point
+├── package.json               # Dependencies and scripts
+├── babel.config.js            # Babel configuration
+├── metro.config.js            # Metro bundler configuration
+├── tsconfig.json              # TypeScript configuration
+├── build-aab.sh              # Build script for AAB
+├── AAB_Builds/               # Release AAB files (created after build)
+├── android/                   # Android native code
+│   ├── app/
+│   │   ├── build.gradle      # App build configuration
+│   │   ├── src/main/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── java/com/caloriefit/
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   └── MainApplication.kt
+│   │   │   └── res/          # Resources (icons, strings, etc.)
+│   │   ├── debug.keystore    # Debug signing key
+│   │   └── caloriefit-release.keystore  # Release signing key
+│   ├── build.gradle          # Root build configuration
+│   ├── settings.gradle       # Project settings
+│   └── gradle.properties     # Gradle properties (includes keystore config)
+└── create_icons.py           # Script to generate launcher icons
+```
+
+## 🛠 Tech Stack
+
+- **React Native**: 0.78.2
+- **TypeScript**: ~5.6.2
+- **React**: 18.3.1
+- **React Native Image Picker**: ^7.1.0 - Gallery selection
+- **React Native Vision Camera**: ^4.0.0 - Camera access
+- **Gradle**: 8.6
+- **Android Build Tools**: 35.0.0
+- **Target SDK**: 35
+- **Min SDK**: 24
+
+## 🎨 App Icons
+
+The app includes custom launcher icons for all Android densities:
+- mdpi (48x48)
+- hdpi (72x72)
+- xhdpi (96x96)
+- xxhdpi (144x144)
+- xxxhdpi (192x192)
+
+Icons feature a blue background with a white 'C' design.
+
+## 📝 Development Notes
+
+### Android Configuration
+
+- **targetSdkVersion**: 35 (Android 15)
+- **minSdkVersion**: 24 (Android 7.0)
+- **compileSdkVersion**: 35
+- **Namespace**: com.caloriefit
+- **Application ID**: com.caloriefit
+
+### Permissions
+
+The app requests the following permissions:
+- `CAMERA` - Take photos of food
+- `READ_EXTERNAL_STORAGE` - Access gallery
+- `WRITE_EXTERNAL_STORAGE` - Save photos
+- `READ_MEDIA_IMAGES` - Read media on Android 13+
+
+### Food Database
+
+The app includes a built-in food database with calorie information per 100g:
+- Rice: 130 kcal
+- Chicken: 165 kcal
+- Beef: 250 kcal
+- Pork: 242 kcal
+- Fish: 206 kcal
+- And more...
+
+### Exercise Database
+
+Calorie burn rates (per minute):
+- Running: 10 kcal/min
+- Jump Rope: 12 kcal/min
+- Swimming: 11 kcal/min
+- Cycling: 8 kcal/min
+- And more...
+
+## 🐛 Troubleshooting
+
+### Gradle Build Fails
+
+If you encounter Gradle build errors:
+
+1. Clean the build:
+```bash
+cd android
+./gradlew clean
+```
+
+2. Make sure you have JDK 17 installed:
+```bash
+java -version
+```
+
+3. Check Android SDK is properly installed and ANDROID_HOME is set
+
+### Metro Bundler Issues
+
+If Metro won't start:
+
+```bash
+npx react-native start --reset-cache
+```
+
+### App Won't Install
+
+1. Uninstall any previous version
+2. Check device has enough storage
+3. Ensure USB debugging is enabled
+
+## 📄 License
+
+This project is created for demonstration purposes.
+
+## 👨‍💻 Developer
+
+Built with React Native and ❤️
+
+---
+
+**Note**: This is a prototype app. In production, you would integrate with a real AI/ML service for accurate food recognition and calorie calculation.
