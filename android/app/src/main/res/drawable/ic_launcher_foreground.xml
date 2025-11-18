@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <group android:scaleX="0.5"
+      android:scaleY="0.5"
+      android:translateX="27"
+      android:translateY="27">
+    <!-- Fork and Knife icon representing food -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,10 L30,50 L34,50 L34,10 C34,6 30,6 30,10 Z M38,10 L38,24 L42,24 L42,10 C42,6 38,6 38,10 Z M46,10 L46,24 L50,24 L50,10 C50,6 46,6 46,10 Z M42,28 L42,50 L46,50 L46,28 Z"/>
+    <!-- Dumbbell icon representing workout -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,35 L52,35 L52,25 L48,25 L48,35 L40,35 L40,39 L48,39 L48,49 L52,49 L52,39 L60,39 Z M36,25 L36,49 L38,49 L38,25 Z M62,25 L62,49 L64,49 L64,25 Z"/>
+  </group>
+</vector>

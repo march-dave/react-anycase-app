@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`BasicInfo Component Load matches snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
