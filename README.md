@@ -1,122 +1,94 @@
-## Wallaby.js
+# Calorie Workout Calculator
 
-[![Wallaby.js](https://img.shields.io/badge/wallaby.js-powered-blue.svg?style=for-the-badge&logo=github)](https://wallabyjs.com/oss/)
+A React Native Android app that calculates calories from food photos and recommends workout time.
 
-This repository contributors are welcome to use
-[Wallaby.js OSS License](https://wallabyjs.com/oss/) to get
-test results immediately as you type, and see the results in
-your editor right next to your code.
+## Features
 
+- 📸 Take photos of food
+- 🔢 Calculate estimated calories
+- 💪 Get recommended workout time to burn calories
+- 📱 Android-only support
+- 🎯 Target SDK Version 35
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
 
-## Available Scripts
+- Node.js >= 18
+- React Native 0.78.2
+- Android SDK with API Level 35
+- JDK 17 or higher
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+```bash
+# Install dependencies
+npm install
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-## yarn test --coverage
-yarn test --env=jsdom --coverage
-
-
-## free images url
-https://pngtree.com/so/hamburger
-
-## 토론토 날씨 컴포넌트
-
-이 프로젝트에는 토론토의 현재 날씨와 5일 예보를 보여주는 날씨 컴포넌트가 포함되어 있습니다.
-
-### 설정 방법
-
-1. [OpenWeatherMap](https://openweathermap.org/)에서 무료 API 키를 발급받으세요.
-2. 프로젝트 루트의 `.env` 파일에 API 키를 다음과 같이 추가하세요:
-   ```
-   REACT_APP_WEATHER_API_KEY=여기에_API_키_입력
-   ```
-3. 서버를 재시작하여 변경사항을 적용하세요.
-
-### 사용 방법
-
-Weather 컴포넌트를 다음과 같이 임포트하여 사용할 수 있습니다:
-
-```jsx
-import Weather from './components/Weather';
-
-function App() {
-  return (
-    <div className="App">
-      <Weather />
-    </div>
-  );
-}
+# or using yarn
+yarn install
 ```
 
-### 특징
+## Running the App
 
-- 토론토의 현재 온도, 날씨 상태, 체감 온도, 습도, 풍속 표시
-- 5일 날씨 예보 (일별 최고/최저 온도 및 날씨 상태)
-- 반응형 디자인
-- 스타일드 컴포넌트를 사용한 세련된 UI
+```bash
+# Start Metro bundler
+npm start
+
+# Run on Android device/emulator
+npm run android
+```
+
+## Building for Production
+
+### Build AAB (Android App Bundle)
+
+```bash
+# Build release AAB
+npm run build:android
+```
+
+The AAB file will be generated in the `AAB_Builds` folder.
+
+### Release Configuration
+
+- **Keystore**: `android/app/my-release-key.keystore`
+- **Keystore Password**: `654321`
+- **Key Alias**: `my-key-alias`
+- **Key Password**: `654321`
+
+## Project Structure
+
+```
+CalorieWorkoutCalculator/
+├── android/              # Android native code
+│   ├── app/
+│   │   ├── build.gradle  # targetSdkVersion: 35
+│   │   └── src/main/
+│       └── build.gradle
+├── App.tsx               # Main app component
+├── index.js              # Entry point
+├── package.json
+└── AAB_Builds/           # Release AAB files
+```
+
+## Development Notes
+
+- **Language**: UI text in English, code comments in Korean
+- **Camera**: Uses react-native-vision-camera (to be configured)
+- **Permissions**: Camera, Storage access required
+- **Architecture**: Currently using old architecture (newArchEnabled=false)
+
+## TODO
+
+- [ ] Implement real camera functionality with react-native-vision-camera
+- [ ] Integrate AI/ML model for calorie estimation
+- [ ] Add database for food history
+- [ ] Implement workout tracking
+- [ ] Add user settings and preferences
+
+## License
+
+Private - All rights reserved
+
+## Author
+
+Developed for calorie tracking and workout planning
