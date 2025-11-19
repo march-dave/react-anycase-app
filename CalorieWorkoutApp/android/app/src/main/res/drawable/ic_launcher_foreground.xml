@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 배경 원 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+
+    <!-- 칼로리/불꽃 아이콘 -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M54,30
+                         c0,0 -8,10 -8,18
+                         c0,4.4 3.6,8 8,8
+                         s8,-3.6 8,-8
+                         c0,-8 -8,-18 -8,-18z"/>
+
+    <!-- 운동/사람 아이콘 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,62
+                         m-3,0
+                         a3,3 0,1 1,6 0
+                         a3,3 0,1 1,-6 0"/>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeColor="#FFFFFF"
+        android:pathData="M54,67
+                         L54,75
+                         M48,70
+                         L54,72
+                         L60,70
+                         M50,78
+                         L54,75
+                         L58,78"/>
+</vector>
