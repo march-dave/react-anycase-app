@@ -1,0 +1,3 @@
+# This folder is for storing Android App Bundle (.aab) files
+# Build the .aab file using: cd android && ./gradlew bundleRelease
+# The output will be at: android/app/build/outputs/bundle/release/app-release.aab
