@@ -1,0 +1,163 @@
+.cost-calculator {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.calculator-title {
+  font-size: 1.3em;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.calculator-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.price-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-input-group label {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 600;
+}
+
+.price-input-group input {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.price-input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.currency {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.calculation-breakdown {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 1em;
+}
+
+.breakdown-row.discount {
+  color: #f5576c;
+}
+
+.breakdown-row .price {
+  font-weight: 600;
+}
+
+.breakdown-row .price s {
+  color: #999;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.breakdown-divider {
+  height: 2px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  margin: 15px 0;
+  border-radius: 2px;
+}
+
+.breakdown-row.total {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.breakdown-row.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 1.15em;
+}
+
+.price-per-person {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.savings-info {
+  margin-top: 20px;
+}
+
+.savings-badge {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.savings-badge strong {
+  font-size: 1.2em;
+  display: block;
+  margin: 5px 0;
+}
+
+.savings-percent {
+  display: block;
+  font-size: 0.95em;
+  margin-top: 5px;
+  opacity: 0.95;
+}
+
+.calculator-note {
+  margin-top: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.calculator-note p {
+  margin: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .calculator-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-row {
+    font-size: 0.95em;
+  }
+
+  .breakdown-row.highlight {
+    font-size: 1.05em;
+  }
+
+  .price-per-person {
+    font-size: 1.15em;
+  }
+}

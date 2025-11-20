@@ -1,0 +1,265 @@
+.create-request-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.create-request-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.create-request-header h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.request-form {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.calculator-preview {
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%);
+  border-radius: 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* 미리보기 스타일 */
+.request-preview-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.request-preview-container h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.preview-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.preview-section h3 {
+  font-size: 1.2em;
+  color: #667eea;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.preview-section p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.preview-section strong {
+  color: #333;
+}
+
+.cost-preview {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%);
+}
+
+.cost-breakdown {
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.cost-breakdown p {
+  margin: 10px 0;
+  font-size: 1.05em;
+}
+
+.cost-breakdown .highlight {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.cost-breakdown .savings {
+  color: #38ef7d;
+  font-weight: bold;
+  font-size: 1.15em;
+  background: #f0fff4;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-back {
+  flex: 1;
+  padding: 14px;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #f0f4ff;
+}
+
+.btn-confirm {
+  flex: 2;
+  padding: 14px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 153, 142, 0.4);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .create-request-container,
+  .request-preview-container {
+    padding: 15px;
+  }
+
+  .request-form,
+  .preview-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-section h3 {
+    font-size: 1.15em;
+  }
+
+  .preview-actions {
+    flex-direction: column;
+  }
+
+  .btn-back,
+  .btn-confirm {
+    width: 100%;
+  }
+}
