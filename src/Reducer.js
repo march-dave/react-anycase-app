@@ -1,8 +1,11 @@
+import { combineReducers } from 'redux';
+import { shoeSplitReducer } from './shoeSplit/reducer';
+
 const initialState = {
   username: "dave"
 };
 
-const reducer = (state = initialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SET_USER":
       return {
@@ -13,5 +16,10 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+const reducer = combineReducers({
+  user: userReducer,
+  shoeSplit: shoeSplitReducer
+});
 
 export default reducer;

@@ -1,0 +1,153 @@
+.deal-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.deal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.deal-card.expired {
+  opacity: 0.6;
+  background: #f5f5f5;
+}
+
+.expired-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f44336;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.deal-header {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2196F3;
+  padding-bottom: 10px;
+}
+
+.deal-header h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.store-name {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.distance-badge {
+  display: inline-block;
+  background: #4CAF50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.price-info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.split-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2196F3;
+  margin: 5px 0;
+}
+
+.split-price span {
+  color: #f44336;
+}
+
+.savings {
+  color: #4CAF50;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.deal-meta {
+  font-size: 13px;
+  color: #666;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.deal-breakdown {
+  background: #fff3e0;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.deal-breakdown h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #ff9800;
+}
+
+.deal-breakdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.deal-breakdown li {
+  padding: 3px 0;
+  color: #666;
+}
+
+.deal-breakdown li.highlight {
+  font-weight: bold;
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 5px;
+  padding-top: 8px;
+  border-top: 1px solid #ffcc80;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-btn:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.contact-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

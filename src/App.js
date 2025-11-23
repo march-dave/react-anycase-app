@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./style.scss";
-import Weather from './components/Weather';
+import ShoeSplitApp from './shoeSplit/components/ShoeSplitApp';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Weather />
+        <ShoeSplitApp />
       </div>
     );
   }

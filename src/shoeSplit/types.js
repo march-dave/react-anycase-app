@@ -1,0 +1,6 @@
+// Action Types
+export const ADD_SHOE_DEAL = 'ADD_SHOE_DEAL';
+export const SET_USER_LOCATION = 'SET_USER_LOCATION';
+export const MATCH_PARTNER = 'MATCH_PARTNER';
+export const REMOVE_SHOE_DEAL = 'REMOVE_SHOE_DEAL';
+export const UPDATE_SHOE_DEAL = 'UPDATE_SHOE_DEAL';
