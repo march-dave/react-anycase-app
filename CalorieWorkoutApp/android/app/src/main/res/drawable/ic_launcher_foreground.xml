@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <!-- 칼로리/운동 아이콘 - 달리기 하는 사람 -->
+  <group android:scaleX="0.6"
+      android:scaleY="0.6"
+      android:translateX="21.6"
+      android:translateY="21.6">
+    <!-- 머리 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+    <!-- 몸통 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 L54,60 L48,60 L48,30 Z"/>
+    <!-- 왼쪽 팔 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,35 L38,45 L35,42 L45,32 Z"/>
+    <!-- 오른쪽 팔 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,35 L64,25 L67,28 L57,38 Z"/>
+    <!-- 왼쪽 다리 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,60 L40,75 L36,72 L44,57 Z"/>
+    <!-- 오른쪽 다리 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,60 L62,75 L66,72 L58,57 Z"/>
+  </group>
+</vector>
