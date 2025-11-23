@@ -1,122 +1,149 @@
-## Wallaby.js
+# Calorie Workout App
 
-[![Wallaby.js](https://img.shields.io/badge/wallaby.js-powered-blue.svg?style=for-the-badge&logo=github)](https://wallabyjs.com/oss/)
+A React Native application for Android that analyzes food photos to calculate calories and suggests workout times to burn those calories.
 
-This repository contributors are welcome to use
-[Wallaby.js OSS License](https://wallabyjs.com/oss/) to get
-test results immediately as you type, and see the results in
-your editor right next to your code.
+## Features
 
+- 📷 **Photo Capture**: Take photos with camera or select from gallery
+- 🔢 **Calorie Calculation**: Automatically estimates calories from food images
+- 🏃 **Workout Time Estimation**: Calculates required exercise time for different activities:
+  - Running
+  - Walking
+  - Cycling
+  - Swimming
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technical Specifications
 
-## Available Scripts
+- **Framework**: React Native 0.78.2
+- **Platform**: Android only
+- **Target SDK**: Android 35
+- **Language**: TypeScript
+- **UI Language**: English
+- **Build Type**: AAB (Android App Bundle)
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+- Node.js >= 18
+- Java Development Kit (JDK) 17 or higher
+- Android SDK with API Level 35
+- Android Studio (optional, for development)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-## yarn test --coverage
-yarn test --env=jsdom --coverage
-
-
-## free images url
-https://pngtree.com/so/hamburger
-
-## 토론토 날씨 컴포넌트
-
-이 프로젝트에는 토론토의 현재 날씨와 5일 예보를 보여주는 날씨 컴포넌트가 포함되어 있습니다.
-
-### 설정 방법
-
-1. [OpenWeatherMap](https://openweathermap.org/)에서 무료 API 키를 발급받으세요.
-2. 프로젝트 루트의 `.env` 파일에 API 키를 다음과 같이 추가하세요:
-   ```
-   REACT_APP_WEATHER_API_KEY=여기에_API_키_입력
-   ```
-3. 서버를 재시작하여 변경사항을 적용하세요.
-
-### 사용 방법
-
-Weather 컴포넌트를 다음과 같이 임포트하여 사용할 수 있습니다:
-
-```jsx
-import Weather from './components/Weather';
-
-function App() {
-  return (
-    <div className="App">
-      <Weather />
-    </div>
-  );
-}
+1. Install dependencies:
+```bash
+npm install
 ```
 
-### 특징
+2. Start Metro bundler:
+```bash
+npm start
+```
 
-- 토론토의 현재 온도, 날씨 상태, 체감 온도, 습도, 풍속 표시
-- 5일 날씨 예보 (일별 최고/최저 온도 및 날씨 상태)
-- 반응형 디자인
-- 스타일드 컴포넌트를 사용한 세련된 UI
+3. Run on Android device/emulator:
+```bash
+npm run android
+```
+
+## Building Release AAB
+
+### Prerequisites
+The release keystore is already configured with the following credentials:
+- **Keystore file**: `android/app/my-release-key.keystore`
+- **Password**: 654321
+- **Key alias**: my-key-alias
+
+### Build Commands
+
+1. Build AAB file:
+```bash
+npm run build:aab
+```
+
+2. The generated AAB file will be located at:
+```
+android/app/build/outputs/bundle/release/app-release.aab
+```
+
+3. Copy to AAB_Builds folder:
+```bash
+cp android/app/build/outputs/bundle/release/app-release.aab AAB_Builds/
+```
+
+## Testing
+
+Run unit tests:
+```bash
+npm test
+```
+
+Run tests with coverage:
+```bash
+npm test -- --coverage
+```
+
+## Project Structure
+
+```
+CalorieWorkoutApp/
+├── android/                  # Android native code
+│   ├── app/
+│   │   ├── src/main/
+│   │   │   ├── java/        # Kotlin/Java source
+│   │   │   └── res/         # Android resources
+│   │   └── build.gradle     # App-level Gradle config
+│   └── build.gradle         # Project-level Gradle config
+├── src/
+│   ├── types/               # TypeScript type definitions
+│   ├── utils/               # Utility functions
+│   │   └── CalorieCalculator.ts  # Calorie calculation logic
+│   └── components/          # React components
+├── __tests__/               # Unit tests
+├── AAB_Builds/              # Release AAB files
+├── App.tsx                  # Main app component
+├── index.js                 # App entry point
+└── package.json            # Node.js dependencies
+
+```
+
+## Key Files
+
+- `App.tsx`: Main application component with camera and analysis UI
+- `src/utils/CalorieCalculator.ts`: Core calorie and workout time calculation logic
+- `android/app/build.gradle`: Android build configuration (targetSdkVersion 35)
+- `android/gradle.properties`: Gradle properties including keystore configuration
+
+## How It Works
+
+1. User takes a photo or selects from gallery
+2. Image is analyzed to identify food type
+3. Calories are estimated based on food database
+4. Workout times are calculated using metabolic equivalents
+5. Results are displayed with exercise recommendations
+
+## Food Database
+
+The app includes a basic food database with common items:
+- Pizza, Burger, Pasta, Salad
+- Rice Bowl, Sandwich, Sushi
+- Fried Chicken, Steak
+- Donut, Ice Cream
+- Coffee, Smoothie, Soup, Taco
+
+## Exercise Calorie Burn Rates (per minute, 70kg person)
+
+- Running (8km/h): 10 kcal/min
+- Walking (5km/h): 4 kcal/min
+- Cycling (moderate): 7.5 kcal/min
+- Swimming (moderate): 8 kcal/min
+
+## License
+
+This project is for educational purposes.
+
+## Notes
+
+- Camera permissions are required for photo capture
+- Storage permissions are required for gallery access
+- The food recognition is simulated (in production, use ML model or API)
+- Calorie estimates are approximate and for reference only
