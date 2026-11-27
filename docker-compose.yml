@@ -1,14 +1,7 @@
-#docker-compose.yml
-
-version: '3.4'
-
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     environment:
-      - NODE_ENV=test
-    command: yarn start
+      - OPENWEATHER_API_KEY
     ports:
-      - 8082:8081
+      - "8082:3000"

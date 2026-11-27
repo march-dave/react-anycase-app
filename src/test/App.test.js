@@ -1,57 +1,53 @@
-import React from 'react';
-import App from '../App';
-import { shallow } from "enzyme";
+import React from "react";
+import { mount, shallow } from "enzyme";
+import { act } from "react-dom/test-utils";
+import axios from "axios";
+import App from "../App";
+import Weather from "../components/Weather";
+
+jest.mock("axios");
 
 describe("App", () => {
-  let component = null;
+  beforeEach(() => axios.get.mockReset());
 
-  it("renders correctly", () => {
-    component = shallow(<App />);
+  it("renders the weather dashboard", () => {
+    expect(shallow(<App />).find(Weather)).toHaveLength(1);
   });
 
-  it("matches snapshot", () => {
-    expect(component).toMatchSnapshot();
+  it("shows a loading status while the weather request is pending", () => {
+    axios.get.mockReturnValueOnce(new Promise(() => {}));
+    const component = mount(<App />);
+    try {
+      expect(component.getDOMNode().querySelector('[role="status"]').textContent)
+        .toContain("날씨 정보를 불러오는 중");
+    } finally {
+      component.unmount();
+    }
   });
 
-  it('find p ', () => {
-    const wrapper = shallow(<App />);
-    const text = wrapper.find('p').text();
-    expect(text).toEqual('Current Text 1');
-  })
+  it("loads the weather from the API and displays the returned forecast", async () => {
+    axios.get.mockResolvedValueOnce({
+      data: {
+        current: {
+          temperature: "18°C", condition: "clear sky", feelsLike: "17°C",
+          humidity: "60%", windSpeed: "3 m/s"
+        },
+        forecast: [{ day: "월", high: "21°C", low: "12°C", condition: "light rain" }]
+      }
+    });
 
+    let component;
+    await act(async () => {
+      component = mount(<App />);
+    });
 
-  // it("renders correctly", () => {
-  //   const wrapper = shallow(<App />);
-  //   // const countState = wrapper.state().totalNumber
-  //   const text = wrapper.find('p').text();
-  //   expect(text).toEqual("1")
-  // });
-
-
-  // let totalNumber = 1;
-  // const onIncrease = (totalNumber) => {
-  //   totalNumber = totalNumber + 1
-  // };
-
-  // it("render correclty button click", () => {
-  //   component = shallow(<Counter onClick={onIncrease} />);
-  // });
-
-  // it("matches snapshot", () => {
-  //   expect(component).toMatchSnapshot();
-  // });
-
-  // describe("button", () => {
-  //   it("has a button", () => {
-  //     expect(component.find("button").exists()).toBe(true);
-  //   });
-  // });
-
+    try {
+      expect(axios.get).toHaveBeenCalledWith("/api/weather");
+      expect(component.text()).toContain("18°C");
+      expect(component.text()).toContain("21°C");
+      expect(component.text()).toContain("light rain");
+    } finally {
+      component.unmount();
+    }
+  });
 });
-
-
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });

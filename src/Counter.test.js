@@ -1,16 +1,17 @@
-import { React } from 'react';
-import Counter from './Counter';
-import { shallow } from 'enzyme';
+import React from "react";
+import { shallow } from "enzyme";
+import Counter from "./Counter";
 
-describe('ConterTest', () => {
+describe("Counter", () => {
+  test("starts at zero", () => {
+    const counter = shallow(<Counter />);
+    expect(counter.find("p").text()).toBe("0");
+  });
 
-    let wrapper = null;
-    test('Counter render collectly', () => {
-        wrapper = shallow(<Counter />);
-    })
-
-    test('Counter snapshot', () => {
-        expect(wrapper).toMatchSnapshot();
-
-    });
-})
+  test("increments the displayed count for each click", () => {
+    const counter = shallow(<Counter />);
+    counter.find('input[value="+"]').simulate("click");
+    counter.find('input[value="+"]').simulate("click");
+    expect(counter.find("p").text()).toBe("2");
+  });
+});

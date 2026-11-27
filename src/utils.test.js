@@ -1,4 +1,4 @@
-import { sortAlphabetize } from './sort';
+import { sortAlphabetize } from './utils';
 
 describe('Alphabetics Array Object return sort by object property name ascending', () => {
   it('it should matching array object return', () => {

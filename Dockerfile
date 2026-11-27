@@ -1,14 +1,11 @@
-FROM node:10
+FROM node:24-bookworm-slim
 
-# Create work directory and copy over dependency
 WORKDIR /user/app
 
-COPY package.json /user/app
-RUN yarn install
+COPY package.json package-lock.json ./
+RUN PUPPETEER_SKIP_DOWNLOAD=true npm ci
 
-COPY . /user/app
+COPY . .
 
-CMD yarn start
-
-# Expose Port number Host OS 8082
-# EXPOSE 8082
+EXPOSE 3000
+CMD ["npm", "start"]

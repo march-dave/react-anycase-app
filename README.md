@@ -91,12 +91,13 @@ https://pngtree.com/so/hamburger
 
 ### 설정 방법
 
-1. [OpenWeatherMap](https://openweathermap.org/)에서 무료 API 키를 발급받으세요.
-2. 프로젝트 루트의 `.env` 파일에 API 키를 다음과 같이 추가하세요:
-   ```
-   REACT_APP_WEATHER_API_KEY=여기에_API_키_입력
-   ```
-3. 서버를 재시작하여 변경사항을 적용하세요.
+1. Node.js 24에서 `npm ci`로 의존성을 설치하세요. Chromium 다운로드가 제한된 환경에서 날씨 앱만 실행할 때는 `PUPPETEER_SKIP_DOWNLOAD=true npm ci`를 사용할 수 있습니다.
+2. [OpenWeatherMap](https://openweathermap.org/)에서 현재 날씨 및 5일 예보를 조회할 수 있는 API 키를 발급받으세요. 프로젝트 루트의 `.env.example`을 `.env.local`로 복사하고 `OPENWEATHER_API_KEY`에 발급받은 값을 입력하세요. 배포 환경에서는 같은 이름의 서버 환경 변수로 설정할 수 있습니다.
+3. `npm start`로 개발 서버를 실행하세요. 이 서버가 화면과 `/api/weather`를 함께 제공합니다. 프로덕션에서는 `npm run build` 후 `npm run serve`로 실행하세요. 두 모드 모두 기본 포트는 3000이며, 키를 변경한 뒤에는 서버를 재시작하세요.
+
+브라우저는 같은 서버의 `/api/weather`를 호출하고, 서버가 `api.openweathermap.org`에 접속합니다. 키가 없으면 서버가 HTTP 503을 반환하고 화면에 설정 안내가 표시됩니다. 제공업체 오류는 HTTP 502, 시간 초과는 HTTP 504로 반환됩니다.
+
+Docker로 개발할 때는 키를 입력한 `.env.local`이 있는 디렉터리에서 `docker compose --env-file .env.local up --build`를 실행하세요. 호스트의 8082번 포트에서 앱을 열 수 있습니다.
 
 ### 사용 방법
 

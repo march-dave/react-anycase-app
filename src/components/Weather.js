@@ -124,30 +124,57 @@ const ErrorMessage = styled.div`
   max-width: 500px;
 `;
 
+function hasDisplayFields(record, fields) {
+  return record && fields.every(field => {
+    const value = record[field];
+    return (typeof value === 'string' && value.trim() !== '') || Number.isFinite(value);
+  });
+}
+
+function isWeatherReport(data) {
+  return data && hasDisplayFields(data.current, ['temperature', 'condition', 'feelsLike', 'humidity', 'windSpeed'])
+    && Array.isArray(data.forecast)
+    && data.forecast.length > 0
+    && data.forecast.every(day => hasDisplayFields(day, ['day', 'high', 'low', 'condition']));
+}
+
+function requestErrorMessage(error) {
+  const status = error.response && error.response.status;
+  if (status === 503) {
+    return '날씨 서비스의 API 키가 설정되지 않았습니다. 서비스 관리자에게 문의해 주세요.';
+  }
+  if (status === 502 || status === 504) {
+    return '날씨 제공업체에서 데이터를 가져오지 못했습니다. 잠시 후 새로고침해 주세요.';
+  }
+  return '날씨 정보를 불러오지 못했습니다. 연결 상태를 확인한 뒤 새로고침해 주세요.';
+}
+
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    let active = true;
     const fetchWeather = async () => {
       try {
-        setLoading(true);
-        const response = await axios.get('/api/weather');
-        setWeatherData(response.data);
-        setLoading(false);
+        const { data } = await axios.get('/api/weather');
+        if (!active) return;
+        if (isWeatherReport(data)) {
+          setWeatherData(data);
+        } else {
+          setError('날씨 데이터 형식을 읽을 수 없습니다. 문제가 계속되면 서비스 관리자에게 문의해 주세요.');
+        }
       } catch (err) {
-        setError('날씨 정보를 불러오는데 실패했습니다. 잠시 후 다시 시도해주세요.');
-        setLoading(false);
+        if (active) setError(requestErrorMessage(err));
       }
     };
 
     fetchWeather();
+    return () => { active = false; };
   }, []);
 
-  if (loading) return <LoadingSpinner>날씨 정보를 불러오는 중입니다...</LoadingSpinner>;
-  if (error) return <ErrorMessage>{error}</ErrorMessage>;
-  if (!weatherData) return null;
+  if (error) return <ErrorMessage role="alert">{error}</ErrorMessage>;
+  if (!weatherData) return <LoadingSpinner role="status">날씨 정보를 불러오는 중입니다...</LoadingSpinner>;
 
   return (
     <WeatherContainer>
@@ -189,4 +216,4 @@ const Weather = () => {
   );
 };
 
-export default Weather; 
+export default Weather;
