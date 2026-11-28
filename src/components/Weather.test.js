@@ -14,7 +14,7 @@ const current = {
   windSpeed: '2 m/s'
 };
 
-describe('weather request errors', () => {
+describe('weather reports', () => {
   let container;
 
   beforeEach(() => {
@@ -25,10 +25,40 @@ describe('weather request errors', () => {
     act(() => { ReactDOM.unmountComponentAtNode(container); });
   });
 
-  async function renderAlert() {
+  async function renderWeather() {
     await act(async () => { ReactDOM.render(<Weather />, container); });
+  }
+
+  async function renderAlert() {
+    await renderWeather();
     return container.querySelector('[role="alert"]').textContent;
   }
+
+  const forecast = [{ day: '월', high: '11°C', low: '3°C', condition: 'clear sky' }];
+
+  it.each([
+    ['open-meteo', [
+      ['Open-Meteo', 'https://open-meteo.com/'],
+      ['CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/']
+    ]],
+    ['openweathermap', [['OpenWeatherMap', 'https://openweathermap.org/']]]
+  ])('credits %s below the forecast', async (provider, expectedLinks) => {
+    axios.get.mockResolvedValueOnce({ data: { current, forecast, provider } });
+    await renderWeather();
+    const links = Array.from(container.querySelectorAll('footer a'), link => [link.textContent, link.href]);
+    expect(links).toEqual(expectedLinks);
+  });
+
+  it.each([
+    ['absent', {}],
+    ['unrecognized', { provider: 'https://example.org/' }]
+  ])('displays the forecast when provider metadata is %s', async (description, metadata) => {
+    axios.get.mockResolvedValueOnce({ data: { current, forecast, ...metadata } });
+    await renderWeather();
+    expect(container.querySelector('h1').textContent).toBe(current.temperature);
+    expect(container.querySelector('h3').textContent).toBe(forecast[0].day);
+    expect(container.querySelector('footer')).toBeNull();
+  });
 
   it.each([
     ['the HTML app shell', '<!doctype html><html></html>'],
@@ -44,7 +74,7 @@ describe('weather request errors', () => {
   });
 
   it.each([
-    [503, 'API 키가 설정되지 않았습니다. 서비스 관리자에게 문의해 주세요'],
+    [503, '현재 날씨 서비스를 이용할 수 없습니다. 잠시 후 새로고침해 주세요'],
     [502, '날씨 제공업체에서 데이터를 가져오지 못했습니다'],
     [504, '날씨 제공업체에서 데이터를 가져오지 못했습니다']
   ])('shows a visitor-facing error for HTTP %d', async (status, message) => {

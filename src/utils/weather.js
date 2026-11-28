@@ -1,15 +1,11 @@
 const axios = require('axios');
+const { toronto, requireNumber, formatTemperature } = require('./weatherData');
 
 const providerUrl = 'https://api.openweathermap.org/data/2.5';
 const torontoWeekday = new Intl.DateTimeFormat('ko-KR', {
-  timeZone: 'America/Toronto',
+  timeZone: toronto.timeZone,
   weekday: 'short'
 });
-
-function requireNumber(value) {
-  if (!Number.isFinite(value)) throw new Error('Invalid weather observation');
-  return value;
-}
 
 function condition(observation) {
   const description = observation.weather[0].description;
@@ -19,13 +15,9 @@ function condition(observation) {
   return description;
 }
 
-function formatTemperature(value) {
-  return `${Math.round(requireNumber(value))}°C`;
-}
-
 async function getTorontoWeather(apiKey) {
   const config = {
-    params: { lat: 43.6532, lon: -79.3832, units: 'metric', appid: apiKey },
+    params: { lat: toronto.latitude, lon: toronto.longitude, units: 'metric', appid: apiKey },
     timeout: 5000
   };
   const { data: observation } = await axios.get(`${providerUrl}/weather`, config);

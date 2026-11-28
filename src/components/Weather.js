@@ -105,6 +105,17 @@ const ForecastCondition = styled.p`
   text-transform: capitalize;
 `;
 
+const Attribution = styled.footer`
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+`;
+
+const providers = new Map([
+  ['open-meteo', { name: 'Open-Meteo', url: 'https://open-meteo.com/' }],
+  ['openweathermap', { name: 'OpenWeatherMap', url: 'https://openweathermap.org/' }]
+]);
+
 const LoadingSpinner = styled.div`
   display: flex;
   justify-content: center;
@@ -141,7 +152,7 @@ function isWeatherReport(data) {
 function requestErrorMessage(error) {
   const status = error.response && error.response.status;
   if (status === 503) {
-    return '날씨 서비스의 API 키가 설정되지 않았습니다. 서비스 관리자에게 문의해 주세요.';
+    return '현재 날씨 서비스를 이용할 수 없습니다. 잠시 후 새로고침해 주세요.';
   }
   if (status === 502 || status === 504) {
     return '날씨 제공업체에서 데이터를 가져오지 못했습니다. 잠시 후 새로고침해 주세요.';
@@ -176,6 +187,7 @@ const Weather = () => {
   if (error) return <ErrorMessage role="alert">{error}</ErrorMessage>;
   if (!weatherData) return <LoadingSpinner role="status">날씨 정보를 불러오는 중입니다...</LoadingSpinner>;
 
+  const provider = providers.get(weatherData.provider);
   return (
     <WeatherContainer>
       <CurrentWeather>
@@ -212,6 +224,17 @@ const Weather = () => {
           </ForecastCard>
         ))}
       </ForecastGrid>
+      {provider && (
+        <Attribution>
+          날씨 데이터 제공 <a href={provider.url}>{provider.name}</a>
+          {weatherData.provider === 'open-meteo' && (
+            <>
+              {' · '}<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+              {' · 기온은 반올림하고 날씨 코드는 한국어로 표시합니다.'}
+            </>
+          )}
+        </Attribution>
+      )}
     </WeatherContainer>
   );
 };
