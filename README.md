@@ -91,12 +91,15 @@ https://pngtree.com/so/hamburger
 
 ### 설정 방법
 
-1. [OpenWeatherMap](https://openweathermap.org/)에서 무료 API 키를 발급받으세요.
-2. 프로젝트 루트의 `.env` 파일에 API 키를 다음과 같이 추가하세요:
-   ```
-   REACT_APP_WEATHER_API_KEY=여기에_API_키_입력
-   ```
-3. 서버를 재시작하여 변경사항을 적용하세요.
+1. Node.js 24에서 `npm ci`로 의존성을 설치하세요. Chromium 다운로드가 제한된 환경에서 날씨 앱만 실행할 때는 `PUPPETEER_SKIP_DOWNLOAD=true npm ci`를 사용할 수 있습니다.
+2. `npm start`로 개발 서버를 실행하세요. 기본 포트는 3000이며 API 키 없이 토론토의 현재 날씨와 5일 예보를 조회할 수 있습니다. 프로덕션에서는 `npm run build` 후 `npm run serve`로 실행하세요.
+3. OpenWeatherMap을 사용하려면 프로젝트 루트의 `.env.example`을 `.env.local`로 복사하고 `OPENWEATHER_API_KEY`에 발급받은 키를 입력한 뒤 서버를 재시작하세요. 배포 환경에서도 같은 이름의 서버 환경 변수를 사용할 수 있습니다.
+
+브라우저는 같은 서버의 `/api/weather`를 호출합니다. 키가 없으면 서버가 `api.open-meteo.com`에 접속하고, 키가 있으면 `api.openweathermap.org`에 접속합니다. 선택한 호스트로의 HTTPS 연결이 필요합니다. 제공업체 오류는 HTTP 502, 시간 초과는 HTTP 504로 반환됩니다.
+
+Open-Meteo의 무료 호스팅 API는 비상업적 이용을 위한 서비스입니다. 이 앱은 온도를 반올림하고 날씨 코드를 한국어로 표시합니다. [Open-Meteo 이용 약관](https://open-meteo.com/en/terms) · [날씨 데이터 라이선스](https://open-meteo.com/en/licence)
+
+Docker로 개발할 때는 `docker compose up --build`를 실행하고 호스트의 8082번 포트에서 앱을 여세요. OpenWeatherMap 키를 담은 `.env.local`을 쓰려면 `docker compose --env-file .env.local up --build`로 실행하세요.
 
 ### 사용 방법
 

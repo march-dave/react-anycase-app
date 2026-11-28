@@ -1,38 +1,26 @@
 import React from "react";
-import Basic from "../Basic";
-// import { shallow } from "enzyme";
-
-import configureMockStore from "redux-mock-store";
-// import configureStore from "../configureStore";
-
+import { mount } from "enzyme";
 import { Provider } from "react-redux";
-import action from "../Action";
-import reducer from "../Reducer";
+import Basic from "../Basic";
+import configureStore from "../configureStore";
 
-const setUp = (props = {}) => {
-  const component = shallow(<Basic {...props} />);
-  return component;
-};
-
-describe("Counter", () => {
-  let component = null;
+describe("Basic", () => {
+  let store;
+  let component;
 
   beforeEach(() => {
-    let wrapper;
-    const props = {
-      header: "Test Header",
-      desc: "Test Desc"
-    };
-    wrapper = setUp(props);
-
-    component = setUp();
+    store = configureStore();
+    component = mount(<Provider store={store}><Basic /></Provider>);
   });
 
-  it("renders correctly", () => {
-    component = setUp();
+  afterEach(() => component.unmount());
+
+  it("renders a text field", () => {
+    expect(component.find('input[type="text"]')).toHaveLength(1);
   });
 
-  it("matches snapshot", () => {
-    expect(component).toMatchSnapshot();
+  it("updates the username in the store when the field changes", () => {
+    component.find("input").simulate("change", { target: { value: "jane" } });
+    expect(store.getState().username).toBe("jane");
   });
 });

@@ -1,18 +1,19 @@
-require('dotenv').config(); // 환경 변수 로드
-const express = require('express');
 const path = require('path');
+const express = require('express');
 const weatherRouter = require('./src/api/weather');
 
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.use(express.static(path.join(__dirname, 'build')));
-app.use(weatherRouter);
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+require('dotenv').config({
+  path: ['.env.local', '.env'].map(file => path.join(__dirname, file))
 });
 
+const app = express();
+const build = path.join(__dirname, 'build');
+
+app.use('/api', weatherRouter);
+app.use(express.static(build));
+app.get('/{*path}', (req, res) => res.sendFile(path.join(build, 'index.html')));
+
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
-}); 
+});

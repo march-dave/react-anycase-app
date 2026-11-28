@@ -1,51 +1,30 @@
-import React from 'react';
-import SeeRef from '../SeeRef';
-import { shallow } from "enzyme";
+import React from "react";
+import ReactDOM from "react-dom";
+import SeeRef from "../SeeRef";
 
 describe("SeeRef", () => {
-  let component = null;
+  let container;
 
-  it("renders correctly", () => {
-    component = shallow(<SeeRef />);
+  beforeEach(() => {
+    container = document.createElement("div");
+    document.body.appendChild(container);
   });
 
-  it("matches snapshot", () => {
-    expect(component).toMatchSnapshot();
+  afterEach(() => {
+    ReactDOM.unmountComponentAtNode(container);
+    container.remove();
+    jest.restoreAllMocks();
   });
 
+  test("displays the measured content height on mount", () => {
+    jest.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(135);
+    ReactDOM.render(<SeeRef />, container);
+    expect(container.textContent).toContain("height: 135");
+  });
 
-  // it("renders correctly", () => {
-  //   const wrapper = shallow(<App />);
-  //   // const countState = wrapper.state().totalNumber
-  //   const text = wrapper.find('p').text();
-  //   expect(text).toEqual("1")
-  // });
-
-
-  // let totalNumber = 1;
-  // const onIncrease = (totalNumber) => {
-  //   totalNumber = totalNumber + 1
-  // };
-
-  // it("render correclty button click", () => {
-  //   component = shallow(<Counter onClick={onIncrease} />);
-  // });
-
-  // it("matches snapshot", () => {
-  //   expect(component).toMatchSnapshot();
-  // });
-
-  // describe("button", () => {
-  //   it("has a button", () => {
-  //     expect(component.find("button").exists()).toBe(true);
-  //   });
-  // });
-
+  test("focuses the input when the button is clicked", () => {
+    ReactDOM.render(<SeeRef />, container);
+    container.querySelector("button").click();
+    expect(document.activeElement).toBe(container.querySelector("input"));
+  });
 });
-
-
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });

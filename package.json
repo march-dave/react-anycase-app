@@ -27,8 +27,9 @@
         "thunk": "^0.0.1"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "react-scripts --openssl-legacy-provider start",
+        "build": "react-scripts --openssl-legacy-provider build",
+        "serve": "node server.js",
         "test": "react-scripts test --env=jsdom",
         "coverage": "react-scripts test --env=jsdom --coverage",
         "eject": "react-scripts eject"
